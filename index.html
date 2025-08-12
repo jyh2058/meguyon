@@ -55,6 +55,14 @@
       font-size: 0.95em;
     }
 
+    .gallery-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    
     .scroll-gallery {
       display: flex;
       overflow-x: auto;
@@ -62,6 +70,8 @@
       padding: 20px 0;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      max-width: 90vw;
     }
     
     .thumbnail {
@@ -72,14 +82,21 @@
       background-position: center;
       border-radius: 8px;
       scroll-snap-align: center;
-      pointer-events: none;
+      cursor: pointer;
+      pointer-events: auto;
       user-select: none;
     }
-
-    .thumbnail:hover {
-      transform: scale(1.05);
+    
+    .arrow {
+      background: none;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      padding: 0 10px;
+      color: #555;
+      user-select: none;
     }
-
+    
     #overlay {
       position: fixed;
       top: 0;
@@ -92,14 +109,14 @@
       align-items: center;
       z-index: 999;
     }
-
+    
     #overlay img {
       max-width: 90%;
       max-height: 90%;
       box-shadow: 0 0 20px rgba(255,255,255,0.3);
       border-radius: 8px;
     }
-
+    
     .petal-layer {
       position: fixed;
       top: -100px;
@@ -212,13 +229,19 @@
   </div>
 
   <!-- 갤러리 컨테이너 -->
-  <div class="scroll-gallery">
-    <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');"></div>
-    <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');"></div>
-    <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');"></div>
-    <!-- 필요 시 더 추가 가능 -->
+  <div class="gallery-wrapper">
+    <button class="arrow left" onclick="scrollGallery(-1)">←</button>
+  
+    <div class="scroll-gallery" id="scrollGallery">
+      <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
+      <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')"></div>
+      <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
+      <!-- 필요 시 더 추가 가능 -->
+    </div>
+  
+    <button class="arrow right" onclick="scrollGallery(1)">→</button>
   </div>
-
+  
   <!-- 오버레이 확대 이미지 -->
   <div id="overlay" onclick="hideOverlay()">
     <img id="overlayImage" src="" alt="확대 이미지">
@@ -250,16 +273,23 @@
       document.getElementById('ja').style.display = lang === 'ja' ? 'block' : 'none';
     }
 
-    // 이미지 오버레이
+    // 오버레이 확대
     function showOverlay(src) {
       const overlay = document.getElementById('overlay');
       const overlayImage = document.getElementById('overlayImage');
       overlayImage.src = src;
       overlay.style.display = 'flex';
     }
-
+    
     function hideOverlay() {
       document.getElementById('overlay').style.display = 'none';
+    }
+    
+    // 화살표 버튼으로 스크롤
+    function scrollGallery(direction) {
+      const gallery = document.getElementById('scrollGallery');
+      const scrollAmount = 140; // thumbnail 너비 + gap
+      gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
     
     document.addEventListener('mousemove', (e) => {
@@ -292,4 +322,5 @@
 </body>
 
 </html>
+
 
