@@ -91,8 +91,7 @@
     }
     
     .thumbnail:hover {
-      filter: brightness(1.15); /* 살짝 밝게 */
-      transform: scale(1.05);   /* 약간 확대 */
+      transform: scale(1.10);   /* 약간 확대 */
     }
     
     .arrow {
@@ -427,8 +426,7 @@
 
     document.querySelectorAll('.thumbnail').forEach(el => {
       el.addEventListener('touchstart', () => {
-        el.style.filter = 'brightness(1.15)';
-        el.style.transform = 'scale(1.05)';
+        el.style.transform = 'scale(1.10)';
       });
       el.addEventListener('touchend', () => {
         el.style.filter = '';
@@ -438,6 +436,7 @@
   </script>
 </body>
 </html>
+
 
 
 
