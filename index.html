@@ -398,10 +398,10 @@
     function toggleMusic() {
       if (bgm.paused) {
         bgm.play();
-        toggleBtn.textContent = '<i class="fa-solid fa-pause"></i>정지';
+        toggleBtn.innerHTML = "<i class="fa-solid fa-pause"></i>정지";
       } else {
         bgm.pause();
-        toggleBtn.textContent = '<i class="fa-solid fa-play"></i>재생';
+        toggleBtn.innerHTML = "<i class="fa-solid fa-play"></i>재생";
       }
     }
   </script>
