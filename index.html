@@ -129,6 +129,21 @@
       border-radius: 12px;
       font-family: sans-serif;
     }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+      user-select: none;
+    }
+
+    .hidden {
+      display: none;
+    }
     
     .petal-layer {
       position: fixed;
@@ -257,6 +272,7 @@
   
   <!-- 오버레이 확대 이미지 -->
   <div id="overlay" class="overlay">
+    <span id="closeOverlay" class="close-btn">×</span>
     <div class="arrow left" onclick="showPrevImage()">&#10094;</div>
     <img id="overlayImage" src="" alt="Overlay Image">
     <div class="arrow right" onclick="showNextImage()">&#10095;</div>
@@ -376,7 +392,12 @@
         toggleBtn.textContent = '▶️ 재생';
       }
     }
+
+    document.getElementById('closeOverlay').addEventListener('click', () => {
+      document.getElementById('overlay').classList.add('hidden');
+    });
   </script>
 </body>
 </html>
+
 
