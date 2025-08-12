@@ -116,6 +116,19 @@
       box-shadow: 0 0 20px rgba(255,255,255,0.3);
       border-radius: 8px;
     }
+
+    .slide-counter {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1.2rem;
+      background: rgba(0,0,0,0.5);
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-family: sans-serif;
+    }
     
     .petal-layer {
       position: fixed;
@@ -243,8 +256,11 @@
   </div>
   
   <!-- 오버레이 확대 이미지 -->
-  <div id="overlay" onclick="hideOverlay()">
-    <img id="overlayImage" src="" alt="확대 이미지">
+  <div id="overlay" class="overlay">
+    <div class="arrow left" onclick="showPrevImage()">&#10094;</div>
+    <img id="overlayImage" src="" alt="Overlay Image">
+    <div class="arrow right" onclick="showNextImage()">&#10095;</div>
+    <div id="slideCounter" class="slide-counter">1 / 3</div>
   </div>
 
   <script>
@@ -273,16 +289,72 @@
       document.getElementById('ja').style.display = lang === 'ja' ? 'block' : 'none';
     }
 
-    // 오버레이 확대
-    function showOverlay(src) {
-      const overlay = document.getElementById('overlay');
+    let currentIndex = -1;
+    const imageList = [
+      './img/B-(1) 247-0.jpg',
+      './img/D-(1) 101-0.jpg',
+      './img/E-(1) 53-1.jpg'
+    ];
+    
+    function updateOverlay() {
       const overlayImage = document.getElementById('overlayImage');
-      overlayImage.src = src;
-      overlay.style.display = 'flex';
+      const slideCounter = document.getElementById('slideCounter');
+      overlayImage.src = imageList[currentIndex];
+      slideCounter.textContent = `${currentIndex + 1} / ${imageList.length}`;
+    }
+    
+    function showOverlay(src) {
+      currentIndex = imageList.indexOf(src);
+      document.getElementById('overlay').style.display = 'flex';
+      updateOverlay();
     }
     
     function hideOverlay() {
       document.getElementById('overlay').style.display = 'none';
+      currentIndex = -1;
+    }
+    
+    function showPrevImage() {
+      currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+      updateOverlay();
+    }
+    
+    function showNextImage() {
+      currentIndex = (currentIndex + 1) % imageList.length;
+      updateOverlay();
+    }
+    
+    // 키보드 대응
+    document.addEventListener('keydown', (e) => {
+      const overlay = document.getElementById('overlay');
+      if (overlay.style.display !== 'flex') return;
+    
+      if (e.key === 'ArrowRight') showNextImage();
+      else if (e.key === 'ArrowLeft') showPrevImage();
+      else if (e.key === 'Escape') hideOverlay();
+    });
+    
+    // 모바일 스와이프 대응
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.getElementById('overlay').addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.getElementById('overlay').addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipeGesture();
+    });
+    
+    function handleSwipeGesture() {
+      const threshold = 50; // 최소 스와이프 거리
+      const distance = touchEndX - touchStartX;
+    
+      if (Math.abs(distance) < threshold) return;
+    
+      if (distance > 0) showPrevImage(); // 오른쪽으로 스와이프 → 이전
+      else showNextImage();              // 왼쪽으로 스와이프 → 다음
     }
     
     // 화살표 버튼으로 스크롤
@@ -291,19 +363,6 @@
       const scrollAmount = 140; // thumbnail 너비 + gap
       gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
-    
-    document.addEventListener('mousemove', (e) => {
-      const petals = document.querySelectorAll('.petal');
-      const x = e.clientX / window.innerWidth - 0.5;
-      const y = e.clientY / window.innerHeight - 0.5;
-
-      petals.forEach((petal, i) => {
-        const depth = petal.dataset.depth || (0.5 + Math.random()); // 민감도
-        const offsetX = x * depth * 30; // 이동 거리 조절
-        const offsetY = y * depth * 30;
-        petal.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${i * 12}deg) scale(1)`;
-      });
-    });
 
     const bgm = document.getElementById('bgm');
     const toggleBtn = document.getElementById('toggleMusicBtn');
@@ -318,9 +377,5 @@
       }
     }
   </script>
-
 </body>
-
 </html>
-
-
