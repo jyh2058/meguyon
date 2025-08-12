@@ -444,10 +444,8 @@
         el.style.transform = '';
       });
     });
-
-    const body = document.getElementById('body');
     
-    body.addEventListener('click', function(e) {
+    document.body.addEventListener('click', function(e) {
       const overlay = document.getElementById('overlay');
       if (overlay.style.display !== 'flex') return;
       if (e.target !== overlay) {
@@ -457,3 +455,4 @@
   </script>
 </body>
 </html>
+
