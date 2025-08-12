@@ -445,14 +445,21 @@
       });
     });
     
-    document.body.addEventListener('click', function(e) {
-      const overlay = document.getElementById('overlay');
-      if (overlay.style.display !== 'flex') return;
-      if (e.target !== overlay) {
+    const overlay = document.getElementById('overlay');
+    
+    overlay.addEventListener('click', function(e) {
+      // 클릭된 요소가 overlay 자체일 경우만 닫기
+      if (e.target === overlay) {
         hideOverlay();
       }
     });
+    
+    function hideOverlay() {
+      overlay.style.display = 'none';
+      document.body.classList.remove('no-scroll');
+    }
   </script>
 </body>
 </html>
+
 
