@@ -117,6 +117,12 @@
       max-height: 90%;
       box-shadow: 0 0 20px rgba(255,255,255,0.3);
       border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    #overlay img.fade-in {
+      opacity: 1;
     }
 
     .slide-counter {
@@ -225,7 +231,7 @@
 
   <div class="top-bar">
     <div class="controls">
-      <button id="toggleMusicBtn" onclick="toggleMusic()"><i class="fa-solid fa-play"></i>재생</button>
+      <button id="toggleMusicBtn" onclick="toggleMusic()"><i class="fa-solid fa-music"></i><i class="fa-solid fa-play"></i></button>
     </div>
 
     <div class="language-switch">
@@ -327,9 +333,17 @@
     
     function updateOverlay() {
       const overlayImage = document.getElementById('overlayImage');
-      const slideCounter = document.getElementById('slideCounter');
+    
+      // 페이드 아웃
+      overlayImage.classList.remove('fade-in');
+      void overlayImage.offsetWidth; // 리플로우 트릭으로 transition 재적용
+    
+      // 이미지 변경 후 페이드 인
       overlayImage.src = imageList[currentIndex];
-      slideCounter.textContent = `${currentIndex + 1} / ${imageList.length}`;
+      overlayImage.classList.add('fade-in');
+    
+      // 슬라이드 번호도 업데이트
+      document.getElementById('slideCounter').textContent = `${currentIndex + 1} / ${imageList.length}`;
     }
     
     function showOverlay(src) {
@@ -398,13 +412,12 @@
     function toggleMusic() {
       if (bgm.paused) {
         bgm.play();
-        toggleBtn.innerHTML = "<i class='fa-solid fa-pause'></i>정지";
+        toggleBtn.innerHTML = '<i class="fa-solid fa-music"></i><i class="fa-solid fa-pause"></i>';
       } else {
         bgm.pause();
-        toggleBtn.innerHTML = "<i class='fa-solid fa-play'></i>재생";
+        toggleBtn.innerHTML = '<i class="fa-solid fa-music"></i><i class="fa-solid fa-play"></i>';
       }
     }
   </script>
 </body>
 </html>
-
