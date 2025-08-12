@@ -254,16 +254,12 @@
 
   <!-- 갤러리 컨테이너 -->
   <div class="gallery-wrapper">
-    <button class="arrow left" onclick="scrollGallery(-1)">←</button>
-  
     <div class="scroll-gallery" id="scrollGallery">
       <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
       <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')"></div>
       <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
       <!-- 필요 시 더 추가 가능 -->
     </div>
-  
-    <button class="arrow right" onclick="scrollGallery(1)">→</button>
   </div>
   
   <!-- 오버레이 확대 이미지 -->
@@ -325,6 +321,10 @@
       document.getElementById('overlay').style.display = 'none';
       currentIndex = -1;
     }
+
+    document.getElementById('closeOverlay').addEventListener('click', () => {
+      hideOverlay();
+    });
     
     function showPrevImage() {
       currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
@@ -368,13 +368,6 @@
       if (distance > 0) showPrevImage(); // 오른쪽으로 스와이프 → 이전
       else showNextImage();              // 왼쪽으로 스와이프 → 다음
     }
-    
-    // 화살표 버튼으로 스크롤
-    function scrollGallery(direction) {
-      const gallery = document.getElementById('scrollGallery');
-      const scrollAmount = 140; // thumbnail 너비 + gap
-      gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-    }
 
     const bgm = document.getElementById('bgm');
     const toggleBtn = document.getElementById('toggleMusicBtn');
@@ -388,14 +381,6 @@
         toggleBtn.textContent = '▶️ 재생';
       }
     }
-
-    document.getElementById('closeOverlay').addEventListener('click', () => {
-      hideOverlay();
-    });
   </script>
 </body>
 </html>
-
-
-
-
