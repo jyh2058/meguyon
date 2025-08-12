@@ -225,7 +225,7 @@
 
   <div class="top-bar">
     <div class="controls">
-      <button id="toggleMusicBtn" onclick="toggleMusic()">▶️ 재생</button>
+      <button id="toggleMusicBtn" onclick="toggleMusic()"><i class="fa-solid fa-play"></i>재생</button>
     </div>
 
     <div class="language-switch">
@@ -252,13 +252,13 @@
       <div class="info">
         <p><strong>일시:</strong> 2025년 11월 1일 (토) 오후 1시</p>
         <p><strong>장소:</strong> 김해비즈컨벤션웨딩</p>
-        <p><strong>주소:</strong> (50969) 경상남도 김해시 주촌면 골든루트로 80-16<br>김해중소기업비즈니스센터 5층</p>
+        <p><strong>주소:</strong> <i class="fa-solid fa-signs-post"></i>50969 경상남도 김해시 주촌면 골든루트로 80-16<br>김해중소기업비즈니스센터 5층</p>
       </div>
     </div>
   
     <!-- 일본어 콘텐츠 -->
     <div class="container" id="ja" style="display:none;">
-      <h1>全　永煥<i class="fa-solid fa-heart"></i>天野　愛</h1>
+      <h1>全　永煥<i class="fa-solid fa-heart fa-flip" style="color:red; --fa-animation-duration: 3s;"></i>天野　愛</h1>
       <h2>私たちは、愛によって一つになります</h2>
   
       <p>お互いのまなざしの中に、共に歩む道を見つけました。</p>
@@ -268,7 +268,7 @@
       <div class="info">
         <p><strong>日時:</strong> 2025年11月1日（土）午後1時</p>
         <p><strong>会場:</strong> 金海ビズコンベンションウェディング</p>
-        <p><strong>住所:</strong> 〒50969 慶尚南道 金海市 主村面 ゴールデンルート路 80-16<br>金海中小企業ビジネスセンター 5階</p>
+        <p><strong>住所:</strong> <i class="fa-solid fa-signs-post"></i>50969 慶尚南道 金海市 主村面 ゴールデンルート路 80-16<br>金海中小企業ビジネスセンター 5階</p>
       </div>
     </div>
   </div>
@@ -398,24 +398,12 @@
     function toggleMusic() {
       if (bgm.paused) {
         bgm.play();
-        toggleBtn.textContent = '⏸️ 정지';
+        toggleBtn.textContent = '<i class="fa-solid fa-pause"></i>정지';
       } else {
         bgm.pause();
-        toggleBtn.textContent = '▶️ 재생';
+        toggleBtn.textContent = '<i class="fa-solid fa-play"></i>재생';
       }
     }
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
