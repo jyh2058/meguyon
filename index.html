@@ -444,13 +444,16 @@
         el.style.transform = '';
       });
     });
+
+    const body = document.getElementById('body');
+    
+    body.addEventListener('click', function(e) {
+      const overlay = document.getElementById('overlay');
+      if (overlay.style.display !== 'flex') return;
+      if (e.target !== overlay) {
+        hideOverlay();
+      }
+    });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
