@@ -55,19 +55,25 @@
       font-size: 0.95em;
     }
 
-    .image-row {
+    .scroll-gallery {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 20px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
-
+    
     .thumbnail {
+      flex: 0 0 auto;
       width: 120px;
-      height: auto;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+      height: 120px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      scroll-snap-align: center;
+      pointer-events: none;
+      user-select: none;
     }
 
     .thumbnail:hover {
@@ -205,11 +211,12 @@
     </div>
   </div>
 
-  <!-- 하단 장식 이미지 갤러리 -->
-  <div class="image-row">
-    <img src="https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800" alt="장식 이미지 1" class="thumbnail" onclick="showOverlay(this.src)">
-    <img src="https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800" alt="장식 이미지 2" class="thumbnail" onclick="showOverlay(this.src)">
-    <img src="https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800" alt="장식 이미지 3" class="thumbnail" onclick="showOverlay(this.src)">
+  <!-- 갤러리 컨테이너 -->
+  <div class="scroll-gallery">
+    <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');"></div>
+    <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');"></div>
+    <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');"></div>
+    <!-- 필요 시 더 추가 가능 -->
   </div>
 
   <!-- 오버레이 확대 이미지 -->
@@ -285,3 +292,4 @@
 </body>
 
 </html>
+
