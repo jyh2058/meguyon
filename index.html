@@ -87,6 +87,12 @@
       cursor: pointer;
       pointer-events: auto;
       user-select: none;
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+    
+    .thumbnail:hover {
+      filter: brightness(1.15); /* 살짝 밝게 */
+      transform: scale(1.05);   /* 약간 확대 */
     }
     
     .arrow {
@@ -231,7 +237,7 @@
 
   <div class="top-bar">
     <div class="controls">
-      <button id="toggleMusicBtn" onclick="toggleMusic()"><i class="fa-solid fa-music"></i><i class="fa-solid fa-play"></i></button>
+      <button id="toggleMusicBtn" onclick="toggleMusic()"></i><i class="fa-solid fa-play"></i></button>
     </div>
 
     <div class="language-switch">
@@ -412,12 +418,24 @@
     function toggleMusic() {
       if (bgm.paused) {
         bgm.play();
-        toggleBtn.innerHTML = '<i class="fa-solid fa-music"></i><i class="fa-solid fa-pause"></i>';
+        toggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
       } else {
         bgm.pause();
-        toggleBtn.innerHTML = '<i class="fa-solid fa-music"></i><i class="fa-solid fa-play"></i>';
+        toggleBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
       }
     }
+
+    document.querySelectorAll('.thumbnail').forEach(el => {
+      el.addEventListener('touchstart', () => {
+        el.style.filter = 'brightness(1.15)';
+        el.style.transform = 'scale(1.05)';
+      });
+      el.addEventListener('touchend', () => {
+        el.style.filter = '';
+        el.style.transform = '';
+      });
+    });
   </script>
 </body>
 </html>
+
