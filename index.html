@@ -206,10 +206,6 @@
       cursor: pointer;
       white-space: nowrap;
     }
-
-    .language-switch button {
-      color: #0077cc; /* 파란색 */
-    }
     
     body.no-scroll {
       overflow: hidden;
@@ -223,6 +219,34 @@
       background-color: #fff;
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
       max-width: 600px;
+    }
+
+    .language-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    
+    .lang-toggle {
+      padding: 6px 12px;
+      background-color: #f5f5f5;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .lang-toggle:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .divider {
+      width: 1px;
+      height: 20px;
+      background-color: #ccc;
     }
   </style>
 </head>
@@ -238,10 +262,11 @@
       </a>
     </div>
 
-    <div class="language-switch">
-      <a href="javascript:void(0)" onclick="switchLanguage('ko')" class="lang-toggle">한국어</a>
-      <a href="javascript:void(0)" onclick="switchLanguage('ja')" class="lang-toggle">日本語</a>
-    </div>
+  <div class="language-switch">
+    <a href="javascript:void(0)" onclick="switchLanguage('ko')" class="lang-toggle">한국어</a>
+    <span class="divider"></span>
+    <a href="javascript:void(0)" onclick="switchLanguage('ja')" class="lang-toggle">日本語</a>
+  </div>
   </div>
 
   <div class="petal-layer" id="petalLayer"></div>
@@ -448,6 +473,7 @@
   </script>
 </body>
 </html>
+
 
 
 
