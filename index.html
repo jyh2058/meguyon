@@ -19,7 +19,7 @@
       background-color: #fff;
       color: black;
       text-align: center;
-      padding: 50px 20px;
+      padding: 0% 0%;
       margin: 0;
       overflow-x: hidden;
     }
@@ -94,10 +94,6 @@
       pointer-events: auto;
       user-select: none;
       transition: filter 0.3s ease, transform 0.3s ease;
-    }
-    
-    .thumbnail:hover {
-      transform: scale(1.10);   /* 약간 확대 */
     }
     
     .arrow {
@@ -235,12 +231,6 @@
   </style>
 </head>
 <body>
-  <div style="text-align: center;">
-    <i class="fa-solid fa-cat fa-bounce fa-5x"></i>
-    <i class="fa-solid fa-cat fa-flip fa-5x"></i>
-    <i class="fa-solid fa-cat fa-bounce fa-flip-horizontal fa-5x"></i>
-  </div>
-
   <audio id="bgm" loop>
     <source src="./白の花びら.mp3" type="audio/mpeg">
   </audio>
@@ -297,7 +287,7 @@
 
   <!-- 갤러리 컨테이너 -->
   <div class="container text-center mt-5">
-    <div class="row">
+    <div class="row my-2">
       <div class="col-4">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
       </div>
@@ -308,7 +298,7 @@
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
       </div>
     </div>
-    <div class="row">
+    <div class="row my-2">
       <div class="col-4">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
       </div>
@@ -319,7 +309,7 @@
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
       </div>
     </div>
-    <div class="row">
+    <div class="row my-2">
       <div class="col-4">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
       </div>
@@ -463,16 +453,6 @@
         toggleBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
       }
     }
-
-    document.querySelectorAll('.thumbnail').forEach(el => {
-      el.addEventListener('touchstart', () => {
-        el.style.transform = 'scale(1.10)';
-      });
-      el.addEventListener('touchend', () => {
-        el.style.filter = '';
-        el.style.transform = '';
-      });
-    });
     
     const overlay = document.getElementById('overlay');
     
@@ -490,6 +470,7 @@
   </script>
 </body>
 </html>
+
 
 
 
