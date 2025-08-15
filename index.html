@@ -29,11 +29,9 @@
       width: 100%;
       height: 100%;
       display: block;
-      margin: 0 auto;     /* 가운데 정렬 */
       border-radius: 16px;
       border: 2px solid #e0e0e0;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      margin: 0 auto;
     }
     
     /* 모바일용 스타일 */
@@ -188,9 +186,7 @@
       display: flex;
       justify-content: space-between; /* 좌우로 나눔 */
       align-items: center;
-      padding: 10px 20px;
       box-sizing: border-box;
-      width: 100%;
     }
 
     .controls,
@@ -225,8 +221,6 @@
       background-color: #fff;
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
       max-width: 600px;
-      margin: 0 auto;
-      margin-top: 40px;
     }
   </style>
 </head>
@@ -235,22 +229,24 @@
     <source src="./白の花びら.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="top-bar p-1">
+  <div class="top-bar m-1">
     <div class="controls">
-      <button id="toggleMusicBtn" onclick="toggleMusic()"></i><i class="fa-solid fa-play"></i></button>
+      <a href="javascript:void(0)" id="toggleMusicBtn" onclick="toggleMusic()" class="music-toggle">
+        <i class="fa-solid fa-play"></i>
+      </a>
     </div>
 
     <div class="language-switch">
-      <button onclick="switchLanguage('ko')">한국어</button>
-      <button onclick="switchLanguage('ja')">日本語</button>
+      <a href="javascript:void(0)" onclick="switchLanguage('ko')" class="lang-toggle">한국어</a>
+      <a href="javascript:void(0)" onclick="switchLanguage('ja')" class="lang-toggle">日本語</a>
     </div>
   </div>
 
   <div class="petal-layer" id="petalLayer"></div>
 
-  <img src="https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800" alt="초대장 상단 장식 이미지" class="header-image">
+  <img src="https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800" alt="초대장 상단 장식 이미지" class="header-image my-1">
 
-  <div class="invitation-box">
+  <div class="invitation-box my-1">
     <!-- 초대장 내용 -->
     <!-- 한국어 콘텐츠 -->
     <div class="container" id="ko">
@@ -286,8 +282,8 @@
   </div>
 
   <!-- 갤러리 컨테이너 -->
-  <div class="container text-center mt-5">
-    <div class="row my-2">
+  <div class="container text-center my-1">
+    <div class="row">
       <div class="col-4 px-1" style="aspect-ratio: 2 / 3;">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
       </div>
@@ -448,18 +444,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
