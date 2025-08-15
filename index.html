@@ -32,16 +32,17 @@
       border-radius: 16px;
       border: 2px solid #e0e0e0;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      aspect-ratio: 2 / 3;
     }
     
     /* 모바일용 스타일 */
     @media screen and (max-width: 768px) {
       .header-image {
         width: 100%;      /* 모바일에서는 화면 너비에 맞춤 */
-        height: auto;
+        height: 100%;
         display: block;
-        margin: 0;        /* 여백 제거 */
-        border-radius: 12px;
+        border-radius: 20px;
+        aspect-ratio: 2 / 3;
       }
     }
 
@@ -244,7 +245,9 @@
 
   <div class="petal-layer" id="petalLayer"></div>
 
-  <img src="https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800" alt="초대장 상단 장식 이미지" class="header-image m-1">
+  <div class="m-1">
+    <img src="https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800" alt="초대장 상단 장식 이미지" class="header-image">
+  </div>
 
   <div class="invitation-box m-1">
     <!-- 초대장 내용 -->
@@ -444,4 +447,5 @@
   </script>
 </body>
 </html>
+
 
