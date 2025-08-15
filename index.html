@@ -11,19 +11,26 @@
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="/meguyon/favicon.ico" type="image/x-icon">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+JP&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   
   <title>전영환♡아마노 메구미 결혼식 초대장</title>
   <style>
     body {
-      font-family: 'Apple SD Gothic Neo', 'Noto Serif KR', 'Noto Serif JP', 'Yu Mincho', serif;
-      background-color: #fff;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.1em;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      background-color: #FFF5F3;
       color: black;
       text-align: center;
       padding: .25rem!important;
       margin: 0;
       overflow-x: hidden;
+    }
+
+    .lang-ja {
+      font-family: 'Noto Serif JP', serif;
     }
 
     .header-image {
@@ -126,7 +133,7 @@
       box-shadow: 0 0 20px rgba(255,255,255,0.3);
       border-radius: 8px;
       opacity: 0;
-      transition: opacity 2s ease;
+      transition: opacity 1s ease;
     }
 
     #overlayImage.fade-in {
@@ -219,7 +226,6 @@
       padding: 0;
       background-color: #fff;
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-      max-width: 600px;
     }
 
     .language-switch {
@@ -279,7 +285,7 @@
     </div>
   
     <!-- 일본어 콘텐츠 -->
-    <div class="container-1" id="ja" style="display:none;">
+    <div class="container-1 lang-ja" id="ja" style="display:none;">
       <h1>全　永煥<i class="fa-solid fa-heart fa-flip" style="color:red; --fa-animation-duration: 3s;"></i>天野　愛</h1>
       <h2>私たちは、愛によって一つになります</h2>
   
@@ -458,6 +464,7 @@
   </script>
 </body>
 </html>
+
 
 
 
