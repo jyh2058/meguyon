@@ -26,8 +26,8 @@
 
     .header-image {
       background-image: url('https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800');
-      width: 800px;       /* PC에서는 고정 너비 */
-      height: auto;
+      width: 100%;
+      height: 100%;
       display: block;
       margin: 0 auto;     /* 가운데 정렬 */
       border-radius: 16px;
@@ -84,10 +84,10 @@
     
     .thumbnail {
       flex: 0 0 auto;
-      width: 80px;
+      width: auto;
       height: 120px;
       background-size: cover;
-      background-position: center;
+      background-position: top;
       border-radius: 8px;
       scroll-snap-align: center;
       cursor: pointer;
@@ -288,35 +288,13 @@
   <!-- 갤러리 컨테이너 -->
   <div class="container text-center mt-5">
     <div class="row my-2">
-      <div class="col-4">
+      <div class="col-4 px-1" style="aspect-ratio: 2 / 3;">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
       </div>
-      <div class="col-4">
+      <div class="col-4 px-1" style="aspect-ratio: 2 / 3;">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')"></div>
       </div>
-      <div class="col-4">
-        <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
-      </div>
-    </div>
-    <div class="row my-2">
-      <div class="col-4">
-        <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
-      </div>
-      <div class="col-4">
-        <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')"></div>
-      </div>
-      <div class="col-4">
-        <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
-      </div>
-    </div>
-    <div class="row my-2">
-      <div class="col-4">
-        <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')"></div>
-      </div>
-      <div class="col-4">
-        <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')"></div>
-      </div>
-      <div class="col-4">
+      <div class="col-4 px-1" style="aspect-ratio: 2 / 3;">
         <div class="thumbnail" style="background-image: url('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800');" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')"></div>
       </div>
     </div>
@@ -470,6 +448,7 @@
   </script>
 </body>
 </html>
+
 
 
 
