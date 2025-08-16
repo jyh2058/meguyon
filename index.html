@@ -145,8 +145,6 @@
     #overlayImage {
       max-width: 75%;
       max-height: 75%;
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
-      border-radius: 8px;
       opacity: 0;
       transition: opacity 1s ease;
     }
@@ -186,7 +184,7 @@
       width: 100vw;
       height: 100vh;
       pointer-events: none;
-      z-index: 999;
+      z-index: 500;
       overflow: hidden;
     }
 
@@ -562,7 +560,7 @@
     const overlay = document.getElementById('overlay');
     
     overlay.addEventListener('click', function(e) {
-      // 클릭된 요소가 overlayImage 자체일 경우만 닫기
+      // 클릭된 요소가 overlay 자체일 경우만 닫기
       if (e.target === overlay) {
         hideOverlay();
       }
@@ -575,10 +573,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
