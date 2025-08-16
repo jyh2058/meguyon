@@ -38,10 +38,11 @@
       font-family: 'Noto Serif JP', serif;
     }
 
-    .clipped {
-      width: auto;
+    .clipped-top-left {
+      width: 400px; /* 이미지 원본 크기 또는 원하는 크기 */
       height: auto;
-      clip-path: inset(0 80% 80% 0); /* 상단 왼쪽 20%만 보이게 */
+      clip-path: inset(0 80% 80% 0); /* top: 0, right: 80%, bottom: 80%, left: 0 */
+      object-fit: cover;
     }
     
     .header-image {
@@ -292,7 +293,7 @@
 
   <div class="petal-layer" id="petalLayer"></div>
 
-  <img src="sakura.jpg" class="clipped">
+  <img src="sakura.jpg" class="clipped-top-left">
   
   <div class="my-5 m-lg-5 d-flex justify-content-center">
     <img src="https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800" alt="앞 이미지" class="header-image">
@@ -559,6 +560,7 @@
   </script>
 </body>
 </html>
+
 
 
 
