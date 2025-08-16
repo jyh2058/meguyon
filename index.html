@@ -38,12 +38,10 @@
       font-family: 'Noto Serif JP', serif;
     }
 
-    .header-decoration {
-      height: 100px;
-      background-image: url('sakura.jpg');
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: contain;
+    .clipped {
+      width: auto;
+      height: auto;
+      clip-path: inset(0 80% 80% 0); /* 상단 왼쪽 20%만 보이게 */
     }
     
     .header-image {
@@ -294,6 +292,8 @@
 
   <div class="petal-layer" id="petalLayer"></div>
 
+  <img src="sakura.jpg" class="clipped">
+  
   <div class="my-5 m-lg-5 d-flex justify-content-center">
     <img src="https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w800" alt="앞 이미지" class="header-image">
   </div>
@@ -559,6 +559,7 @@
   </script>
 </body>
 </html>
+
 
 
 
