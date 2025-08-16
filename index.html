@@ -239,7 +239,7 @@
     .invitation-box {
       position: relative;
       width: 100%;
-      min-height: 100vh; /* 화면 전체 높이 */
+      height: 100%;
       background-image: url('/meguyon/ballentain-dei-baegyeong.jpg');
       background-size: cover;
       background-position: center;
@@ -247,7 +247,6 @@
       display: flex;
       align-items: center;     /* 수직 가운데 */
       justify-content: center; /* 수평 가운데 */
-      padding: 2rem;
       box-sizing: border-box;
     }
     
@@ -267,10 +266,6 @@
       z-index: 1;
       max-width: 800px;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.85); /* 콘텐츠 배경 반투명 */
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .language-switch {
       display: flex;
@@ -318,7 +313,7 @@
   <div class="invitation-box m-1 mb-5">
     <div class="bg-overlay"></div> <!-- 배경 투명도 조절용 -->
 
-    <div class="content-wrapper">
+    <div class="content-wrapper px-4">
       <!-- 초대장 내용 -->
       <!-- 한국어 콘텐츠 -->
       <div class="container-1" id="ko">
@@ -560,6 +555,7 @@
   </script>
 </body>
 </html>
+
 
 
 
