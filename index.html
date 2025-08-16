@@ -559,11 +559,11 @@
       }
     }
     
-    const overlayImage = document.getElementById('overlayImage');
+    const overlay = document.getElementById('overlay');
     
     overlay.addEventListener('click', function(e) {
-      // 클릭된 요소가 overlayImage 가 아닐 경우만 닫기
-      if (e.target !== overlayImage) {
+      // 클릭된 요소가 overlayImage 자체일 경우만 닫기
+      if (e.target _== overlay) {
         hideOverlay();
       }
     });
@@ -575,6 +575,7 @@
   </script>
 </body>
 </html>
+
 
 
 
