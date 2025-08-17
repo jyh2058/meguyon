@@ -434,13 +434,13 @@
   <div class="container text-center" style="max-width: 547.4px">
     <div class="row">
       <div class="col-4 px-1">
-        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800" onclick="showOverlay('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')">
+        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800" onclick="showImage('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')">
       </div>
       <div class="col-4 px-1">
-        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800" onclick="showOverlay('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')">
+        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800" onclick="showImage('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')">
       </div>
       <div class="col-4 px-1">
-        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800" onclick="showOverlay('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')">
+        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800" onclick="showImage('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')">
       </div>
     </div>
   </div>
@@ -500,6 +500,15 @@
       document.getElementById('ja').style.display = lang === 'ja' ? 'block' : 'none';
     }
 
+    function showImage(src) {
+      const mainImage = document.getElementById('mainImage');
+      mainImage.style.opacity = 0;
+      setTimeout(() => {
+        mainImage.src = src;
+        mainImage.style.opacity = 1;
+      }, 200);
+    }
+
     let currentIndex = -1;
     const imageList = [
       'https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800',
@@ -521,14 +530,12 @@
       // 슬라이드 번호도 업데이트
       document.getElementById('slideCounter').textContent = `${currentIndex + 1} / ${imageList.length}`;
     }
-    
-    function showImage(src) {
-      const mainImage = document.getElementById('mainImage');
-      mainImage.style.opacity = 0;
-      setTimeout(() => {
-        mainImage.src = src;
-        mainImage.style.opacity = 1;
-      }, 200);
+
+    function showOverlay(src) {
+      currentIndex = imageList.indexOf(src);
+      document.getElementById('overlay').style.display = 'flex';
+      updateOverlay();
+      document.body.classList.add('no-scroll');
     }
     
     function hideOverlay() {
@@ -613,4 +620,5 @@
   </script>
 </body>
 </html>
+
 
