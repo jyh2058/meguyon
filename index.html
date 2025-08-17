@@ -621,14 +621,14 @@
     let touchStartX = 0;
     let touchEndX = 0;
     
-    document.getElementById('overlay').addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
+    //document.getElementById('overlay').addEventListener('touchstart', (e) => {
+    //  touchStartX = e.changedTouches[0].screenX;
+    //});
     
-    document.getElementById('overlay').addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipeGesture();
-    });
+    //document.getElementById('overlay').addEventListener('touchend', (e) => {
+    //  touchEndX = e.changedTouches[0].screenX;
+    //  handleSwipeGesture();
+    //});
     
     function handleSwipeGesture() {
       const threshold = 50; // 최소 스와이프 거리
@@ -669,6 +669,7 @@
   </script>
 </body>
 </html>
+
 
 
 
