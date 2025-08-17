@@ -655,12 +655,12 @@
     
     const overlay = document.getElementById('overlay');
     
-    overlay.addEventListener('click', function(e) {
+    //overlay.addEventListener('click', function(e) {
       // 클릭된 요소가 overlay 자체일 경우만 닫기
-      if (e.target === overlay) {
-        hideOverlay();
-      }
-    });
+    //  if (e.target === overlay) {
+    //    hideOverlay();
+    //  }
+    //});
     
     function hideOverlay() {
       overlay.style.display = 'none';
@@ -669,6 +669,7 @@
   </script>
 </body>
 </html>
+
 
 
 
