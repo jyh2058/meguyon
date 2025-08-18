@@ -612,14 +612,14 @@
     }
     
     // 키보드 대응
-    document.addEventListener('keydown', (e) => {
-      const overlay = document.getElementById('overlay');
-      if (overlay.style.display !== 'flex') return;
+    //document.addEventListener('keydown', (e) => {
+    //  const overlay = document.getElementById('overlay');
+    //  if (overlay.style.display !== 'flex') return;
     
-      if (e.key === 'ArrowRight') showNextImage();
-      else if (e.key === 'ArrowLeft') showPrevImage();
-      else if (e.key === 'Escape') hideOverlay();
-    });
+    //  if (e.key === 'ArrowRight') showNextImage();
+    //  else if (e.key === 'ArrowLeft') showPrevImage();
+    //  else if (e.key === 'Escape') hideOverlay();
+    //});
     
     // 모바일 스와이프 대응
     let touchStartX = 0;
