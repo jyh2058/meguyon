@@ -38,6 +38,37 @@
       font-family: 'Noto Serif JP', serif;
     }
 
+    .audio-container {
+      position: relative;
+      width: 300px;
+      margin: 0 auto;
+    }
+    
+    .audio-container audio {
+      width: 100%;
+    }
+    
+    .play-button {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+    }
+    
+    .play-button:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+    }
+
     .header-decoration-wrapper {
       width: 100%;
       height: 100%;
@@ -339,16 +370,11 @@
   </style>
 </head>
 <body>
-  <audio id="bgm" loop>
-    <source src="./白の花びら.mp3" type="audio/mpeg">
-  </audio>
-
   <div class="audio-container">
-    <audio id="bgm" loop>
-      <source src="./白の花びら.mp3" type="audio/mpeg">
-    </audio>
-    <button class="play-button"><i class="fa-solid fa-play"></i></button>
+    <audio src="./白の花びら.mp3" controls></audio>
+    <button class="play-button">▶</button>
   </div>
+
 
   <!--
   <div class="top-bar m-1">
@@ -584,6 +610,25 @@
       document.getElementById('ja').style.display = lang === 'ja' ? 'block' : 'none';
     }
 
+    const audio = document.querySelector("audio");
+    const playBtn = document.querySelector(".play-button");
+    
+    // 버튼 클릭 시 재생/일시정지 토글
+    playBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸"; // 재생 중이면 일시정지 아이콘
+      } else {
+        audio.pause();
+        playBtn.textContent = "▶"; // 멈춰 있으면 재생 아이콘
+      }
+    });
+    
+    // 오디오가 끝났을 때 아이콘 초기화
+    audio.addEventListener("ended", () => {
+      playBtn.textContent = "▶";
+    });
+
     function showImage(src) {
       const mainImage = document.getElementById('mainImage');
       mainImage.style.opacity = 0;
@@ -728,6 +773,3 @@
   </script>
 </body>
 </html>
-
-
-
