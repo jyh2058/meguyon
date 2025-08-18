@@ -600,16 +600,11 @@
     playBtn.addEventListener("click", () => {
       if (audio.paused) {
         audio.play();
-        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>'; // 재생 중이면 일시정지 아이콘
+        playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-pause fa-stack-1x"></i>'; // 재생 중이면 일시정지 아이콘
       } else {
         audio.pause();
-        playBtn.innerHTML = '<i class="fa-solid fa-play"></i>'; // 멈춰 있으면 재생 아이콘
+        playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-play fa-stack-1x"></i>'; // 멈춰 있으면 재생 아이콘
       }
-    });
-    
-    // 오디오가 끝났을 때 아이콘 초기화
-    audio.addEventListener("ended", () => {
-      playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
     });
 
     function showImage(src) {
@@ -756,6 +751,7 @@
   </script>
 </body>
 </html>
+
 
 
 
