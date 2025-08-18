@@ -528,6 +528,10 @@
         type="button" role="tab" aria-controls="kakaomap" aria-selected="true">카카오맵</button>
     </li>
     <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="navermap-tab" data-bs-toggle="tab" data-bs-target="#navermap"
+        type="button" role="tab" aria-controls="navermap" aria-selected="true">네이버맵</button>
+    </li>
+    <li class="nav-item" role="presentation">
       <button class="nav-link" id="googlemap-tab" data-bs-toggle="tab" data-bs-target="#googlemap"
         type="button" role="tab" aria-controls="googlemap" aria-selected="false">구글맵</button>
     </li>
@@ -556,13 +560,13 @@
       	}).render();
       </script>
     </div>
+
+    <div class="tab-pane fade" id="navermap" role="tabpanel" aria-labelledby="navermap-tab">
+      <a href="https://naver.me/FJbS2I30" target="_blank" rel="noopener noreferrer">네이버맵 열기</a>
+    </div>
     
     <div class="tab-pane fade" id="googlemap" role="tabpanel" aria-labelledby="googlemap-tab">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.72880364704!2d128.82899127632794!3d35.21322355554019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c793822d237b%3A0x18d478ee06760b4f!2z6rmA7ZW07KSR7IaM6riw7JeF67mE7KaI64uI7Iqk7IS87YSw!5e0!3m2!1sja!2sjp!4v1755507307774!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div class="tab-pane fade" id="googlemap" role="tabpanel" aria-labelledby="googlemap-tab">
-      <a href="https://naver.me/FJbS2I30" target="_blank" rel="noopener noreferrer">네이버맵 열기</a>
     </div>
   </div>
 
@@ -785,4 +789,5 @@
   </script>
 </body>
 </html>
+
 
