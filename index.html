@@ -366,7 +366,7 @@
     </div> -->
     <span class="fa-stack fa-1x play-button">
       <i class="fa-regular fa-circle fa-stack-2x"></i>
-      <i class="fa-solid fa-play fa-stack-1x"></i>
+      <i class="fa-solid fa-music fa-stack-1x"></i>
     </span>
   </div>
 
@@ -523,16 +523,14 @@
 
   <div class="mb-5">
     <img src="biz_img02.jpg" class="w-100">
-    <div class="p-5">
+    <div class="py-1 border" style="font-size: 0.8em; background-color: white;">
       <i class="fa-solid fa-phone"></i>
-      <b>예식장 전화번호</b>
+      예식장 전화번호
       <div>
         <a href="tel:055-325-1486">055-325-1486 (연락가능시간 10:00~18:00)</a>
         <br>
-        <a href="tel:051-668-7979">
-          <div>
-              전화문의
-          </div>
+        <a href="tel:051-668-7979" class="btn btn-warning">
+          <i class="fa-solid fa-phone"></i>전화문의
         </a>
       </div>
     </div>
@@ -682,7 +680,7 @@
         playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-pause fa-stack-1x"></i>'; // 재생 중이면 일시정지 아이콘
       } else {
         audio.pause();
-        playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-play fa-stack-1x"></i>'; // 멈춰 있으면 재생 아이콘
+        playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-music fa-stack-1x"></i>'; // 멈춰 있으면 재생 아이콘
       }
     });
 
@@ -806,13 +804,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
