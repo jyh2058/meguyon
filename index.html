@@ -735,33 +735,10 @@
       overlay.style.display = 'none';
       document.body.classList.remove('no-scroll');
     }
-
-    const input1 = document.getElementById("widthInput1");
-    const headerImage = document.getElementById("header-image");
-    
-    input1.addEventListener("input", function () {
-      let value = parseInt(this.value, 10);
-    
-      // 유효성 검사: 1~100 사이만 허용
-      if (value >= 1 && value <= 100) {
-        headerImage.style.width = value + "%";
-      }
-    });
-
-    const input2 = document.getElementById("widthInput1");
-    const carouselItemImage = document.querySelector(".carousel-item img");
-    
-    input2.addEventListener("input", function () {
-      let value = parseInt(this.value, 10);
-    
-      // 유효성 검사: 1~100 사이만 허용
-      if (value >= 1 && value <= 100) {
-        carouselItemImage.style.width = value + "%";
-      }
-    });
   </script>
 </body>
 </html>
+
 
 
 
