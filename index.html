@@ -521,24 +521,27 @@
     </div>
   </div>
 
-  <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">카카오맵</a>
-    <!-- 카카오맵 -->
-    <a href="https://map.kakao.com/?urlX=916955&urlY=480716&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=916955&MY=480716&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a><div class="hide" style="overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;"><strong style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵"></strong><div style="float: right;position:relative"><a style="font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000" target="_blank" href="https://map.kakao.com/?urlX=916955&urlY=480716&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false">지도 크게 보기</a></div></div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">구글맵</a>
-    <!-- 구글맵 -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.72880364704!2d128.82899127632794!3d35.21322355554019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c793822d237b%3A0x18d478ee06760b4f!2z6rmA7ZW07KSR7IaM6riw7JeF67mE7KaI64uI7Iqk7IS87YSw!5e0!3m2!1sja!2sjp!4v1755507307774!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-  </li>
+  <!-- 탭 메뉴 -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+        type="button" role="tab" aria-controls="kakaomap" aria-selected="true">카카오맵</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+        type="button" role="tab" aria-controls="googlemap" aria-selected="false">구글맵</button>
+    </li>
   </ul>
+  
+  <!-- 탭 콘텐츠 -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="kakaomap" role="tabpanel" aria-labelledby="home-tab">
+      <a href="https://map.kakao.com/?urlX=916955&urlY=480716&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=916955&MY=480716&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a><div class="hide" style="overflow:hidden;padding:7px 11px;border:1px solid #dfdfdf;border-color:rgba(0,0,0,.1);border-radius:0 0 2px 2px;background-color:#f9f9f9;width:482px;"><strong style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵"></strong><div style="float: right;position:relative"><a style="font-size:12px;text-decoration:none;float:left;height:15px;padding-top:1px;line-height:15px;color:#000" target="_blank" href="https://map.kakao.com/?urlX=916955&urlY=480716&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false">지도 크게 보기</a></div></div>
+    </div>
+    <div class="tab-pane fade" id="googlemap" role="tabpanel" aria-labelledby="profile-tab">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.72880364704!2d128.82899127632794!3d35.21322355554019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c793822d237b%3A0x18d478ee06760b4f!2z6rmA7ZW07KSR7IaM6riw7JeF67mE7KaI64uI7Iqk7IS87YSw!5e0!3m2!1sja!2sjp!4v1755507307774!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
   
   <!-- 상단 큰 이미지 영역 -->
   <!-- <div id="mainDisplay" class="main-display mb-2">
@@ -757,5 +760,6 @@
   </script>
 </body>
 </html>
+
 
 
