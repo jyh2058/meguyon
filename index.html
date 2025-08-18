@@ -77,6 +77,21 @@
       background-position: right bottom;     /* 오른쪽 아래 기준 */
     }
 
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+      padding: 10px 20px;
+      border-radius: 8px;
+      z-index: 10;
+      text-align: center;
+    }
+
     .crop-box {
       width: 100%;
       height: 390px; /* 보여줄 높이 */
@@ -379,6 +394,7 @@
   
   <div class="header-decoration-wrapper">
     <div class="decoration header-decoration"></div>
+    <div class="center-text">중앙에 표시되는 글</div>
   </div>
 
   <div class="mb-5 m-lg-5 d-flex justify-content-center">
@@ -751,6 +767,7 @@
   </script>
 </body>
 </html>
+
 
 
 
