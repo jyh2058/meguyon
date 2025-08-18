@@ -505,9 +505,15 @@
   </div>
 
   <!-- 너비 입력 텍스트 박스 -->
-  <label for="widthInput">幅 (%):</label>
-  <input type="number" id="widthInput" min="1" max="100" value="75" step="1">
-  <span>%</span>
+  <div style="font-size: 0.8em;">
+    <label for="widthInput1">上段イメージの幅 (%):</label>
+    <input type="number" id="widthInput1" min="1" max="100" value="75" step="1">
+    <span>%</span>
+    <label for="widthInput2">下段イメージの幅 (%):</label>
+    <input type="number" id="widthInput2" min="1" max="100" value="75" step="1">
+    <span>%</span>
+  </div>
+  <div class="mb-5"></div>
 
   <script src="https://kit.fontawesome.com/6fcecb4845.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
@@ -669,10 +675,10 @@
       document.body.classList.remove('no-scroll');
     }
 
-    const input = document.getElementById("widthInput");
+    const input1 = document.getElementById("widthInput1");
     const headerImage = document.getElementById("header-image");
     
-    input.addEventListener("input", function () {
+    input.addEventListener("input1", function () {
       let value = parseInt(this.value, 10);
     
       // 유효성 검사: 1~100 사이만 허용
@@ -680,7 +686,18 @@
         headerImage.style.width = value + "%";
       }
     });
+
+    const input2 = document.getElementById("widthInput1");
+    const carouselItemImage = document.querySelector(".carousel-item img");
+    
+    input.addEventListener("input2", function () {
+      let value = parseInt(this.value, 10);
+    
+      // 유효성 검사: 1~100 사이만 허용
+      if (value >= 1 && value <= 100) {
+        carouselItemImage.style.width = value + "%";
+      }
+    });
   </script>
 </body>
 </html>
-
