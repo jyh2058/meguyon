@@ -43,7 +43,7 @@
       height: 100%;
     }
 
-    .header-decoration {
+    .decoration {
       width: 281.25px;       /* 원하는 잘린 영역 크기 */
       aspect-ratio: 1000 / 707;
       background-image: url('sakura.png');
@@ -51,6 +51,10 @@
       background-position: left top;
       background-repeat: no-repeat;
       overflow: hidden;
+    }
+
+    .header-decoration {
+      background-position: left top;
     }
 
     .footer-decoration-wrapper {
@@ -61,13 +65,7 @@
     }
     
     .footer-decoration {
-      width: 281.25px;
-      aspect-ratio: 1000 / 707;
-      background-image: url('sakura.png');
-      background-size: 375px 265.125px;         /* 축소된 이미지 */
       background-position: right bottom;     /* 오른쪽 아래 기준 */
-      background-repeat: no-repeat;
-      overflow: hidden;
     }
 
     .carousel-item img {
@@ -348,7 +346,7 @@
   <div class="petal-layer" id="petalLayer"></div>
   
   <div class="header-decoration-wrapper">
-    <div class="header-decoration"></div>
+    <div class="decoration header-decoration"></div>
   </div>
   
   <div class="mb-5 m-lg-5 d-flex justify-content-center">
@@ -504,7 +502,7 @@
   </div> -->
 
   <div class="footer-decoration-wrapper">
-    <div class="footer-decoration"></div>
+    <div class="decoration footer-decoration"></div>
   </div>
 
   <script src="https://kit.fontawesome.com/6fcecb4845.js" crossorigin="anonymous"></script>
@@ -669,24 +667,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
