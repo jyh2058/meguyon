@@ -494,7 +494,7 @@
 
   <h2 class="text-center fw-bold m-2"><i class="fa-solid fa-camera-retro"></i>갤러리</h2>
   <div style="display: flex; align-items: center; justify-content: center;" class="mb-5">
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide"data-bs-touch="true">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -661,7 +661,7 @@
     
     // 꽃잎 애니메이션
     const petalLayer = document.getElementById('petalLayer');
-    const NUM_PETALS = 30;
+    const NUM_PETALS = 20;
 
     for (let i = 0; i < NUM_PETALS; i++) {
       const petal = document.createElement('div');
@@ -811,21 +811,15 @@
       overlay.style.display = 'none';
       document.body.classList.remove('no-scroll');
     }
+
+    // 캐러셀을 DOM 완전 로드 후에 초기화
+    document.addEventListener("DOMContentLoaded", function () {
+      const carouselElement = document.querySelector('#carouselExampleIndicators');
+      const carousel = new bootstrap.Carousel(carouselElement, {
+        touch: true,
+        interval: false
+      });
+    });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
