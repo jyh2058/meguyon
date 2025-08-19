@@ -78,11 +78,20 @@
       background-position: right bottom;     /* 오른쪽 아래 기준 */
     }
 
-    .center-bottom-text {
+    .center-top-text {
       position: absolute;
       top: 80%;                  /* 중앙보다 아래쪽으로 이동 */
       left: 50%;
       transform: translate(-50%, -50%);
+      font-size: 18px;
+      color: #333;
+    }
+
+    .center-bottom-text {
+      position: absolute;
+      bottom: 80%;
+      left: 50%;
+      transform: translate(-50%, 50%);
       font-size: 18px;
       color: #333;
     }
@@ -391,7 +400,7 @@
   
   <div class="header-decoration-wrapper">
     <div class="decoration header-decoration"></div>
-    <div class="center-bottom-text">전영환 ＆<br>아마노 메구미</div>
+    <div class="center-top-text">전영환 ＆<br>아마노 메구미</div>
   </div>
 
   <div class="mb-5 m-lg-5 d-flex justify-content-center">
@@ -639,6 +648,7 @@
 
   <div class="footer-decoration-wrapper">
     <div class="decoration footer-decoration"></div>
+    <div class="center-bottom-text">이 청첩장은 신랑 신부가 직접 디자인하고 제작했습니다.</div>
   </div>
 
   <footer class="text-center text-muted small mt-5">
@@ -847,3 +857,4 @@
   </script>
 </body>
 </html>
+
