@@ -820,6 +820,23 @@
         interval: false
       });
     });
+
+    const carousel = document.querySelector('.carousel');
+    
+    carousel.addEventListener('touchstart', function (e) {
+      this.startY = e.touches[0].clientY;
+      this.startX = e.touches[0].clientX;
+    }, { passive: false });
+    
+    carousel.addEventListener('touchmove', function (e) {
+      const deltaY = e.touches[0].clientY - this.startY;
+      const deltaX = e.touches[0].clientX - this.startX;
+    
+      // 수평 스와이프 시 수직 스크롤 방지
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        e.preventDefault();
+      }
+    }, { passive: false });
   </script>
 </body>
 </html>
