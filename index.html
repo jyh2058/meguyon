@@ -546,7 +546,7 @@
   <h2 class="text-center fw-bold mb-2"><i class="fa-solid fa-map"></i>지도</h2>
   
   <!-- 탭 메뉴 -->
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="kakaomap-tab" data-bs-toggle="tab" data-bs-target="#kakaomap"
         type="button" role="tab" aria-controls="kakaomap" aria-selected="true">카카오지도</button>
@@ -561,10 +561,10 @@
     </li>
   </ul>
   
-  <!-- 탭 콘텐츠 (367 x 300) -->
+  <!-- 탭 콘텐츠 (367 x 332) -->
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="kakaomap" role="tabpanel" aria-labelledby="home-tab">
-      <div style="height: 332px; overflow: hidden;">
+      <div class="d-flex justify-content-center" style="height: 332px; overflow: hidden;">
         <!-- * 카카오맵 - 지도퍼가기 -->
         <!-- 1. 지도 노드 -->
         <div id="daumRoughmapContainer1755525829784" class="root_daum_roughmap root_daum_roughmap_landing"></div>
@@ -588,13 +588,13 @@
     </div>
     
     <div class="tab-pane fade" id="navermap" role="tabpanel" aria-labelledby="navermap-tab">
-      <div style="width: 367px; height: 332px;">
+      <div class="d-flex justify-content-center" style="width: 367px; height: 332px;">
         <a href="https://naver.me/FJbS2I30" target="_blank" rel="noopener noreferrer">네이버맵에서 예식장 위치열기 (<i class="fa-solid fa-up-right-from-square"></i>)</a>
       </div>
     </div>
     
     <div class="tab-pane fade" id="googlemap" role="tabpanel" aria-labelledby="googlemap-tab" style="height: 332px; overflow: hidden;">
-      <div style="height: 332px; overflow: hidden;">
+      <div class="d-flex justify-content-center" style="height: 332px; overflow: hidden;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.72880364704!2d128.82899127632794!3d35.21322355554019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c793822d237b%3A0x18d478ee06760b4f!2z6rmA7ZW07KSR7IaM6riw7JeF67mE7KaI64uI7Iqk7IS87YSw!5e0!3m2!1sja!2sjp!4v1755507307774!5m2!1sja!2sjp" width="367px" height="332px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -843,6 +843,7 @@
   </script>
 </body>
 </html>
+
 
 
 
