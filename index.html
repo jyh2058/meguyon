@@ -275,13 +275,34 @@
       z-index: 500;
     }
     
+    @keyframes fallZigzag {
+      0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      25% {
+        transform: translateX(-30px) translateY(25vh) rotate(45deg);
+      }
+      50% {
+        transform: translateX(30px) translateY(50vh) rotate(90deg);
+      }
+      75% {
+        transform: translateX(-20px) translateY(75vh) rotate(135deg);
+      }
+      100% {
+        transform: translateX(0) translateY(100vh) rotate(180deg);
+        opacity: 0;
+      }
+    }
+    
     .sakura {
       position: absolute;
       width: 20px;
       height: 20px;
-      background-image: url('https://drive.google.com/thumbnail?id=1llY2_njRUrvlfGzvrjBVPwlweffCJ7w6&sz=w1181');
+      background-image: url('./img/sakura.png');
       background-size: cover;
-      animation: fall 10s linear infinite;
+      animation: fallZigzag 12s linear forwards;
+      pointer-events: none;
     }
     
     @keyframes fall {
@@ -719,6 +740,8 @@
     
     function toggleSakura() {
       const btn = document.getElementById('sakuraToggleBtn');
+      const container = document.querySelector('.sakura-container');
+    
       if (!sakuraActive) {
         sakuraInterval = setInterval(createSakura, 300);
         btn.textContent = '🌸 벚꽃 흩날림 끄기';
@@ -727,6 +750,9 @@
         clearInterval(sakuraInterval);
         sakuraActive = false;
         btn.textContent = '🌸 벚꽃 흩날림 켜기';
+    
+        // 모든 벚꽃 즉시 제거
+        container.innerHTML = '';
       }
     }
 
@@ -896,6 +922,7 @@
   </script>
 </body>
 </html>
+
 
 
 
