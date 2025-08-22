@@ -329,6 +329,7 @@
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       z-index: 999;
+      cursor: pointer;
     }
     
     .top-bar {
@@ -445,6 +446,10 @@
   
   <!-- 제어 버튼 -->
   <button onclick="toggleSakura()" id="sakuraToggleBtn">🌸</button>
+  <span class="fa-stack fa-1x" id="sakuraToggleBtn" onclick="toggleSakura()">
+    <i class="fa-regular fa-circle fa-stack-2x"></i>
+    <i class="fa-solid fa-music fa-stack-1x"></i>
+  </span>
   
   <div class="header-decoration-wrapper">
     <div class="decoration header-decoration"></div>
@@ -923,3 +928,4 @@
   </script>
 </body>
 </html>
+
