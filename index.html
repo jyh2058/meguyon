@@ -444,7 +444,7 @@
   <div class="sakura-container"></div>
   
   <!-- 제어 버튼 -->
-  <button onclick="toggleSakura()" id="sakuraToggleBtn">🌸 벚꽃 흩날림 켜기</button>
+  <button onclick="toggleSakura()" id="sakuraToggleBtn">🌸</button>
   
   <div class="header-decoration-wrapper">
     <div class="decoration header-decoration"></div>
@@ -745,12 +745,12 @@
     
       if (!sakuraActive) {
         sakuraInterval = setInterval(createSakura, 300);
-        btn.textContent = '🌸 벚꽃 흩날림 끄기';
+        btn.textContent = '🌸';
         sakuraActive = true;
       } else {
         clearInterval(sakuraInterval);
         sakuraActive = false;
-        btn.textContent = '🌸 벚꽃 흩날림 켜기';
+        btn.textContent = '🌸';
     
         // 모든 벚꽃 즉시 제거
         container.innerHTML = '';
@@ -923,10 +923,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
