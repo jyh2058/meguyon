@@ -445,9 +445,8 @@
   <div class="sakura-container"></div>
   
   <!-- 제어 버튼 -->
-  <span class="fa-stack fa-1x" id="sakuraToggleBtn" onclick="toggleSakura()">
-    <i class="fa-regular fa-circle fa-stack-2x"></i>
-    <i class="fa-solid fa-music fa-stack-1x"></i>
+  <span id="fa-stack fa-1x sakuraToggleBtn" onclick="toggleSakura()">
+    <i class="fa-regular fa-circle-question"></i>
   </span>
   
   <div class="header-decoration-wrapper">
@@ -754,7 +753,7 @@
       } else {
         clearInterval(sakuraInterval);
         sakuraActive = false;
-        btn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-music fa-stack-1x"></i>'; // 멈춰 있으면 재생 아이콘
+        btn.innerHTML = '<i class="fa-regular fa-circle-question fa-stack-2x"></i>'; // 멈춰 있으면 재생 아이콘
     
         // 모든 벚꽃 즉시 제거
         container.innerHTML = '';
@@ -927,3 +926,4 @@
   </script>
 </body>
 </html>
+
