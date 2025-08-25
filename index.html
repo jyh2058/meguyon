@@ -648,16 +648,17 @@
   <h2 id="account_section" class="text-center mb-2 mb-3" style="color: #4B3F2F; font-size: 18px;">신랑 신부에게 마음전하기</h2>
   <p>축하의 마음을 담아 축의금을 전달해 보세요.</p>
 
-  <div class="accordion" id="accordionExample">
+  <div class="accordion mb-5" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           전영환
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          1234567890
+          농협 352-0994-7566-13
+          <button class="copy-account" data-account="3520994756613">계좌번호 복사</button>
         </div>
       </div>
     </div>
@@ -669,16 +670,17 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          1234567890
+          농협 ???-????-????-??
+          <button class="copy-account" data-account="?????????????">계좌번호 복사</button>
         </div>
       </div>
     </div>
   </div>
 
-  <h2 id="map_section" class="text-center mb-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-map"></i> 지도</h2>
+  <h2 id="map_section" class="text-center mb-2 mb-3" style="color: #4B3F2F; font-size: 18px; background-color: #FFFFFF;"><i class="fa-solid fa-map"></i> 지도</h2>
   
   <!-- 탭 메뉴 -->
-  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" style="background-color: #FFFFFF;">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="kakaomap-tab" data-bs-toggle="tab" data-bs-target="#kakaomap"
         type="button" role="tab" aria-controls="kakaomap" aria-selected="true">카카오지도</button>
@@ -783,6 +785,19 @@
     </span>
   </a>
 
+  <!-- Toast 메시지 영역 -->
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="copyToast" class="toast text-bg-light" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          계좌번호가 복사되었습니다.
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://kit.fontawesome.com/6fcecb4845.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <script>
@@ -975,6 +990,14 @@
       overlay.style.display = 'none';
       document.body.classList.remove('no-scroll');
     }
+    
+    document.querySelector(".copy-account").addEventListener("click", () => {
+      navigator.clipboard.writeText(this.dataset.account).then(() => {
+        const toastElement = document.getElementById('copyToast');
+        const toast = new bootstrap.Toast(toastElement);
+        toast.show();
+      });
+    });
 
     // 캐러셀을 DOM 완전 로드 후에 초기화
     document.addEventListener("DOMContentLoaded", function () {
@@ -1010,6 +1033,17 @@
         btn.style.display = "none"; // 아니면 숨김
       }
     };
+
+    $(document).ready(function () {
+      $(".copy-account").on("click", function () {
+        const accountNumber = $(this).data("account");
+        navigator.clipboard.writeText(accountNumber).then(() => {
+          const toast = new bootstrap.Toast($("#copyToast")[0]);
+          toast.show();
+        });
+      });
+    });
   </script>
 </body>
 </html>
+
