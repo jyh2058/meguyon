@@ -431,8 +431,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 1em;
-      height: 1em;
+      width: 1.2em;
+      height: 1.2em;
       transform: translate(-50%, -50%);
       pointer-events: none;
     }
@@ -801,7 +801,7 @@
       } else {
         clearInterval(sakuraInterval);
         sakuraActive = false;
-        btn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-clover fa-rotate-by fa-stack-1x" style="--fa-rotate-angle: 45deg;"></i>'; // 멈춰 있으면 재생 아이콘
+        btn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><img src="sakura-icon.png" class="sakura-icon" alt="Sakura Icon" />'; // 멈춰 있으면 재생 아이콘
     
         // 모든 벚꽃 즉시 제거
         container.innerHTML = '';
@@ -983,6 +983,7 @@
   </script>
 </body>
 </html>
+
 
 
 
