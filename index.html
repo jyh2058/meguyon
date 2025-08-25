@@ -648,7 +648,7 @@
   <h2 id="account_section" class="text-center mb-2 mb-3" style="color: #4B3F2F; font-size: 18px;">신랑 신부에게 마음전하기</h2>
   <p>축하의 마음을 담아 축의금을 전달해 보세요.</p>
 
-  <div class="accordion mb-5" id="accordionExample">
+  <div class="accordion mb-5 mx-4" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -657,8 +657,10 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          농협 352-0994-7566-13
-          <button class="copy-account" data-account="3520994756613">계좌번호 복사</button>
+          <p>
+            농협 352-0994-7566-13
+            <button class="copy-account btn btn-light" data-account="3520994756613">계좌번호 복사</button>
+          </p>
         </div>
       </div>
     </div>
@@ -670,106 +672,73 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          농협 ???-????-????-??
-          <button class="copy-account" data-account="?????????????">계좌번호 복사</button>
+          <p>
+            농협 ???-????-????-??
+            <button class="copy-account btn btn-light" data-account="?????????????">계좌번호 복사</button>
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-  <h2 id="map_section" class="text-center mb-2 mb-3" style="color: #4B3F2F; font-size: 18px; background-color: #FFFFFF;"><i class="fa-solid fa-map"></i> 지도</h2>
-  
-  <!-- 탭 메뉴 -->
-  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" style="background-color: #FFFFFF;">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="kakaomap-tab" data-bs-toggle="tab" data-bs-target="#kakaomap"
-        type="button" role="tab" aria-controls="kakaomap" aria-selected="true">카카오지도</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="navermap-tab" data-bs-toggle="tab" data-bs-target="#navermap"
-        type="button" role="tab" aria-controls="navermap" aria-selected="true">네이버지도</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="googlemap-tab" data-bs-toggle="tab" data-bs-target="#googlemap"
-        type="button" role="tab" aria-controls="googlemap" aria-selected="false">구글지도</button>
-    </li>
-  </ul>
-  
-  <!-- 탭 콘텐츠 (367 x 332) -->
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="kakaomap" role="tabpanel" aria-labelledby="home-tab">
-      <div class="d-flex justify-content-center" style="height: 332px; overflow: hidden;">
-        <!-- * 카카오맵 - 지도퍼가기 -->
-        <!-- 1. 지도 노드 -->
-        <div id="daumRoughmapContainer1755525829784" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-        
-        <!--
-          2. 설치 스크립트
-          * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-        -->
-        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-        
-        <!-- 3. 실행 스크립트 -->
-        <script charset="UTF-8">
-          new daum.roughmap.Lander({
-            "timestamp" : "1755525829784",
-            "key" : "7m54uct2eam",
-            "mapWidth" : "367",
-            "mapHeight" : "300"
-          }).render();
-        </script>
-      </div>
-    </div>
+  <div style="background-color: #FFFFFF;">
+    <h2 id="map_section" class="text-center mb-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-map"></i> 지도</h2>
     
-    <div class="tab-pane fade" id="navermap" role="tabpanel" aria-labelledby="navermap-tab">
-      <div class="d-flex justify-content-center" style="width: 100%; height: 332px;">
-        <a href="https://naver.me/FJbS2I30" target="_blank" rel="noopener noreferrer">네이버지도에서 예식장 위치열기(<i class="fa-solid fa-up-right-from-square"></i>)</a>
-      </div>
-    </div>
+    <!-- 탭 메뉴 -->
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="kakaomap-tab" data-bs-toggle="tab" data-bs-target="#kakaomap"
+          type="button" role="tab" aria-controls="kakaomap" aria-selected="true">카카오지도</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="navermap-tab" data-bs-toggle="tab" data-bs-target="#navermap"
+          type="button" role="tab" aria-controls="navermap" aria-selected="true">네이버지도</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="googlemap-tab" data-bs-toggle="tab" data-bs-target="#googlemap"
+          type="button" role="tab" aria-controls="googlemap" aria-selected="false">구글지도</button>
+      </li>
+    </ul>
     
-    <div class="tab-pane fade" id="googlemap" role="tabpanel" aria-labelledby="googlemap-tab" style="height: 332px; overflow: hidden;">
-      <div class="d-flex justify-content-center" style="height: 332px; overflow: hidden;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.72880364704!2d128.82899127632794!3d35.21322355554019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c793822d237b%3A0x18d478ee06760b4f!2z6rmA7ZW07KSR7IaM6riw7JeF67mE7KaI64uI7Iqk7IS87YSw!5e0!3m2!1sja!2sjp!4v1755507307774!5m2!1sja!2sjp" width="367px" height="332px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- 탭 콘텐츠 (367 x 332) -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="kakaomap" role="tabpanel" aria-labelledby="home-tab">
+        <div class="d-flex justify-content-center" style="height: 332px; overflow: hidden;">
+          <!-- * 카카오맵 - 지도퍼가기 -->
+          <!-- 1. 지도 노드 -->
+          <div id="daumRoughmapContainer1755525829784" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+          
+          <!--
+            2. 설치 스크립트
+            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+          -->
+          <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+          
+          <!-- 3. 실행 스크립트 -->
+          <script charset="UTF-8">
+            new daum.roughmap.Lander({
+              "timestamp" : "1755525829784",
+              "key" : "7m54uct2eam",
+              "mapWidth" : "367",
+              "mapHeight" : "300"
+            }).render();
+          </script>
+        </div>
+      </div>
+      
+      <div class="tab-pane fade" id="navermap" role="tabpanel" aria-labelledby="navermap-tab">
+        <div class="d-flex justify-content-center" style="width: 100%; height: 332px;">
+          <a href="https://naver.me/FJbS2I30" target="_blank" rel="noopener noreferrer">네이버지도에서 예식장 위치열기(<i class="fa-solid fa-up-right-from-square"></i>)</a>
+        </div>
+      </div>
+      
+      <div class="tab-pane fade" id="googlemap" role="tabpanel" aria-labelledby="googlemap-tab" style="height: 332px; overflow: hidden;">
+        <div class="d-flex justify-content-center" style="height: 332px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.72880364704!2d128.82899127632794!3d35.21322355554019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c793822d237b%3A0x18d478ee06760b4f!2z6rmA7ZW07KSR7IaM6riw7JeF67mE7KaI64uI7Iqk7IS87YSw!5e0!3m2!1sja!2sjp!4v1755507307774!5m2!1sja!2sjp" width="367px" height="332px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
   </div>
-  
-  <!-- 상단 큰 이미지 영역 -->
-  <!-- <div id="mainDisplay" class="main-display mb-2">
-    <img src="https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800" alt="대표 이미지" id="mainImage">
-  </div>
-
-  <div class="thumbnail-scroll">
-    <img src="https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800" class="thumbnail" onclick="showImage('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')">
-    <img src="https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800" class="thumbnail" onclick="showImage('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')">
-    <img src="https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800" class="thumbnail" onclick="showImage('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')">
-  </div> -->
-
-  <!-- 갤러리 컨테이너 -->
-  <!-- 
-  <div class="container text-center" style="max-width: 547.4px">
-    <div class="row">
-      <div class="col-4 px-1">
-        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800" onclick="showImage('https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w800')">
-      </div>
-      <div class="col-4 px-1">
-        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800" onclick="showImage('https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w800')">
-      </div>
-      <div class="col-4 px-1">
-        <img class="thumbnail" src="https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800" onclick="showImage('https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w800')">
-      </div>
-    </div>
-  </div>
-  -->
-  
-  <!-- 오버레이 확대 이미지 -->
-  <!-- <div id="overlay" class="overlay">
-    <span id="closeOverlay" class="close-btn" title="닫기(ESC)"><i class="fa-solid fa-xmark"></i></span>
-    <div class="arrow left" onclick="showPrevImage()"><i class="fa-regular fa-circle-left"></i></div>
-    <img id="overlayImage" src="" alt="Overlay Image">
-    <div class="arrow right" onclick="showNextImage()"><i class="fa-regular fa-circle-right"></i></div>
-    <div id="slideCounter" class="slide-counter">1 / 3</div>
-  </div> -->
 
   <div class="footer-decoration-wrapper">
     <div class="footer-message">
@@ -786,7 +755,7 @@
   </a>
 
   <!-- Toast 메시지 영역 -->
-  <div class="toast-container position-fixed top-0 end-0 p-3">
+  <div class="toast-container position-fixed bottom-0 start-50 p-3">
     <div id="copyToast" class="toast text-bg-light" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
         <div class="toast-body">
@@ -1046,4 +1015,5 @@
   </script>
 </body>
 </html>
+
 
