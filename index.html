@@ -420,6 +420,22 @@
       color: lightpink;
       z-index: 999;
     }
+
+    .sakura-stack {
+      position: relative;
+      width: 2em;
+      height: 2em;
+    }
+    
+    .sakura-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1em;
+      height: 1em;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -455,9 +471,9 @@
   <div class="sakura-container"></div>
   
   <!-- 제어 버튼 -->
-  <span class="fa-stack fa-1x" id="sakuraToggleBtn" onclick="toggleSakura()">
+  <span class="fa-stack fa-1x sakura-stack" id="sakuraToggleBtn" onclick="toggleSakura()">
     <i class="fa-regular fa-circle fa-stack-2x"></i>
-    <img src="sakura-icon.svg"  class="fa-stack-1x"/>
+    <img src="sakura-icon.svg" class="sakura-icon" alt="Sakura Icon" />
   </span>
 
   <a class="car-button" href="#car_section">
@@ -967,6 +983,7 @@
   </script>
 </body>
 </html>
+
 
 
 
