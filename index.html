@@ -798,13 +798,13 @@
       sakura.classList.add('sakura');
       sakura.style.left = Math.random() * window.innerWidth + 'px';
       sakura.style.animationDuration = (5 + Math.random() * 5) + 's';
+    
       container.appendChild(sakura);
     
-      setTimeout(() => {
-        if (container.contains(sakura)) {
-          container.removeChild(sakura);
-        }
-      }, 10000);
+      // 벚꽃이 화면 아래로 사라진 후 자동 제거
+      sakura.addEventListener('animationend', () => {
+        sakura.remove();
+      });
     }
     
     function toggleSakura() {
@@ -1018,3 +1018,4 @@
   </script>
 </body>
 </html>
+
