@@ -449,23 +449,8 @@
       }
     }
     
-    @keyframes slideDown {
-      from {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      to {
-        transform: translateY(100%);
-        opacity: 0;
-      }
-    }
-    
-    .toast.custom-show {
-      animation: slideUp 0.5s ease-out forwards;
-    }
-    
-    .toast.custom-hide {
-      animation: slideDown 0.5s ease-in forwards;
+    .toast.show {
+      animation: slideUp 0.5s ease-out;
     }
   </style>
 </head>
@@ -792,7 +777,7 @@
     <div id="copyToast" class="toast text-bg-secondary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
       <div class="d-flex">
         <div class="toast-body text-center">
-          계좌번호가 복사되었습니다.
+          복사되었습니다.
         </div>
       </div>
     </div>
@@ -1047,6 +1032,7 @@
   </script>
 </body>
 </html>
+
 
 
 
