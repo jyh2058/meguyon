@@ -801,7 +801,9 @@
       container.appendChild(sakura);
     
       setTimeout(() => {
-        container.removeChild(sakura);
+        if (container.contains(sakura)) {
+          container.removeChild(sakura);
+        }
       }, 10000);
     }
     
@@ -1016,3 +1018,4 @@
   </script>
 </body>
 </html>
+
