@@ -437,6 +437,21 @@
       transform: translate(-50%, -50%);
       pointer-events: none;
     }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .toast.show {
+      animation: slideUp 0.5s ease-out;
+    }
   </style>
 </head>
 <body>
@@ -759,12 +774,11 @@
 
   <!-- Toast 메시지 영역 -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="copyToast" class="toast text-bg-secondary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+    <div id="copyToast" class="toast text-bg-secondary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
       <div class="d-flex">
         <div class="toast-body">
           계좌번호가 복사되었습니다.
         </div>
-        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
       </div>
     </div>
   </div>
@@ -1018,3 +1032,4 @@
   </script>
 </body>
 </html>
+
