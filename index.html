@@ -449,8 +449,23 @@
       }
     }
     
-    .toast.show {
-      animation: slideUp 0.5s ease-out;
+    @keyframes slideDown {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+    }
+    
+    .toast.custom-show {
+      animation: slideUp 0.5s ease-out forwards;
+    }
+    
+    .toast.custom-hide {
+      animation: slideDown 0.5s ease-in forwards;
     }
   </style>
 </head>
@@ -1032,4 +1047,5 @@
   </script>
 </body>
 </html>
+
 
