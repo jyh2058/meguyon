@@ -791,20 +791,19 @@
     
     let sakuraInterval = null;
     let sakuraActive = false;
+    const maxSakuraCount = 20;
     
     function createSakura() {
       const container = document.querySelector('.sakura-container');
+      if (container.childElementCount >= maxSakuraCount) return;
       const sakura = document.createElement('div');
       sakura.classList.add('sakura');
       sakura.style.left = Math.random() * window.innerWidth + 'px';
-      sakura.style.animationDuration = (5 + Math.random() * 5) + 's';
-    
+      sakura.style.animationDuration = (6 + Math.random() * 6) + 's';
+      sakura.style.animationDelay = (Math.random() * 5) + 's';
+      sakura.style.transform = `scale(${0.8 + Math.random() * 0.4}) rotate(${Math.random() * 360}deg)`;
+      sakura.style.opacity = 0.6 + Math.random() * 0.4;
       container.appendChild(sakura);
-    
-      // 벚꽃이 화면 아래로 사라진 후 자동 제거
-      sakura.addEventListener('animationend', () => {
-        sakura.remove();
-      });
     }
     
     function toggleSakura() {
