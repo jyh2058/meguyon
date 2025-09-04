@@ -440,8 +440,28 @@
 
     .img-thumbnail {
       pointer-events: auto;
-      width: 75px;
+      width: 80px;
       cursor: pointer;
+    }
+
+    #carousel-thumbnails {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    #carousel-thumbnails::-webkit-scrollbar {
+      display: none;
+    }
+    .thumb {
+      flex: 0 0 auto;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+    .thumb.active {
+      border: 2px solid #007bff;
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -1070,6 +1090,32 @@
 
       createPagination();
       showPage(0);
+    });
+
+    const carouselleIndicators = document.querySelector('#carouselExampleIndicators');
+    const thumbnails = document.querySelectorAll('.thumb');
+    const thumbnailWrapper = document.querySelector('#carousel-thumbnails');
+
+    // 썸네일 클릭 시 Carousel 이동
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => {
+        const bsCarousel = bootstrap.Carousel.getInstance(carouselleIndicators);
+        bsCarousel.to(index);
+      });
+    });
+
+    // Carousel 슬라이드 변경 시 썸네일 강조 + 스크롤 이동
+    carouselleIndicators.addEventListener('slid.bs.carousel', function (e) {
+      const activeIndex = e.to;
+
+      thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle('active', i === activeIndex);
+      });
+
+      // 썸네일 자동 스크롤 (중앙으로)
+      const activeThumb = thumbnails[activeIndex];
+      const offsetLeft = activeThumb.offsetLeft - thumbnailWrapper.offsetWidth / 2 + activeThumb.offsetWidth / 2;
+      thumbnailWrapper.scrollTo({ left: offsetLeft, behavior: 'smooth' });
     });
   </script>
 </body>
