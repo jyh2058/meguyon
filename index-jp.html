@@ -1050,49 +1050,6 @@
       });
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const thumbnails = Array.from(document.querySelectorAll('#carousel-thumbnails .thumb'));
-      const pagination = document.getElementById('thumbnail-pagination');
-      const itemsPerPage = 4;
-      let currentPage = 0;
-
-      function showPage(page) {
-        currentPage = page;
-        thumbnails.forEach((thumb, index) => {
-          thumb.style.display = (Math.floor(index / itemsPerPage) === page) ? 'inline-block' : 'none';
-        });
-
-        // 페이지네이션 active 상태 업데이트
-        const pageButtons = pagination.querySelectorAll('.page-item');
-        pageButtons.forEach((btn, i) => {
-          btn.classList.toggle('active', i === page);
-        });
-      }
-
-      function createPagination() {
-        const totalPages = Math.ceil(thumbnails.length / itemsPerPage);
-        pagination.innerHTML = '';
-
-        for (let i = 0; i < totalPages; i++) {
-          const li = document.createElement('li');
-          li.className = 'page-item' + (i === 0 ? ' active' : '');
-          const a = document.createElement('a');
-          a.className = 'page-link';
-          a.href = '#';
-          a.textContent = i + 1;
-          a.addEventListener('click', (e) => {
-            e.preventDefault();
-            showPage(i);
-          });
-          li.appendChild(a);
-          pagination.appendChild(li);
-        }
-      }
-
-      createPagination();
-      showPage(0);
-    });
-
     const carouselleIndicators = document.querySelector('#carouselExampleIndicators');
     const thumbnails = document.querySelectorAll('.thumb');
     const thumbnailWrapper = document.querySelector('#carousel-thumbnails');
