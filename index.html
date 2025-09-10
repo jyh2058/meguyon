@@ -15,6 +15,9 @@
 
     window.addEventListener("load", function () {
       document.body.classList.add("loaded");
+      setTimeout(() => {
+        document.getElementById("buttonGuide").classList.add("fade-out");
+      }, 5000); // 5초 후에 fade-out 클래스 추가
     });
   </script>
 
@@ -55,22 +58,21 @@
 
     .button-guide {
       position: fixed;
-      top: 0px;
-      left: 0px;
+      top: 15px;
+      left: 15px;
       background: rgba(255, 240, 245, 0.9);
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 14px;
       color: #d85c8a;
-      animation: fadeOut 5s forwards;
       z-index: 1000;
+      opacity: 1;
+      transition: opacity 2s ease;
       text-align: left;
     }
 
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      80% { opacity: 1; }
-      100% { opacity: 0; display: none; }
+    .button-guide.fade-out {
+      opacity: 0;
     }
 
     .play-button {
@@ -546,7 +548,7 @@
     </div>
   </div>
 
-  <div class="button-guide">
+  <div id="buttonGuide" class="button-guide">
     <p>🎵 음표 버튼을 누르면 음악이 재생됩니다</p>
     <p>🌸 벚꽃 버튼을 누르면 꽃잎이 흩날려요</p>
   </div>
