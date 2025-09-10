@@ -15,7 +15,6 @@
 
     window.addEventListener("load", function () {
       document.body.classList.add("loaded");
-      toggleSakura();
     });
   </script>
   
@@ -526,7 +525,6 @@
   <span class="fa-stack fa-1x sakura-stack" id="sakuraToggleBtn" onclick="toggleSakura()">
     <i class="fa-regular fa-circle fa-stack-2x"></i>
     <img src="sakura-icon.png" class="sakura-icon" alt="Sakura Icon" />
-    <i class="fa-solid fa-ban fa-stack-2x"></i>
   </span>
   
   <div id="top" class="header-decoration-wrapper">
@@ -909,7 +907,7 @@
     
       if (!sakuraActive) {
         sakuraInterval = setInterval(createSakura, 300);
-        btn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><img src="sakura-icon.png" class="sakura-icon" alt="Sakura Icon" /><i class="fa-solid fa-ban fa-stack-2x"></i>'; // 재생 중이면 일시정지 아이콘
+        btn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-pause fa-stack-1x"></i>'; // 재생 중이면 일시정지 아이콘
         sakuraActive = true;
       } else {
         clearInterval(sakuraInterval);
@@ -934,7 +932,7 @@
     playBtn.addEventListener("click", () => {
       if (audio.paused) {
         audio.play();
-        playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-music fa-stack-1x"></i><i class="fa-solid fa-ban fa-stack-2x"></i>'; // 재생 중이면 일시정지 아이콘
+        playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-pause fa-stack-1x"></i>'; // 재생 중이면 일시정지 아이콘
       } else {
         audio.pause();
         playBtn.innerHTML = '<i class="fa-regular fa-circle fa-stack-2x"></i><i class="fa-solid fa-music fa-stack-1x"></i>'; // 멈춰 있으면 재생 아이콘
