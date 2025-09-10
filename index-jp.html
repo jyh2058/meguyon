@@ -15,6 +15,11 @@
 
     window.addEventListener("load", function () {
       document.body.classList.add("loaded");
+      setTimeout(() => {
+        document.getElementById("buttonGuide").classList.add("fade-out");
+        document.getElementById("playBtn").classList.remove("fa-bounce");
+        document.getElementById("sakuraToggleBtn").classList.remove("fa-bounce");
+      }, 5000); // 5초 후
     });
   </script>
   
@@ -41,6 +46,25 @@
       padding: .25rem !important;
       margin: 0;
       overflow-x: hidden;
+    }
+
+    .button-guide {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: rgba(255, 240, 245, 0.9);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #d85c8a;
+      z-index: 1000;
+      opacity: 1;
+      transition: opacity 2s ease;
+      text-align: left;
+    }
+
+    .button-guide.fade-out {
+      opacity: 0;
     }
 
     .play-button {
@@ -510,9 +534,21 @@
     </div>
   </div>
 
+  <div id="buttonGuide" class="button-guide">
+    <p>🎵 音符ボタンを押すと音楽が流れます</p>
+    <p>🌸 桜ボタンを押すと花びらが舞い散ります</p>
+  </div>
+
+  <div style="position: fixed; top: 50px; right: 70px; font-size: 12px; color: lightpink;">
+    音楽
+  </div>
+  <div style="position: fixed; top: 50px; right: 25px; font-size: 12px; color: lightpink;">
+    花びら
+  </div>
+
   <div class="audio-container">
     <audio src="./白の花びら.mp3" loop></audio>
-    <span class="fa-stack fa-1x play-button">
+    <span class="fa-stack fa-1x play-button fa-bounce" id="playBtn">
       <i class="fa-regular fa-circle fa-stack-2x"></i>
       <i class="fa-solid fa-music fa-stack-1x"></i>
     </span>
@@ -522,7 +558,7 @@
   <div class="sakura-container"></div>
   
   <!-- 제어 버튼 -->
-  <span class="fa-stack fa-1x sakura-stack" id="sakuraToggleBtn" onclick="toggleSakura()">
+  <span class="fa-stack fa-1x sakura-stack fa-bounce" id="sakuraToggleBtn" onclick="toggleSakura()">
     <i class="fa-regular fa-circle fa-stack-2x"></i>
     <img src="sakura-icon.png" class="sakura-icon" alt="Sakura Icon" />
   </span>
