@@ -1368,44 +1368,38 @@
 
       <div class="media-card">
         <h3 class="video-subtitle"><i class="fa-solid fa-play"></i> 式前映像 ①</h3>
-        <div class="video-frame video-frame-embed">
-          <iframe
-            src="https://drive.google.com/file/d/1F2Bu-M8rCLp4W4KMZKd3R7XQdZCe4Te3/preview"
-            title="式前映像 1"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <div class="video-frame">
+          <video
+            src="식전영상1.mp4#t=0.001"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://drive.google.com/thumbnail?id=1F2Bu-M8rCLp4W4KMZKd3R7XQdZCe4Te3&sz=w1000">
+            ブラウザが video タグをサポートしていません。
+          </video>
         </div>
-        <p class="media-caption">
+        <p class="media-caption" style="margin-bottom: 4px;">
           結婚式の開式前に上映したムービーです。<br>
-          ※ BGMを再生中の場合は、右上の音符ボタンで停止してからご覧ください。
+          ※ 動画を再生すると、BGMは自動的に一時停止します。
         </p>
-        <a class="btn-outline-warm" href="https://drive.google.com/file/d/1F2Bu-M8rCLp4W4KMZKd3R7XQdZCe4Te3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-google-drive"></i> 大きな画面で見る
-          <i class="fa-solid fa-up-right-from-square" style="font-size: 0.78em;"></i>
-        </a>
       </div>
 
       <div class="media-card mt-3">
         <h3 class="video-subtitle"><i class="fa-solid fa-play"></i> 式前映像 ②</h3>
-        <div class="video-frame video-frame-embed">
-          <iframe
-            src="https://drive.google.com/file/d/1zB08JqkO5RN8G2fD6i2ezh2Lfn-wmyLN/preview"
-            title="式前映像 2"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <div class="video-frame">
+          <video
+            src="식전영상2.mp4#t=0.001"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://drive.google.com/thumbnail?id=1zB08JqkO5RN8G2fD6i2ezh2Lfn-wmyLN&sz=w1000">
+            ブラウザが video タグをサポートしていません。
+          </video>
         </div>
-        <p class="media-caption">
+        <p class="media-caption" style="margin-bottom: 4px;">
           結婚式の開式前に上映した2本目のムービーです。<br>
-          ※ BGMを再生中の場合は、右上の音符ボタンで停止してからご覧ください。
+          ※ 動画を再生すると、BGMは自動的に一時停止します。
         </p>
-        <a class="btn-outline-warm" href="https://drive.google.com/file/d/1zB08JqkO5RN8G2fD6i2ezh2Lfn-wmyLN/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-google-drive"></i> 大きな画面で見る
-          <i class="fa-solid fa-up-right-from-square" style="font-size: 0.78em;"></i>
-        </a>
       </div>
     </section>
 
@@ -1418,23 +1412,20 @@
       </div>
 
       <div class="media-card">
-        <div class="video-frame video-frame-embed">
-          <iframe
-            src="https://drive.google.com/file/d/1ZhAaHimRLka1vRGe-jQER16odFbJ-iNO/preview"
-            title="式中ムービー"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <div class="video-frame">
+          <video
+            src="식중영상.mp4#t=0.001"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://drive.google.com/thumbnail?id=1ZhAaHimRLka1vRGe-jQER16odFbJ-iNO&sz=w1000">
+            ブラウザが video タグをサポートしていません。
+          </video>
         </div>
-        <p class="media-caption">
+        <p class="media-caption" style="margin-bottom: 4px;">
           結婚式の進行中に上映したムービーです。<br>
-          ※ BGMを再生中の場合は、右上の音符ボタンで停止してからご覧ください。
+          ※ 動画を再生すると、BGMは自動的に一時停止します。
         </p>
-        <a class="btn-outline-warm" href="https://drive.google.com/file/d/1ZhAaHimRLka1vRGe-jQER16odFbJ-iNO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-google-drive"></i> 大きな画面で見る
-          <i class="fa-solid fa-up-right-from-square" style="font-size: 0.78em;"></i>
-        </a>
       </div>
     </section>
 
@@ -1815,13 +1806,19 @@
       }
     });
 
-    // 영상 재생 시 BGM과 소리가 겹치지 않도록 자동 정지
-    document.querySelectorAll('video').forEach((videoEl) => {
+    // 영상 재생 시 BGM과 다른 영상이 겹치지 않도록 자동 정지
+    const allVideos = document.querySelectorAll('video');
+    allVideos.forEach((videoEl) => {
       videoEl.addEventListener('play', () => {
         if (!bgmAudio.paused) {
           bgmAudio.pause();
           setBgmButtonState(false);
         }
+        allVideos.forEach((other) => {
+          if (other !== videoEl && !other.paused) {
+            other.pause();
+          }
+        });
       });
     });
 
@@ -2231,29 +2228,6 @@
       if (diffX < 0 && bookState < 2) goToBookState(bookState + 1);
       else if (diffX > 0 && bookState > 0) goToBookState(bookState - 1);
     }, { passive: true });
-
-    /* ============================================================
-       6-3. Google Drive iframe 반응형 스케일링 (720x405 → 16:9 맞춤)
-       아이폰에서 구글 드라이브 플레이어 컨트롤이 지나치게 커져 잘리는 현상 방지
-    ============================================================ */
-    function resizeEmbedVideos() {
-      document.querySelectorAll('.video-frame-embed').forEach((wrap) => {
-        const iframe = wrap.querySelector('iframe');
-        if (!iframe) return;
-        const w = wrap.clientWidth;
-        if (w > 0) {
-          iframe.style.transform = `scale(${w / 720})`;
-        }
-      });
-    }
-
-    resizeEmbedVideos();
-    window.addEventListener('resize', resizeEmbedVideos);
-    window.addEventListener('load', resizeEmbedVideos);
-    if (typeof ResizeObserver === 'function') {
-      const embedObserver = new ResizeObserver(resizeEmbedVideos);
-      document.querySelectorAll('.video-frame-embed').forEach((wrap) => embedObserver.observe(wrap));
-    }
 
     /* ============================================================
        7. 스크롤 리빌 & TOP 버튼
