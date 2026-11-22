@@ -2,159 +2,1478 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>川を見に行きましょう</title>
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      const isMobile = /iPhone|iPad|Android|iPod|blackberry|opera mini|opera mobile/i.test(navigator.userAgent);
-      if (!isMobile) {
-        document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>モバイル端末からアクセスしてください 🙏</h2>";
-      }
-      document.body.style.visibility = 'visible';
-    });
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全 永煥♡天野 愛 結婚1周年記念</title>
 
-    window.addEventListener("load", function () {
-      document.body.classList.add("loaded");
-    });
-  </script>
-  
-  <meta property="og:title" content="川を見に行きましょう" />
-  <meta property="og:description" content="すべてはその一言から始まった。" />
-  <meta property="og:url" content="https://jyh2058.github.io/meguyon/" />
+  <meta property="og:title" content="全 永煥♡天野 愛 結婚1周年記念" />
+  <meta property="og:description" content="2025年11月1日の結婚式から1年。ご列席いただいた皆様へ、感謝を込めて映像と写真をお届けします。" />
+  <meta property="og:image" content="https://jyh2058.github.io/meguyon/Digest-Video-Thumbnail.jpg" />
+  <meta property="og:url" content="https://jyh2058.github.io/meguyon/after-jp.html" />
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@300;400;500;600&display=swap">
+
   <style>
+    :root {
+      --bg-outer: #F4ECE4;
+      --bg-page: #FFF9F3;
+      --bg-card: #FFFFFF;
+      --accent-pink: #E69DB0;
+      --accent-pink-deep: #C96B86;
+      --accent-pink-soft: #FDF1F4;
+      --accent-gold: #C2A378;
+      --text-heading: #4B3F2F;
+      --text-body: #3E352E;
+      --text-muted: #7F7267;
+      --border-soft: #EFE3D9;
+      --shadow-soft: 0 10px 30px rgba(75, 63, 47, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      line-height: 1.85;
+      letter-spacing: 0.04em;
+      background-color: var(--bg-outer);
+      color: var(--text-body);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 모바일 & PC 모두 아름답게 보이는 중앙 래퍼 */
+    .page-shell {
+      max-width: 560px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: var(--bg-page);
+      box-shadow: 0 0 40px rgba(75, 63, 47, 0.08);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 로더 */
     #loader {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: #fefefe;
+      inset: 0;
+      background-color: #FFF9F3;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      transition: opacity 0.6s ease;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
     }
+
     body.loaded #loader {
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
     }
-    .fa-spinner {
-      font-size: 3rem;
-      color: lightpink;
+
+    .loader-spinner {
+      font-size: 2.5rem;
+      color: var(--accent-pink);
     }
 
-    body {
-      visibility: hidden;
-      font-family: 'Noto Serif JP', serif;
-      font-size: 1.1em;
+    .loader-text {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* 상단 플로팅 버튼 (BGM & 벚꽃) */
+    .floating-controls {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      display: flex;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .ctrl-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent-pink);
+      background: rgba(255, 249, 243, 0.92);
+      color: var(--accent-pink-deep);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(201, 107, 134, 0.16);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      padding: 0;
+    }
+
+    .ctrl-btn:hover,
+    .ctrl-btn.active {
+      background: var(--accent-pink-soft);
+      transform: translateY(-1px);
+    }
+
+    .ctrl-btn img {
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+    }
+
+    .button-guide {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      background: rgba(255, 245, 248, 0.95);
+      border: 1px solid #F3D4DF;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 12px;
       line-height: 1.6;
-      letter-spacing: 0.03em;
-      background-color: #FFF9F3;
-      color: black;
-      text-align: center;
-      padding: .25rem !important;
-      margin: 0;
-      overflow-x: hidden;
+      color: var(--accent-pink-deep);
+      z-index: 1000;
+      text-align: left;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      opacity: 1;
+      transition: opacity 1.2s ease;
+      pointer-events: none;
     }
 
+    .button-guide.fade-out {
+      opacity: 0;
+    }
+
+    .button-guide p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    /* 벚꽃 눈 효과 */
+    .sakura-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 500;
+      overflow: hidden;
+    }
+
+    .sakura-petal {
+      position: absolute;
+      top: -30px;
+      width: 14px;
+      height: 18px;
+      background: linear-gradient(135deg, #FFD6E2 0%, #F7A8BE 100%);
+      border-radius: 100% 0 100% 25%;
+      opacity: 0.78;
+      animation: sakuraFall linear infinite;
+    }
+
+    @keyframes sakuraFall {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.85;
+      }
+      50% {
+        transform: translate(35px, 50vh) rotate(180deg);
+      }
+      90% {
+        opacity: 0.75;
+      }
+      100% {
+        transform: translate(-25px, 105vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* 기존 벚꽃 코너 장식 유지 */
     .header-decoration-wrapper {
       width: 100%;
-      height: 100%;
       position: relative;
+      height: 155px;
     }
 
     .decoration {
-      width: 235.25px;       /* 원하는 잘린 영역 크기 */
+      width: 235.25px;
       aspect-ratio: 1000 / 707;
       background-image: url('sakura.png');
       background-size: 375px 265.125px;
-      background-position: left top;
       background-repeat: no-repeat;
       overflow: hidden;
     }
 
     .header-decoration {
       background-position: left top;
-      height: 160px;
+      height: 155px;
     }
 
     .footer-decoration-wrapper {
       position: relative;
       width: 100%;
-      height: 100%;
       display: flex;
       justify-content: flex-end;
+      margin-top: 24px;
     }
 
     .footer-decoration {
-      background-position: right bottom;     /* 오른쪽 아래 기준 */
+      background-position: right bottom;
+      height: 165px;
     }
-    
-    h1 { font-size: 2em; margin-bottom: 0.3em; }
-    h2 { font-size: 1em; }
-    p { font-size: 0.65em; line-height: 1.6; margin: 0.5em 0; }
+
+    .footer-message {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 36px;
+      text-align: center;
+      font-size: 12.5px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    /* 영문 세리프 라벨 */
+    .en-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: 0.14em;
+    }
+
+    /* 히어로 섹션 */
+    .hero-section {
+      padding: 0 24px 36px;
+      margin-top: -42px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .anniversary-badge {
+      display: inline-block;
+      padding: 5px 16px;
+      border-radius: 999px;
+      background: var(--accent-pink-soft);
+      border: 1px solid #F3CFD9;
+      color: var(--accent-pink-deep);
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero-names {
+      font-size: 1.65rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      letter-spacing: 0.14em;
+      margin: 0 0 6px;
+    }
+
+    .hero-names .amp {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--accent-pink-deep);
+      font-style: italic;
+      font-size: 1.75rem;
+      margin: 0 6px;
+    }
+
+    .hero-dates {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.18em;
+      margin-bottom: 18px;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(75, 63, 47, 0.14);
+      border: 5px solid #FFFFFF;
+      margin: 0 auto 20px;
+      max-width: 460px;
+      background-color: #EFE8E0;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 10;
+    }
+
+    .hero-quote {
+      font-size: 0.95rem;
+      color: var(--text-heading);
+      margin: 14px 0 4px;
+      font-weight: 500;
+    }
+
+    .hero-subquote {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin: 0 0 22px;
+    }
+
+    /* 빠른 이동 네비게이션 */
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 0 26px;
+    }
+
+    .quick-nav a {
+      text-decoration: none;
+      font-size: 12.5px;
+      color: var(--text-heading);
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      padding: 6px 13px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .quick-nav a:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+    }
+
+    /* 결혼식으로부터 경과 시간 카운터 */
+    .counter-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 20px 16px;
+      box-shadow: var(--shadow-soft);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .counter-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .counter-headline {
+      font-size: 0.98rem;
+      color: var(--text-heading);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .counter-headline strong {
+      color: var(--accent-pink-deep);
+      font-weight: 600;
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .counter-box {
+      background: var(--bg-page);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 10px 4px;
+    }
+
+    .counter-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.1;
+      display: block;
+    }
+
+    .counter-unit {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* 공통 섹션 스타일 */
+    .content-section {
+      padding: 36px 22px;
+    }
+
+    .section-header {
+      margin-bottom: 22px;
+    }
+
+    .section-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.22rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      color: var(--accent-pink);
+      font-size: 1rem;
+    }
+
+    .section-divider {
+      width: 44px;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--accent-pink), transparent);
+      margin: 12px auto 0;
+    }
+
+    /* 섹션 구분선 */
+    .floral-divider {
+      color: var(--accent-pink);
+      font-size: 0.85rem;
+      letter-spacing: 0.5em;
+      opacity: 0.65;
+      margin: 4px 0;
+    }
+
+    /* 감사 메시지 카드 (기존 invitation-box 감성 계승) */
+    .message-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background-image: url('./ballentain-dei-baegyeong.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+      padding: 38px 24px;
+    }
+
+    .message-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 251, 247, 0.84);
+      z-index: 0;
+    }
+
+    .message-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .message-card p {
+      font-size: 0.9rem;
+      line-height: 2;
+      color: var(--text-body);
+      margin: 0 0 14px;
+    }
+
+    .message-signature {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px dashed #DFCFC3;
+      font-size: 0.92rem;
+      color: var(--text-heading);
+      letter-spacing: 0.08em;
+    }
+
+    .message-date-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* 영상 카드 */
+    .media-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .video-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1B1816;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .media-caption {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 14px 4px 16px;
+      line-height: 1.75;
+    }
+
+    .btn-sakura {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #E89CB1 0%, #D67B96 100%);
+      color: #FFFFFF !important;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      box-shadow: 0 6px 18px rgba(214, 123, 150, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-sakura:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(214, 123, 150, 0.4);
+    }
+
+    .btn-outline-warm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: #FFFFFF;
+      border: 1px solid #DEC9BC;
+      color: var(--text-heading) !important;
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-warm:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep) !important;
+    }
+
+    /* 포토 갤러리 */
+    .gallery-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .gallery-tab {
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-tab.active,
+    .gallery-tab:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+      font-weight: 500;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .photo-tile {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #EFE7DF;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 4px 12px rgba(75, 63, 47, 0.08);
+      padding: 0;
+    }
+
+    .photo-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.35s ease;
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    .photo-tile:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    /* 라이트박스 (사진 확대 모달) */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 19, 17, 0.92);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    #lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.12);
+      color: #FFFFFF;
+      font-size: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-stage {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightboxImg {
+      max-width: 90vw;
+      max-height: 74vh;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      transition: opacity 0.25s ease;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+      font-size: 18px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-prev { left: 6px; }
+    .lightbox-next { right: 6px; }
+
+    .lightbox-caption {
+      color: #F7EFE9;
+      font-size: 0.88rem;
+      margin-top: 14px;
+      min-height: 1.4em;
+    }
+
+    .lightbox-counter {
+      color: #D7C6BA;
+      font-size: 0.78rem;
+      margin-top: 4px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.15em;
+    }
+
+    /* 1년 타임라인 */
+    .timeline {
+      position: relative;
+      text-align: left;
+      padding-left: 28px;
+      margin: 8px 4px 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-pink) 0%, #EBD7CA 100%);
+    }
+
+    .timeline-item {
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 15px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 5px 16px rgba(75, 63, 47, 0.05);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-pink);
+      border: 3px solid var(--bg-page);
+      box-shadow: 0 0 0 1.5px var(--accent-pink);
+    }
+
+    .timeline-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-pink-deep);
+      letter-spacing: 0.08em;
+      margin-bottom: 3px;
+    }
+
+    .timeline-title {
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0 0 5px;
+    }
+
+    .timeline-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* 마무리 카드 */
+    .closing-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .closing-card p {
+      font-size: 0.88rem;
+      line-height: 1.95;
+      margin: 0 0 12px;
+    }
+
+    .closing-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* 스크롤 리빌 애니메이션 */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* TOP 이동 버튼 */
+    #top-button {
+      display: none;
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 249, 243, 0.94);
+      border: 1.5px solid var(--accent-pink);
+      color: var(--accent-pink-deep);
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    #top-button.show {
+      display: inline-flex;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    @media (max-width: 400px) {
+      .hero-names {
+        font-size: 1.42rem;
+      }
+      .counter-num {
+        font-size: 1.35rem;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- 로딩 화면 -->
   <div id="loader">
-    <div style="text-align:center;">
-      <i class="fas fa-spinner fa-spin"></i>
-      <p style="margin-top:10px; font-size: 1em;">少々お待ちください 🙏</p>
+    <div style="text-align: center;">
+      <i class="fas fa-spinner fa-spin loader-spinner"></i>
+      <p class="loader-text">少々お待ちください 🙏</p>
     </div>
   </div>
 
-  <div id="top" class="header-decoration-wrapper">
-    <div class="decoration header-decoration"></div>
+  <!-- 버튼 안내 (5초 후 자동 페이드아웃) -->
+  <div id="buttonGuide" class="button-guide">
+    <p>🎵 音符ボタンでBGMを再生できます</p>
+    <p>🌸 桜ボタンで花びらが舞い散ります</p>
   </div>
 
-  <div id="section01" style="display: flex; align-items: center; justify-content: center;" class="mb-5">
-    <div class="" style="max-width: 547.4px;">
-      <h2 class="text-center m-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-film"></i> 結婚式映像</h2>
-      <video src="Digest(480p).mp4" controls playsinline width="100%" height="auto" poster="Digest-Video-Thumbnail.jpg">
-        ブラウザが video タグをサポートしていません。
-      </video>
-      <a href="https://naver.me/GplYUnxa" target="_blank" rel="noopener noreferrer">映像の続きはこちらからどうぞ</a>
+  <!-- BGM & 벚꽃 토글 버튼 -->
+  <audio id="bgmAudio" src="./白の花びら.mp3" loop preload="none"></audio>
+  <div class="floating-controls">
+    <button type="button" class="ctrl-btn" id="playBtn" aria-label="BGM 再生・停止" title="BGM 再生・停止">
+      <i class="fa-solid fa-music"></i>
+    </button>
+    <button type="button" class="ctrl-btn" id="sakuraToggleBtn" aria-label="桜の花びら" title="桜の花びら">
+      <img src="sakura-icon.png" alt="桜" />
+    </button>
+  </div>
+
+  <!-- 벚꽃 꽃잎 컨테이너 -->
+  <div class="sakura-container" id="sakuraContainer" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <!-- 상단 벚꽃 코너 장식 -->
+    <div id="top" class="header-decoration-wrapper">
+      <div class="decoration header-decoration"></div>
     </div>
+
+    <!-- 히어로 영역 -->
+    <header class="hero-section">
+      <div class="anniversary-badge en-serif">1st Wedding Anniversary</div>
+      <h1 class="hero-names">
+        全 永煥<span class="amp">&amp;</span>天野 愛
+      </h1>
+      <div class="hero-dates">2025.11.01 &mdash; 2026.11.01</div>
+
+      <div class="hero-photo-frame">
+        <!-- 대표 사진: 결혼식 베스트 컷이 있다면 src를 교체해 주세요 -->
+        <img src="Digest-Video-Thumbnail.jpg" alt="結婚式 1周年記念 メイン写真">
+      </div>
+
+      <!-- 빠른 이동 메뉴 -->
+      <nav class="quick-nav" aria-label="ページ内メニュー">
+        <a href="#section-message"><i class="fa-regular fa-envelope"></i> ご挨拶</a>
+        <a href="#section01"><i class="fa-solid fa-film"></i> 結婚式映像</a>
+        <a href="#section02"><i class="fa-solid fa-camera-retro"></i> 写真</a>
+        <a href="#section03"><i class="fa-solid fa-video"></i> 招待映像</a>
+        <a href="#section04"><i class="fa-regular fa-heart"></i> 1年の歩み</a>
+      </nav>
+
+      <!-- 결혼식(2025.11.01 13:00)으로부터의 경과 시간 -->
+      <div class="counter-card">
+        <div class="counter-label">2025年11月1日 午後1時 挙式より</div>
+        <div class="counter-headline" id="anniversaryHeadline">
+          あの日から <strong id="elapsedSummary">1年</strong> が経ちました
+        </div>
+        <div class="counter-grid">
+          <div class="counter-box">
+            <span class="counter-num" id="countDays">365</span>
+            <span class="counter-unit">日</span>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="countHours">00</span>
+            <span class="counter-unit">時間</span>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="countMins">00</span>
+            <span class="counter-unit">分</span>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="countSecs">00</span>
+            <span class="counter-unit">秒</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="floral-divider" aria-hidden="true">✿ ✿ ✿</div>
+
+    <!-- 감사 인사말 -->
+    <section id="section-message" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Thank You</span>
+        <h2 class="section-title"><i class="fa-regular fa-envelope-open"></i> ご列席いただいた皆様へ</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-card-inner">
+          <p>
+            2025年11月1日、私たちの結婚式に<br>
+            遠方よりご出席いただき、<br>
+            温かい祝福をくださった皆様、<br>
+            心より御礼申し上げます。
+          </p>
+          <p>
+            幸せに満ちたあの日から、<br>
+            早いもので1年が経ちました。<br>
+            皆様の笑顔と優しいお言葉に包まれた時間は、<br>
+            今でも私たちの大切な宝物です。
+          </p>
+          <p>
+            感謝の気持ちを込めて、<br>
+            当日の映像や思い出の写真をまとめました。<br>
+            よろしければ、あの日の記憶を<br>
+            一緒に振り返っていただけますと幸いです。
+          </p>
+          <div class="message-signature">
+            全 永煥 &nbsp;・&nbsp; 天野 愛
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01: 結婚式ダイジェスト映像 -->
+    <section id="section01" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Wedding Movie</span>
+        <h2 class="section-title"><i class="fa-solid fa-film"></i> 結婚式ダイジェスト映像</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="media-card">
+        <div class="video-frame">
+          <video
+            src="Digest(480p).mp4"
+            controls
+            playsinline
+            preload="metadata"
+            poster="Digest-Video-Thumbnail.jpg">
+            ブラウザが video タグをサポートしていません。
+          </video>
+        </div>
+        <p class="media-caption">
+          結婚式のハイライト映像です。<br>
+          ※ 動画を再生すると、BGMは自動的に一時停止します。
+        </p>
+        <a class="btn-sakura" href="https://naver.me/GplYUnxa" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-clapperboard"></i>
+          映像の続きはこちらからどうぞ
+          <i class="fa-solid fa-up-right-from-square" style="font-size: 0.78em;"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 02: 結婚式フォトギャラリー -->
+    <section id="section02" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Photo Gallery</span>
+        <h2 class="section-title"><i class="fa-solid fa-camera-retro"></i> 思い出のフォトギャラリー</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="gallery-tabs" role="tablist" aria-label="写真カテゴリー">
+        <button type="button" class="gallery-tab active" data-category="all">すべて</button>
+        <button type="button" class="gallery-tab" data-category="wedding">結婚式当日</button>
+        <button type="button" class="gallery-tab" data-category="prewedding">前撮り</button>
+      </div>
+
+      <div class="photo-grid" id="photoGrid"></div>
+      <p class="gallery-hint"><i class="fa-regular fa-hand-pointer"></i> 写真をタップすると大きくご覧いただけます（左右スワイプ対応）</p>
+
+      <!-- 전체 사진 앨범(Google Photos / Naver MYBOX 등) 링크가 있다면 아래 주석을 해제하고 URL을 넣어주세요 -->
+      <!--
+      <div class="mt-3">
+        <a class="btn-outline-warm" href="https://여기에-앨범-링크-입력" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-images"></i> 高画質アルバムをすべて見る
+        </a>
+      </div>
+      -->
+    </section>
+
+    <!-- Section 03: 招待映像 (아카이브 / 추가 영상) -->
+    <section id="section03" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Memories Movie</span>
+        <h2 class="section-title"><i class="fa-solid fa-video"></i> 思い出の招待映像</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="media-card">
+        <div class="video-frame">
+          <video
+            src="Wedding-Invitation-Video-JP.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            poster="Wedding-Invitation-Video-Thumbnail.jpg">
+            ブラウザが video タグをサポートしていません。
+          </video>
+        </div>
+        <p class="media-caption" style="margin-bottom: 4px;">
+          結婚式の前に皆様へお届けした招待映像も、<br>
+          大切な思い出としてここに残しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 05: 結びのご挨拶 -->
+    <section id="section05" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">With Gratitude</span>
+        <h2 class="section-title"><i class="fa-solid fa-seedling"></i> 結びのご挨拶</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="closing-card">
+        <p>
+          これからも二人で手を取り合い、<br>
+          笑顔あふれる温かい家庭を築いてまいります。
+        </p>
+        <p>
+          皆様のご健康とご多幸を心よりお祈り申し上げます。<br>
+          また韓国や日本でお会いできる日を、<br>
+          楽しみにしております。
+        </p>
+
+        <div class="closing-actions">
+          <a class="btn-outline-warm" href="./index-jp.html">
+            <i class="fa-regular fa-bookmark"></i> 昨年のWEB招待状を見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 하단 벚꽃 코너 장식 & 푸터 메시지 -->
+    <footer class="footer-decoration-wrapper">
+      <div class="footer-message">
+        この記念サイトは<br>
+        新郎 全 永煥 と 新婦 天野 愛 が<br>
+        感謝を込めて製作しました。
+      </div>
+      <div class="decoration footer-decoration"></div>
+    </footer>
   </div>
 
-  <div id="section02" style="display: flex; align-items: center; justify-content: center;" class="mb-5">
-    <div class="" style="max-width: 547.4px;">
-      <h2 class="text-center m-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-question"></i> XXXX</h2>
+  <!-- 사진 확대 라이트박스 -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="写真の拡大表示">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="閉じる">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="lightbox-stage">
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="前の写真">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img id="lightboxImg" src="" alt="拡大写真">
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="次の写真">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
   </div>
 
-  <div id="section03" style="display: flex; align-items: center; justify-content: center;" class="mb-5">
-    <div class="" style="max-width: 547.4px;">
-      <h2 class="text-center m-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-question"></i> XXXX</h2>
-    </div>
-  </div>
-
-  <div id="section04" style="display: flex; align-items: center; justify-content: center;" class="mb-5">
-    <div class="" style="max-width: 547.4px;">
-      <h2 class="text-center m-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-question"></i> XXXX</h2>
-    </div>
-  </div>
-
-  <div id="section05" style="display: flex; align-items: center; justify-content: center;" class="mb-5">
-    <div class="" style="max-width: 547.4px;">
-      <h2 class="text-center m-2 mb-3" style="color: #4B3F2F; font-size: 18px;"><i class="fa-solid fa-question"></i> XXXX</h2>
-    </div>
-  </div>
-
-  <div class="footer-decoration-wrapper">
-    <div class="decoration footer-decoration"></div>
-  </div>
+  <!-- 맨 위로 이동 버튼 -->
+  <a id="top-button" href="#top" aria-label="ページトップへ">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
 
   <script src="https://kit.fontawesome.com/6fcecb4845.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <script>
-    document.addEventListener('keydown', function(e) {
-      // F12, Ctrl+Shift+I, Ctrl+U 등 개발자도구 관련 키 차단
+    /* ============================================================
+       [선택 사항] 모바일 전용 접속 제한이 필요하면 아래 주석을 해제하세요.
+       PC에서도 결혼식 영상/사진을 편하게 볼 수 있도록 기본은 허용해 두었습니다.
+    ============================================================ */
+    /*
+    window.addEventListener('DOMContentLoaded', function () {
+      const isMobile = /iPhone|iPad|Android|iPod|blackberry|opera mini|opera mobile/i.test(navigator.userAgent);
+      if (!isMobile) {
+        document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>モバイル端末からアクセスしてください 🙏</h2>";
+      }
+    });
+    */
+
+    /* ============================================================
+       1. 포토 갤러리 데이터
+       결혼식 당일 사진(로컬 파일 예: './photos/01.jpg' 또는 Google Drive URL)을
+       아래 배열에 추가/교체하시면 자동으로 갤러리와 확대 보기에 반영됩니다.
+    ============================================================ */
+    const WEDDING_PHOTOS = [
+      // --- 結婚式当日 (결혼식 당일 사진으로 교체/추가해 주세요) ---
+      {
+        src: 'Digest-Video-Thumbnail.jpg',
+        thumb: 'Digest-Video-Thumbnail.jpg',
+        category: 'wedding',
+        caption: '2025年11月1日 結婚式ダイジェストより'
+      },
+      // 예시: 로컬 폴더(photos/)에 사진을 올린 뒤 아래 형식으로 추가하세요.
+      // { src: './photos/ceremony-01.jpg', thumb: './photos/ceremony-01.jpg', category: 'wedding', caption: '挙式のひとコマ' },
+      // { src: './photos/guests-01.jpg',   thumb: './photos/guests-01.jpg',   category: 'wedding', caption: 'ご列席いただいた皆様と' },
+
+      // --- 前撮り (청첩장에 사용했던 웨딩 사진들) ---
+      {
+        src: 'https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 01'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 02'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 03'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 04'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1GysZjhhHEFsXsMjzLRBABeZl6nncbhHy&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1GysZjhhHEFsXsMjzLRBABeZl6nncbhHy&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 05'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=13GkHL_7s-A0iWTJzDvcSEHoObWSIJlMO&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=13GkHL_7s-A0iWTJzDvcSEHoObWSIJlMO&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 06'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1Pvu9obNEN33r1rfD3mkUA6PUkchdiXZv&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1Pvu9obNEN33r1rfD3mkUA6PUkchdiXZv&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 07'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1CuwnB2L5K8nvAUv98TCdLQMO2-lEwKEa&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1CuwnB2L5K8nvAUv98TCdLQMO2-lEwKEa&sz=w400',
+        category: 'prewedding',
+        caption: '前撮りフォト 08'
+      }
+    ];
+
+    /* ============================================================
+       2. 로더 해제 & 초기 가이드 페이드아웃
+    ============================================================ */
+    function finishLoading() {
+      document.body.classList.add('loaded');
+      setTimeout(() => {
+        const guide = document.getElementById('buttonGuide');
+        if (guide) guide.classList.add('fade-out');
+      }, 4500);
+    }
+
+    window.addEventListener('load', finishLoading);
+    // 외부 리소스가 느려도 2.5초 후에는 화면 표시
+    setTimeout(finishLoading, 2500);
+
+    /* ============================================================
+       3. 결혼식(2025-11-01 13:00 JST/KST) 경과 시간 카운터
+    ============================================================ */
+    const WEDDING_DATE = new Date('2025-11-01T13:00:00+09:00');
+
+    function updateElapsedCounter() {
+      const now = new Date();
+      const diffMs = Math.max(0, now - WEDDING_DATE);
+
+      const totalSeconds = Math.floor(diffMs / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const mins = Math.floor((totalSeconds % 3600) / 60);
+      const secs = totalSeconds % 60;
+
+      document.getElementById('countDays').textContent = days;
+      document.getElementById('countHours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('countMins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('countSecs').textContent = String(secs).padStart(2, '0');
+
+      const years = Math.floor(days / 365);
+      const headlineEl = document.getElementById('anniversaryHeadline');
+      if (years >= 1) {
+        headlineEl.innerHTML = `あの日から <strong>${years}周年</strong>（通算 <strong>${days}日</strong>）を迎えました`;
+      } else {
+        headlineEl.innerHTML = `あの日から <strong>${days}日</strong> が経ちました`;
+      }
+    }
+
+    updateElapsedCounter();
+    setInterval(updateElapsedCounter, 1000);
+
+    /* ============================================================
+       4. BGM 제어 (동영상 재생 시 BGM 자동 일시정지)
+    ============================================================ */
+    const bgmAudio = document.getElementById('bgmAudio');
+    const playBtn = document.getElementById('playBtn');
+
+    function setBgmButtonState(isPlaying) {
+      playBtn.classList.toggle('active', isPlaying);
+      playBtn.innerHTML = isPlaying
+        ? '<i class="fa-solid fa-pause"></i>'
+        : '<i class="fa-solid fa-music"></i>';
+    }
+
+    playBtn.addEventListener('click', () => {
+      if (bgmAudio.paused) {
+        bgmAudio.play().then(() => setBgmButtonState(true)).catch(() => {});
+      } else {
+        bgmAudio.pause();
+        setBgmButtonState(false);
+      }
+    });
+
+    // 영상 재생 시 BGM과 소리가 겹치지 않도록 자동 정지
+    document.querySelectorAll('video').forEach((videoEl) => {
+      videoEl.addEventListener('play', () => {
+        if (!bgmAudio.paused) {
+          bgmAudio.pause();
+          setBgmButtonState(false);
+        }
+      });
+    });
+
+    /* ============================================================
+       5. 벚꽃 꽃잎 효과 토글
+    ============================================================ */
+    const sakuraContainer = document.getElementById('sakuraContainer');
+    const sakuraToggleBtn = document.getElementById('sakuraToggleBtn');
+    let sakuraInterval = null;
+    let sakuraActive = false;
+    const MAX_SAKURA = 22;
+
+    function spawnSakuraPetal() {
+      if (sakuraContainer.childElementCount >= MAX_SAKURA) return;
+      const petal = document.createElement('div');
+      petal.className = 'sakura-petal';
+      const size = 10 + Math.random() * 10;
+      petal.style.width = `${size}px`;
+      petal.style.height = `${size * 1.25}px`;
+      petal.style.left = `${Math.random() * 100}vw`;
+      petal.style.animationDuration = `${6 + Math.random() * 6}s`;
+      petal.style.animationDelay = `${Math.random() * 2}s`;
+      sakuraContainer.appendChild(petal);
+
+      petal.addEventListener('animationiteration', () => {
+        petal.style.left = `${Math.random() * 100}vw`;
+      });
+    }
+
+    sakuraToggleBtn.addEventListener('click', () => {
+      if (!sakuraActive) {
+        sakuraActive = true;
+        sakuraToggleBtn.classList.add('active');
+        sakuraToggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        for (let i = 0; i < 6; i++) spawnSakuraPetal();
+        sakuraInterval = setInterval(spawnSakuraPetal, 400);
+      } else {
+        sakuraActive = false;
+        clearInterval(sakuraInterval);
+        sakuraToggleBtn.classList.remove('active');
+        sakuraToggleBtn.innerHTML = '<img src="sakura-icon.png" alt="桜" />';
+        sakuraContainer.innerHTML = '';
+      }
+    });
+
+    /* ============================================================
+       6. 포토 갤러리 렌더링 & 라이트박스
+    ============================================================ */
+    const photoGrid = document.getElementById('photoGrid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+
+    let filteredPhotos = [...WEDDING_PHOTOS];
+    let currentPhotoIdx = 0;
+
+    function renderGallery(category) {
+      filteredPhotos = category === 'all'
+        ? [...WEDDING_PHOTOS]
+        : WEDDING_PHOTOS.filter((item) => item.category === category);
+
+      photoGrid.innerHTML = '';
+      filteredPhotos.forEach((photo, idx) => {
+        const tile = document.createElement('button');
+        tile.type = 'button';
+        tile.className = 'photo-tile';
+        tile.setAttribute('aria-label', photo.caption || `写真 ${idx + 1}`);
+        tile.innerHTML = `<img src="${photo.thumb || photo.src}" alt="${photo.caption || ''}" loading="lazy">`;
+        tile.addEventListener('click', () => openLightbox(idx));
+        photoGrid.appendChild(tile);
+      });
+    }
+
+    document.querySelectorAll('.gallery-tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-tab').forEach((t) => t.classList.remove('active'));
+        tab.classList.add('active');
+        renderGallery(tab.dataset.category);
+      });
+    });
+
+    function updateLightboxView() {
+      const item = filteredPhotos[currentPhotoIdx];
+      if (!item) return;
+      lightboxImg.style.opacity = '0.35';
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.caption || '';
+      lightboxImg.onload = () => {
+        lightboxImg.style.opacity = '1';
+      };
+      lightboxCaption.textContent = item.caption || '';
+      lightboxCounter.textContent = `${currentPhotoIdx + 1} / ${filteredPhotos.length}`;
+    }
+
+    function openLightbox(index) {
+      currentPhotoIdx = index;
+      updateLightboxView();
+      lightbox.classList.add('open');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    }
+
+    function showPrevPhoto() {
+      currentPhotoIdx = (currentPhotoIdx - 1 + filteredPhotos.length) % filteredPhotos.length;
+      updateLightboxView();
+    }
+
+    function showNextPhoto() {
+      currentPhotoIdx = (currentPhotoIdx + 1) % filteredPhotos.length;
+      updateLightboxView();
+    }
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', showPrevPhoto);
+    document.getElementById('lightboxNext').addEventListener('click', showNextPhoto);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // 모바일 좌우 스와이프 지원
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diffX) < 45) return;
+      if (diffX > 0) showPrevPhoto();
+      else showNextPhoto();
+    }, { passive: true });
+
+    renderGallery('all');
+
+    /* ============================================================
+       7. 스크롤 리빌 & TOP 버튼
+    ============================================================ */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+    const topBtn = document.getElementById('top-button');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('show', window.scrollY > 260);
+    }, { passive: true });
+
+    /* ============================================================
+       8. 키보드 제어 (라이트박스 탐색 + 기존 단축키 차단 유지)
+    ============================================================ */
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.classList.contains('open')) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') showPrevPhoto();
+        else if (e.key === 'ArrowRight') showNextPhoto();
+      }
+
       if (
         e.key === 'F12' ||
         (e.ctrlKey && e.shiftKey && e.key === 'I') ||
