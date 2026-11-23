@@ -1619,10 +1619,10 @@
 
       <div class="gallery-card">
         <div class="gallery-tabs" role="tablist" aria-label="写真カテゴリー">
-          <button type="button" class="gallery-tab" data-category="album">アルバム <span class="tab-count" data-count-for="album">0</span></button>
-          <button type="button" class="gallery-tab" data-category="guests">ゲスト写真 <span class="tab-count" data-count-for="guests">0</span></button>
-          <button type="button" class="gallery-tab" data-category="prewedding">前撮り <span class="tab-count" data-count-for="prewedding">0</span></button>
-          <button type="button" class="gallery-tab active" data-category="all">すべて <span class="tab-count" data-count-for="all">0</span></button>
+          <button type="button" class="gallery-tab active" data-category="prewedding">前撮り <span class="tab-count" data-count-for="prewedding">0</span></button>
+          <button type="button" class="gallery-tab" data-category="album">結婚式① <span class="tab-count" data-count-for="album">0</span></button>
+          <button type="button" class="gallery-tab" data-category="guests">結婚式② <span class="tab-count" data-count-for="guests">0</span></button>
+          <button type="button" class="gallery-tab" data-category="all">すべて <span class="tab-count" data-count-for="all">0</span></button>
         </div>
 
         <div class="gallery-meta-bar">
@@ -1639,14 +1639,15 @@
         <p class="gallery-hint"><i class="fa-regular fa-hand-pointer"></i> 写真をタップすると全枚数を連続スワイプでご覧いただけます</p>
       </div>
 
-      <!-- 전체 사진 앨범(Google Photos / Naver MYBOX 등) 링크가 있다면 아래 주석을 해제하고 URL을 넣어주세요 -->
-      <!--
-      <div class="mt-3">
-        <a class="btn-outline-warm" href="https://여기에-앨범-링크-입력" target="_blank" rel="noopener noreferrer">
-          <i class="fa-regular fa-images"></i> 高画質アルバムをすべて見る
+      <!-- 전체 고화질 원본 폴더 링크 -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+        <a class="btn-outline-warm" href="https://drive.google.com/drive/folders/10_QSmUarUF8F_jo33dnXQpAvnfVOASjk?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-google-drive"></i> 結婚式①元画像を見る
+        </a>
+        <a class="btn-outline-warm" href="https://drive.google.com/drive/folders/1i5znywOVW0rFKzCPnVBMO2aLZTGwp9bn?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-google-drive"></i> 結婚式②元画像を見る
         </a>
       </div>
-      -->
     </section>
 
     <!-- Section 04: 結婚式までの歩み (타임라인) -->
@@ -1815,27 +1816,125 @@
       });
     }
 
-    // [1] 본식 앨범 사진 (51장): 구글 드라이브 링크/ID를 배열에 넣거나, 로컬 폴더면 buildLocalPhotos 사용
+    // [1] 본식 앨범 사진 (51장)
     const ALBUM_DRIVE_LINKS = [
-      // 'https://drive.google.com/file/d/여기에_ID/view?usp=sharing',
+      '1eTP9Aw3p0A0LCoBspgkGA7p0eXX7jqhF', // 3W8A1597.jpg
+      '19sIJMA4v0XOAfEM6FxGDFxdZWDVXEgRm', // 3W8A1614.jpg
+      '1UKhl5fmW8n3fKzXmpYRSwx6iDkPx0zQ7', // 3W8A1710.jpg
+      '1C0fP1vuRVKviFOGifNQr5LlBiaY8I5dD', // 3W8A1741.jpg
+      '1_9IALjqK7RJ22akkSt8QcM7pTltKvFyt', // 3W8A1822.jpg
+      '1eifzTn_ll4RXNIIhQJKKL8MF7byJ6qTO', // 3W8A1847.jpg
+      '1bDRM-ZGTO-_O4cQ-pYsbImUQjYXnReum', // 3W8A1874.jpg
+      '1Rn6ONuhKRq8wQ5tfa2KFfDbgRLnJTkKa', // 3W8A1993.jpg
+      '1YTfzh66SMHk1-xKXLUZT9-nowqmUGrJs', // 3W8A2037.jpg
+      '1rEYtFCqOraF0hKKZ2mDHzXlZ2bOBJzS4', // 3W8A2242.jpg
+      '1OYnhBILJ5RVFL0MSO2W2fp6I58CwFr2i', // 3W8A2271.jpg
+      '13Y6T0SdLQAT4ZU2FKldRRUZkdxDUlrxc', // 3W8A2340.jpg
+      '1LalwY3PE6E1CjXceZSpM40MP99n9M6Y4', // 3W8A2434.jpg
+      '1M3D8g5GNqcu1l_oSR6FY30KYu8CWlhb_', // 3W8A2441.jpg
+      '1_EEn4ErrT2RdSHOaGMun0kTjm-juo4Eh', // 3W8A2463.jpg
+      '1gH-vgeJVHzTj4Xl0HCl5EEJW12W-_11-', // 3W8A2496.jpg
+      '1g3oRZawQp03eQwIZYzPDP4LGjajMkNX6', // 3W8A2627.jpg
+      '1rqHsIBrKO95sq4_ePVatVmXZL444XCyZ', // 3W8A2660.jpg
+      '1VFJf033-ooJiC3NXHOgQRzlwUZEsRBL4', // 3W8A2734.jpg
+      '10mPk_jz8WsAarOE6Ox46_5M8wswjLGj8', // 3W8A2776.jpg
+      '1yHg14wkwxn2hp493WgH6khoKsWXjCIwR', // 3W8A2819.jpg
+      '1upLcSwmdEvAaQ1QFrmw2Qw86MAlaUlcD', // 3W8A2870.jpg
+      '1sbjNfsx5Qjo_D5G6Pld0Hb3dCootQhOs', // 3W8A2872.jpg
+      '1_uneJGpzHlan4w9Ec_3KC7aPgZ9g1ENX', // 3W8A2876.jpg
+      '1Y7M_75o7AdsblLkKiwS11l8yOE8OzTAb', // 3W8A2878.jpg
+      '12l2wOV_t0ixREggUpMtsMwW-e3dtd-LY', // 3W8A2881.jpg
+      '1zx8BrYj1LjpgVTtMWicqUod-0ZehTBUp', // 3W8A2913.jpg
+      '1G_1eSFOfg7xKmughZMO8VndGRDREjQ2X', // 3W8A2916.jpg
+      '1MHwq2TKN9ojbC8yzEnSxv0qoqyqi4Wrz', // 3W8A2923.jpg
+      '1GP6sdcUEQH6xqpFJle_NGO7M1j8odwcv', // DSC04502.jpg
+      '1PXcKeCoIOFNwJnznYiOGAL2GOblEFsYy', // DSC04521.jpg
+      '1D_PWhlK668b1Cmew0772o_qrxZrI3uO5', // DSC04647.jpg
+      '1c9uT0ettspbysjRMe_tiGN4zvoHQiAAy', // DSC04654.jpg
+      '1otajNjThv8RDW4RmD7SXyFT217Kokccf', // DSC04666.jpg
+      '1kO5Rw2KQb7yMZDdOeR9VMCkbn7KkEu9h', // DSC04709.jpg
+      '1kyvZFR1o8w40ffXLBJkr4dwbRH9nkSTZ', // DSC04714.jpg
+      '1YFATSXLDaLLnz75xRRPVr855u816GxAj', // DSC04793.jpg
+      '1vKgATmd6Fw-pPFbEJ4PTNeIlH128ydjd', // DSC04812.jpg
+      '1pvSrJCg5rCT6pZpQws89hdRw6zJdSkEI', // DSC04846.jpg
+      '1LeAnmrkcjr81KM6_pWxZEmK0TM9Ri17o', // DSC04933.jpg
+      '1RZSfTuhXksbyc1s9a3iU23Y5ae35sn8D', // DSC04954.jpg
+      '1ZNua2RVfQlc3QA83ptph5_TmYi7rgNnm', // DSC04959.jpg
+      '1SWvBOiZdDF9tk5OTE9eo2opLIW5PKEmJ', // DSC04967.jpg
+      '11ia-_PICYgt3DP-EAbplRCUdL4mlioSG', // DSC04983.jpg
+      '1tGeQDy2nmDm-Nkly5HjJZvFsAm35jhwc', // DSC05001.jpg
+      '1kCI2OSbi-0ViJqOqJJKxVYLCBodUGlqI', // DSC05017.jpg
+      '1e0PK9t0ufNI0hEX30XAp4rtc72hoxeTI', // DSC05030.jpg
+      '16vGSUB3Fx1xyOp88z0SlgkrjuPP5Zk0w', // DSC05067.jpg
+      '1hP-U3RKg5UdyVqI0EV-4fxifSbQncm-C', // DSC05105.jpg
+      '1MfTAddC0AhXWW0Xrxzfjp9xq_mDN0Jhn', // DSC05210.jpg
+      '12Bu_nxDdvQG2ZmNinV2woqTarUKbs-dG'  // DSC05235.jpg
     ];
 
-    // [2] 지인 사진 (59장): 구글 드라이브 링크/ID를 배열에 넣거나, 로컬 폴더면 buildLocalPhotos 사용
+    // [2] 지인 사진 (59장)
     const GUEST_DRIVE_LINKS = [
-      // 'https://drive.google.com/file/d/여기에_ID/view?usp=sharing',
+      '1ZS-Z1xuNuosfzojTiCVvSmPdEu3485tN', // 3W8A1929.jpg
+      '1bbmBYU6rTLdWfjS5s02WpfxOvApg7e9-', // 3W8A1930.jpg
+      '1pQWuqgLLzBbXh5l5xAr3hQm_H12I6cxY', // 3W8A1931.jpg
+      '1gtDH9gjty5m8NU9yDOHkT3OxcciVLOBL', // 3W8A1932.jpg
+      '1jV9YQ54f4yD9PCC2FNJM749oNSP1jy2p', // 3W8A1933.jpg
+      '1OtEXTGdwuoKupV4MpfO9aGgrW64HMBW6', // 3W8A1935.jpg
+      '19Y2VgcJSfTCFvEerSw9ewVsfsr83LXZ_', // 3W8A1936.jpg
+      '1V1rs9zdLnXyE9OX74c2tW85w4lfWMif2', // 3W8A1937.jpg
+      '1Z0KtXrYEIB8bnKCSamxId9cuMRF9sMek', // 3W8A1938.jpg
+      '1S-ySvWLyR_SCY4aBsMiU34ctJCHB7unw', // 3W8A1939.jpg
+      '1DxJnQ3W3TKd3C9ulAO5QuRcnqXKN7GvR', // 3W8A1970.jpg
+      '1kAT0s1cNmO-tGKzNmjgmNxsOQgwcEOZa', // 3W8A1971.jpg
+      '1AEIUkurOdg2FzxBWYf-qD17DcNzkXXV6', // 3W8A1972.jpg
+      '1wbPkHuI9u9Gg3Ri5TAlo7alsHnQR5_jK', // 3W8A1973.jpg
+      '1VApbPov-bwg_ZOU5p80uQCEopLUatMbK', // 3W8A1980.jpg
+      '1Iy3g-SS3azJxBIIS9WzRi94s8pF5bvQ8', // 3W8A1981.jpg
+      '1ueVOM4nysmbOpfE4wdpsY9jxoXu4xWNd', // 3W8A1982.jpg
+      '1ZIyqFNdmVXF_mGJz5VNOt9JDgVSNjsCz', // 3W8A1983.jpg
+      '1wKR842eXBKdUjlTs7Bkj3Y6FoJvsuGeR', // 3W8A1990.jpg
+      '1vA2TEgomdkMQvU4aEcASBnJVsxvP8bEQ', // 3W8A1991.jpg
+      '1TCXuk98X9W7CcW3unsG1K1-CYylrdV9Y', // 3W8A1992.jpg
+      '1WFzmuePYZbbQ09BbTYHbmBAgzXsiE8_2', // 3W8A1993.jpg
+      '1rn56dGqajwUrl9Wtt4h123LC4VlYz9lH', // 3W8A1994.jpg
+      '119XaUAdwu_rGZLdocP2I6vykSpF36GxZ', // 3W8A2004.jpg
+      '1yBEldyBY-7Hwnd68hDwb3ribwKahVGOY', // 3W8A2005.jpg
+      '1eqmrtrriyHptLoOi8fUmLEXmO_AVNiBa', // 3W8A2006.jpg
+      '1CvSmqidmU-tSdZKYDU8of3c3q2QlG5Wo', // 3W8A2007.jpg
+      '1wjvu-lFPleRvgI2Xe9S-6ew4LmhC1EUq', // 3W8A2008.jpg
+      '1TDVdt94D_Oyp-zDFTZWwOmIE5VrCCqGW', // 3W8A2014.jpg
+      '11o7kmorryEIg7QNnxkmftBJAfjQhJ-Yo', // 3W8A2015.jpg
+      '1m_VdCNH9vuPNj13uKDPG1swKham76kzu', // 3W8A2016.jpg
+      '1WKlV95GxzZxuFZ89cfos7X6l-pxKj6kk', // 3W8A2017.jpg
+      '1PG1CMl1Gn3duePTYsLKPt__Kl9kQq_oX', // 3W8A2018.jpg
+      '1OdBCjGmdEn_cXRUefzPDMk9e3YWC4dLE', // 3W8A2028.jpg
+      '1pqSax39qgLy1bytuta-1mmIGaB80SGxC', // 3W8A2029.jpg
+      '1GoO3AilnA2UqQaiaJ1mmFc7yxRsKHYGa', // 3W8A2030.jpg
+      '1-ft_gW__m7KlXHsbrL98TrC43_x7FFY3', // 3W8A2031.jpg
+      '1Pdhm7Trw8QGcvTa6x6MGV3rIZhvmfV1H', // 3W8A2032.jpg
+      '1d51nWYJxBT67S5Puc4YjrtAVrlVJfJyk', // 3W8A2043.jpg
+      '1XkWgSWK4oDh2T-r2jDl2-Jvp1gqaWJjL', // 3W8A2044.jpg
+      '182wvgd2OKjS5_aCFw7idL8o67XhT-8Vd', // 3W8A2045.jpg
+      '1187Rzoa1bkdxVsxF7rOAWFJ5fFxNbNc7', // 3W8A2046.jpg
+      '1gSHpWxaH9BieLcNMvKdUbYPa60Um4x8I', // 3W8A2047.jpg
+      '1xl2PW64sCZkSaZULFdKBuyAtFuNZv5ph', // 3W8A2178.jpg
+      '10a8TMu0USAmDnU8uvxsYm1FB8bqNRIUG', // 3W8A2179.jpg
+      '17OlZhHxBlLqQHm8eo7SemgDiFpCK8U81', // 3W8A2180.jpg
+      '1d6N_O8wsfopLeJAWWNWyyrjJ9LbjJJK7', // 3W8A2181.jpg
+      '1uEM54wwt5ZFyc3YlCrpXrnCW3VezpJA4', // 3W8A2182.jpg
+      '1E9eK44Hi70KbweeVQy5hH6Q6dp2AVwuZ', // 3W8A2183.jpg
+      '1lPDOJOcrrcWR5Q18xdQ-7AThr1LsiDJ3', // 3W8A2184.jpg
+      '1uW7PTsih7lSxAUYaQLs5M3VexhEJWb3G', // 3W8A2194.jpg
+      '1OnEk4d3bghdAFz8is9HRD3UP990g3zSq', // 3W8A2195.jpg
+      '1VF_-MXeFhYhZRao2JPbkKGlfT6UrShFD', // 3W8A2196.jpg
+      '1iBro6b1tMq8klCnoeAtV7Jk82FzJGFvt', // 3W8A2197.jpg
+      '1tRAO_ZC83rK1t6XylGvrOTV3qS-E1rKC', // 3W8A2211.jpg
+      '1y7Xa5qg-qijxaN4XwvipnHn-fCG7mdny', // 3W8A2212.jpg
+      '1b8pCD6CUU0yEbqYlO1YJY9AK6YSsXeOt', // 3W8A2213.jpg
+      '1iGdlqLizSZVQazmXjkrb3JOMzTqqsIed', // 3W8A2214.jpg
+      '19N9Jsm7IGCmTDB9XJpcrpSqbk8bXbRZD'  // 3W8A2215.jpg
     ];
 
     const WEDDING_PHOTOS = [
-      // --- アルバム (결혼식 당일 앨범 사진 51장) ---
-      ...buildDrivePhotos(ALBUM_DRIVE_LINKS, 'album', 'アルバム'),
-      // 로컬 파일(예: photos/album/01.jpg ~ 51.jpg)로 올릴 경우 위 줄 대신 아래 주석 해제:
-      // ...buildLocalPhotos('./photos/album', 51, 'album', 'アルバム', 'jpg', 2),
-
-      // --- ゲスト写真 (지인 사진 59장) ---
-      ...buildDrivePhotos(GUEST_DRIVE_LINKS, 'guests', 'ゲスト写真'),
-      // 로컬 파일(예: photos/guests/01.jpg ~ 59.jpg)로 올릴 경우 위 줄 대신 아래 주석 해제:
-      // ...buildLocalPhotos('./photos/guests', 59, 'guests', 'ゲスト写真', 'jpg', 2),
-
       // --- 前撮り (작년 WEB초대장의 웨딩 사진 20장 전체) ---
       {
         src: 'https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w1200',
@@ -1956,7 +2055,17 @@
         thumb: 'https://drive.google.com/thumbnail?id=1j3fgYm3XeMbH2Wkdfe48KuRDverdi4r4&sz=w400',
         category: 'prewedding',
         caption: '前撮りフォト 20'
-      }
+      },
+
+      // --- 結婚式① (결혼식 당일 앨범 사진 51장) ---
+      ...buildDrivePhotos(ALBUM_DRIVE_LINKS, 'album', '結婚式①'),
+      // 로컬 파일(예: photos/album/01.jpg ~ 51.jpg)로 올릴 경우 위 줄 대신 아래 주석 해제:
+      // ...buildLocalPhotos('./photos/album', 51, 'album', '結婚式①', 'jpg', 2),
+
+      // --- 結婚式② (지인 사진 59장) ---
+      ...buildDrivePhotos(GUEST_DRIVE_LINKS, 'guests', '結婚式②')
+      // 로컬 파일(예: photos/guests/01.jpg ~ 59.jpg)로 올릴 경우 위 줄 대신 아래 주석 해제:
+      // ...buildLocalPhotos('./photos/guests', 59, 'guests', '結婚式②', 'jpg', 2)
     ];
 
     /* ============================================================
@@ -2414,8 +2523,7 @@
     }, { passive: true });
 
     updateGalleryTabCounts();
-    const initialCategory = WEDDING_PHOTOS.some((p) => p.category === 'album') ? 'album' : 'all';
-    renderGallery(initialCategory);
+    renderGallery('prewedding');
 
     /* ============================================================
        6-2. 식순 3D 책자 (Wedding Program Booklet) 제어
