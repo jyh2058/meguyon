@@ -1,0 +1,2697 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전영환♡아마노 메구미 결혼 1주년 기념</title>
+
+  <meta property="og:title" content="전영환♡아마노 메구미 결혼 1주년 기념" />
+  <meta property="og:description" content="2025년 11월 1일 결혼식으로부터 1년. 참석해 주신 모든 분들께 감사의 마음을 담아 영상과 사진을 전합니다." />
+  <meta property="og:image" content="https://jyh2058.github.io/meguyon/Digest-Video-Thumbnail.jpg" />
+  <meta property="og:url" content="https://jyh2058.github.io/meguyon/after.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+KR:wght@300;400;500;600&display=swap">
+
+  <style>
+    @font-face {
+      font-family: 'MaruBuri';
+      src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"),
+           url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"),
+           url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-outer: #F4ECE4;
+      --bg-page: #FFF9F3;
+      --bg-card: #FFFFFF;
+      --accent-pink: #E69DB0;
+      --accent-pink-deep: #C96B86;
+      --accent-pink-soft: #FDF1F4;
+      --accent-gold: #C2A378;
+      --text-heading: #4B3F2F;
+      --text-body: #3E352E;
+      --text-muted: #7F7267;
+      --border-soft: #EFE3D9;
+      --shadow-soft: 0 10px 30px rgba(75, 63, 47, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'MaruBuri', 'Noto Serif KR', serif;
+      font-size: 15px;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+      background-color: var(--bg-outer);
+      color: var(--text-body);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 모바일 & PC 모두 아름답게 보이는 중앙 래퍼 */
+    .page-shell {
+      max-width: 560px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: var(--bg-page);
+      box-shadow: 0 0 40px rgba(75, 63, 47, 0.08);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 로더 */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background-color: #FFF9F3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    body.loaded #loader {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader-spinner {
+      font-size: 2.5rem;
+      color: var(--accent-pink);
+    }
+
+    .loader-text {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* 상단 플로팅 버튼 (BGM & 벚꽃) */
+    .floating-controls {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      display: flex;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .ctrl-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent-pink);
+      background: rgba(255, 249, 243, 0.92);
+      color: var(--accent-pink-deep);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(201, 107, 134, 0.16);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      padding: 0;
+    }
+
+    .ctrl-btn:hover,
+    .ctrl-btn.active {
+      background: var(--accent-pink-soft);
+      transform: translateY(-1px);
+    }
+
+    .ctrl-btn img {
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+    }
+
+    .button-guide {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      background: rgba(255, 245, 248, 0.95);
+      border: 1px solid #F3D4DF;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--accent-pink-deep);
+      z-index: 1000;
+      text-align: left;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      opacity: 1;
+      transition: opacity 1.2s ease;
+      pointer-events: none;
+    }
+
+    .button-guide.fade-out {
+      opacity: 0;
+    }
+
+    .button-guide p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    /* 벚꽃 눈 효과 */
+    .sakura-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 500;
+      overflow: hidden;
+    }
+
+    .sakura-petal {
+      position: absolute;
+      top: -30px;
+      width: 14px;
+      height: 18px;
+      background: linear-gradient(135deg, #FFD6E2 0%, #F7A8BE 100%);
+      border-radius: 100% 0 100% 25%;
+      opacity: 0.78;
+      animation: sakuraFall linear infinite;
+    }
+
+    @keyframes sakuraFall {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.85;
+      }
+      50% {
+        transform: translate(35px, 50vh) rotate(180deg);
+      }
+      90% {
+        opacity: 0.75;
+      }
+      100% {
+        transform: translate(-25px, 105vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* 기존 벚꽃 코너 장식 유지 */
+    .header-decoration-wrapper {
+      width: 100%;
+      position: relative;
+      height: 155px;
+    }
+
+    .decoration {
+      width: 235.25px;
+      aspect-ratio: 1000 / 707;
+      background-image: url('sakura.png');
+      background-size: 375px 265.125px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .header-decoration {
+      background-position: left top;
+      height: 155px;
+    }
+
+    .footer-decoration-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 24px;
+    }
+
+    .footer-decoration {
+      background-position: right bottom;
+      height: 165px;
+    }
+
+    .footer-message {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 36px;
+      text-align: center;
+      font-size: 12.5px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    /* 영문 세리프 라벨 */
+    .en-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: 0.14em;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+    }
+
+    /* 히어로 섹션 */
+    .hero-section {
+      padding: 0 24px 36px;
+      margin-top: -42px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .anniversary-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: var(--accent-pink-soft);
+      border: 1px solid #F3CFD9;
+      color: var(--accent-pink-deep);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .anniversary-num {
+      font-size: 1.12em;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .anniversary-ord {
+      font-size: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      vertical-align: baseline;
+      letter-spacing: 0.1em;
+      margin-right: 6px;
+    }
+
+    .hero-names {
+      font-size: 1.65rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      letter-spacing: 0.14em;
+      margin: 0 0 6px;
+    }
+
+    .hero-names .amp {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--accent-pink-deep);
+      font-style: italic;
+      font-size: 1.75rem;
+      margin: 0 6px;
+    }
+
+    .hero-dates {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+      font-size: 1.05rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.18em;
+      margin-bottom: 18px;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(75, 63, 47, 0.14);
+      border: 5px solid #FFFFFF;
+      margin: 0 auto 20px;
+      max-width: 460px;
+      background-color: #EFE8E0;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 10;
+    }
+
+    .hero-quote {
+      font-size: 0.95rem;
+      color: var(--text-heading);
+      margin: 14px 0 4px;
+      font-weight: 500;
+    }
+
+    .hero-subquote {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin: 0 0 22px;
+    }
+
+    /* 빠른 이동 네비게이션 */
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 0 26px;
+    }
+
+    .quick-nav a {
+      text-decoration: none;
+      font-size: 12.5px;
+      color: var(--text-heading);
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      padding: 6px 13px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .quick-nav a:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+    }
+
+    /* 결혼식으로부터 경과 시간 카운터 */
+    .counter-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 20px 16px;
+      box-shadow: var(--shadow-soft);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .counter-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .counter-headline {
+      font-size: 0.98rem;
+      color: var(--text-heading);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .counter-headline strong {
+      color: var(--accent-pink-deep);
+      font-weight: 600;
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .counter-box {
+      background: var(--bg-page);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 10px 4px;
+    }
+
+    .counter-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.1;
+      display: block;
+    }
+
+    .counter-unit {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* 공통 섹션 스타일 */
+    .content-section {
+      padding: 36px 22px;
+    }
+
+    .section-header {
+      margin-bottom: 22px;
+    }
+
+    .section-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.22rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      color: var(--accent-pink);
+      font-size: 1rem;
+    }
+
+    .section-divider {
+      width: 44px;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--accent-pink), transparent);
+      margin: 12px auto 0;
+    }
+
+    /* 섹션 구분선 */
+    .floral-divider {
+      color: var(--accent-pink);
+      font-size: 0.85rem;
+      letter-spacing: 0.5em;
+      opacity: 0.65;
+      margin: 4px 0;
+    }
+
+    /* 감사 메시지 카드 (기존 invitation-box 감성 계승) */
+    .message-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background-image: url('./ballentain-dei-baegyeong.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+      padding: 38px 24px;
+    }
+
+    .message-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 251, 247, 0.84);
+      z-index: 0;
+    }
+
+    .message-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .message-card p {
+      font-size: 0.9rem;
+      line-height: 2;
+      color: var(--text-body);
+      margin: 0 0 14px;
+    }
+
+    .message-signature {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px dashed #DFCFC3;
+      font-size: 0.92rem;
+      color: var(--text-heading);
+      letter-spacing: 0.08em;
+    }
+
+    .message-date-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* 영상 카드 */
+    .media-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .video-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1B1816;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-frame-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000000;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .video-frame-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 720px;
+      height: 405px;
+      border: 0;
+      display: block;
+      transform-origin: top left;
+    }
+
+    .video-subtitle {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0 0 10px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .video-subtitle i {
+      color: var(--accent-pink);
+      font-size: 0.85rem;
+    }
+
+    /* 식순 3D 책자 (Wedding Program Booklet) */
+    .program-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 22px 14px 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .book-scene {
+      --book-page-ratio: 0.707; /* A5 기본 비율 (이미지 로드 후 실제 비율로 자동 보정) */
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto 14px;
+      perspective: 1600px;
+      -webkit-perspective: 1600px;
+      overflow-x: hidden;
+      overflow-y: visible;
+      padding: 24px 6px 28px;
+      touch-action: pan-y;
+    }
+
+    .book {
+      position: relative;
+      width: 100%;
+      aspect-ratio: calc(var(--book-page-ratio) * 2);
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      transition: transform 0.72s cubic-bezier(0.25, 0.85, 0.25, 1);
+      will-change: transform;
+      cursor: pointer;
+    }
+
+    .book[data-state="0"] {
+      transform: translateX(-25%);
+    }
+
+    .book[data-state="1"] {
+      transform: translateX(0%);
+    }
+
+    .book[data-state="2"] {
+      transform: translateX(25%);
+    }
+
+    .book-leaf {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      transition: transform 0.78s cubic-bezier(0.25, 0.85, 0.25, 1);
+      will-change: transform;
+    }
+
+    .book-leaf.flipped {
+      transform: rotateY(-180deg);
+    }
+
+    .book-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background: #FAF6F1;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(55, 42, 32, 0.18);
+    }
+
+    .book-face img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      -webkit-user-drag: none;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* 오른쪽 면(표지 앞면, 안쪽 오른쪽): 왼쪽 접힘선 그림자 */
+    .face-front {
+      transform: rotateY(0deg) translateZ(0.5px);
+      border-radius: 2px 8px 8px 2px;
+    }
+
+    .face-front::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(38, 28, 20, 0.18) 0%,
+        rgba(38, 28, 20, 0.05) 8%,
+        transparent 22%,
+        rgba(255, 255, 255, 0.08) 97%,
+        rgba(38, 28, 20, 0.06) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* 왼쪽 면(안쪽 왼쪽, 표지 뒷면): 오른쪽 접힘선 그림자 */
+    .face-back {
+      transform: rotateY(180deg) translateZ(0.5px);
+      border-radius: 8px 2px 2px 8px;
+    }
+
+    .face-back::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        270deg,
+        rgba(38, 28, 20, 0.18) 0%,
+        rgba(38, 28, 20, 0.05) 8%,
+        transparent 22%,
+        rgba(255, 255, 255, 0.08) 97%,
+        rgba(38, 28, 20, 0.06) 100%
+      );
+      pointer-events: none;
+    }
+
+    .book-steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .book-step-btn {
+      border: 1px solid var(--border-soft);
+      background: var(--bg-page);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.78rem;
+      padding: 6px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .book-step-btn.active,
+    .book-step-btn:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+      font-weight: 500;
+    }
+
+    .book-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .book-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid #DEC9BC;
+      background: #FFFFFF;
+      color: var(--text-heading);
+      font-family: inherit;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .book-nav-btn:hover:not(:disabled) {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+    }
+
+    .book-nav-btn:disabled {
+      opacity: 0.38;
+      cursor: default;
+    }
+
+    .book-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin: 12px 0 0;
+    }
+
+    .media-caption {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 14px 4px 16px;
+      line-height: 1.75;
+    }
+
+    .btn-sakura {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #E89CB1 0%, #D67B96 100%);
+      color: #FFFFFF !important;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      box-shadow: 0 6px 18px rgba(214, 123, 150, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-sakura:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(214, 123, 150, 0.4);
+    }
+
+    .btn-outline-warm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: #FFFFFF;
+      border: 1px solid #DEC9BC;
+      color: var(--text-heading) !important;
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-warm:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep) !important;
+    }
+
+    /* 포토 갤러리 */
+    .gallery-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 18px 14px 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .gallery-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .gallery-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid var(--border-soft);
+      background: var(--bg-page);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.78rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-tab .tab-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0 5px;
+      border-radius: 999px;
+      background: rgba(75, 63, 47, 0.08);
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .gallery-tab.active,
+    .gallery-tab:hover {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+      font-weight: 500;
+    }
+
+    .gallery-tab.active .tab-count,
+    .gallery-tab:hover .tab-count {
+      background: rgba(201, 107, 134, 0.16);
+      color: var(--accent-pink-deep);
+    }
+
+    .gallery-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 0 2px 12px;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .gallery-slide-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid #EBD0DB;
+      background: var(--accent-pink-soft);
+      color: var(--accent-pink-deep);
+      font-family: inherit;
+      font-size: 0.74rem;
+      padding: 4px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .gallery-slide-btn:hover {
+      background: #FBE4EC;
+      transform: translateY(-1px);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      min-height: 110px;
+    }
+
+    .gallery-empty {
+      grid-column: 1 / -1;
+      padding: 34px 12px;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+
+    .gallery-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .page-btn {
+      min-width: 34px;
+      height: 34px;
+      padding: 0 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      color: var(--text-heading);
+      font-family: 'Cormorant Garamond', 'MaruBuri', 'Noto Serif KR', serif;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.18s ease;
+    }
+
+    .page-btn:hover:not(:disabled) {
+      background: var(--accent-pink-soft);
+      border-color: var(--accent-pink);
+      color: var(--accent-pink-deep);
+    }
+
+    .page-btn.active {
+      background: linear-gradient(135deg, #E89CB1 0%, #D67B96 100%);
+      border-color: transparent;
+      color: #FFFFFF;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(214, 123, 150, 0.3);
+    }
+
+    .page-btn:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    .page-ellipsis {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 0 2px;
+      user-select: none;
+    }
+
+    .photo-tile {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #EFE7DF;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 4px 12px rgba(75, 63, 47, 0.08);
+      padding: 0;
+    }
+
+    .photo-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.35s ease;
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    .photo-tile:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    /* 라이트박스 (사진 확대 모달) */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 19, 17, 0.94);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.22s ease, visibility 0.22s ease;
+    }
+
+    #lightbox.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+      font-size: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: background-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .lightbox-stage {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      touch-action: pan-y;
+    }
+
+    .lightbox-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img {
+      position: absolute;
+      max-width: calc(100% - 104px);
+      max-height: 100%;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      will-change: transform, opacity;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
+    .lightbox-img.dragging {
+      transition: none;
+    }
+
+    .lightbox-spinner {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border: 2.5px solid rgba(255, 255, 255, 0.2);
+      border-top-color: var(--accent-pink);
+      border-radius: 50%;
+      animation: lbSpin 0.7s linear infinite;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease;
+      z-index: 2;
+    }
+
+    .lightbox-spinner.show {
+      opacity: 1;
+    }
+
+    @keyframes lbSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.16);
+      color: #FFFFFF;
+      font-size: 18px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+      transition: background-color 0.18s ease, transform 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .lightbox-nav:active {
+      transform: translateY(-50%) scale(0.92);
+    }
+
+    .lightbox-prev { left: 6px; }
+    .lightbox-next { right: 6px; }
+
+    @media (max-width: 520px) {
+      .lightbox-img {
+        max-width: 92vw;
+      }
+    }
+
+    .lightbox-caption {
+      color: #F7EFE9;
+      font-size: 0.88rem;
+      margin-top: 14px;
+      min-height: 1.4em;
+    }
+
+    .lightbox-counter {
+      color: #D7C6BA;
+      font-size: 0.78rem;
+      margin-top: 4px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.15em;
+    }
+
+    /* 1년 타임라인 */
+    .timeline {
+      position: relative;
+      text-align: left;
+      padding-left: 28px;
+      margin: 8px 4px 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-pink) 0%, #EBD7CA 100%);
+    }
+
+    .timeline-item {
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 15px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 5px 16px rgba(75, 63, 47, 0.05);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-pink);
+      border: 3px solid var(--bg-page);
+      box-shadow: 0 0 0 1.5px var(--accent-pink);
+    }
+
+    .timeline-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent-pink-deep);
+      letter-spacing: 0.08em;
+      margin-bottom: 3px;
+    }
+
+    .timeline-title {
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0 0 5px;
+    }
+
+    .timeline-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* 마무리 카드 */
+    .closing-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .closing-card p {
+      font-size: 0.88rem;
+      line-height: 1.95;
+      margin: 0 0 12px;
+    }
+
+    .closing-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* 스크롤 리빌 애니메이션 */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* TOP 이동 버튼 */
+    #top-button {
+      display: none;
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 249, 243, 0.94);
+      border: 1.5px solid var(--accent-pink);
+      color: var(--accent-pink-deep);
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    #top-button.show {
+      display: inline-flex;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    @media (max-width: 400px) {
+      .hero-names {
+        font-size: 1.42rem;
+      }
+      .counter-num {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 로딩 화면 -->
+  <div id="loader">
+    <div style="text-align: center;">
+      <i class="fas fa-spinner fa-spin loader-spinner"></i>
+      <p class="loader-text">잠시만 기다려 주세요 🙏</p>
+    </div>
+  </div>
+
+  <!-- 버튼 안내 (5초 후 자동 페이드아웃) -->
+  <div id="buttonGuide" class="button-guide">
+    <p>🎵 음표 버튼을 누르면 배경음악이 재생됩니다</p>
+    <p>🌸 벚꽃 버튼을 누르면 꽃잎이 흩날립니다</p>
+  </div>
+
+  <!-- BGM & 벚꽃 토글 버튼 -->
+  <audio id="bgmAudio" src="./白の花びら.mp3" loop preload="none"></audio>
+  <div class="floating-controls">
+    <button type="button" class="ctrl-btn" id="playBtn" aria-label="BGM 재생·정지" title="BGM 재생·정지">
+      <i class="fa-solid fa-music"></i>
+    </button>
+    <button type="button" class="ctrl-btn" id="sakuraToggleBtn" aria-label="벚꽃 흩날리기" title="벚꽃 흩날리기">
+      <img src="sakura-icon.png" alt="벚꽃" />
+    </button>
+  </div>
+
+  <!-- 벚꽃 꽃잎 컨테이너 -->
+  <div class="sakura-container" id="sakuraContainer" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <!-- 상단 벚꽃 코너 장식 -->
+    <div id="top" class="header-decoration-wrapper">
+      <div class="decoration header-decoration"></div>
+    </div>
+
+    <!-- 히어로 영역 -->
+    <header class="hero-section">
+      <div class="anniversary-badge en-serif"><span class="anniversary-num">1</span><span class="anniversary-ord">st</span>Wedding Anniversary</div>
+      <h1 class="hero-names">
+        전영환<span class="amp">&amp;</span>아마노 메구미
+      </h1>
+      <div class="hero-dates">2025.11.01 &mdash; 2026.11.01</div>
+
+      <div class="hero-photo-frame">
+        <!-- 대표 사진: 결혼식 베스트 컷이 있다면 src를 교체해 주세요 -->
+        <img src="Digest-Video-Thumbnail.jpg" alt="결혼 1주년 기념 메인 사진">
+      </div>
+
+      <!-- 빠른 이동 메뉴 -->
+      <nav class="quick-nav" aria-label="페이지 내 메뉴">
+        <a href="#section-message"><i class="fa-regular fa-envelope"></i> 인사말</a>
+        <a href="#section01"><i class="fa-solid fa-film"></i> 결혼식 영상</a>
+        <a href="#section-premovie"><i class="fa-solid fa-clapperboard"></i> 식전영상</a>
+        <a href="#section-ceremonymovie"><i class="fa-solid fa-film"></i> 식중영상</a>
+        <a href="#section-program"><i class="fa-solid fa-book-open"></i> 식순</a>
+        <a href="#section02"><i class="fa-solid fa-camera-retro"></i> 사진</a>
+        <a href="#section04"><i class="fa-regular fa-heart"></i> 우리의 발자취</a>
+      </nav>
+
+      <!-- 결혼식(2025.11.01 13:00)으로부터의 경과 시간 -->
+      <div class="counter-card">
+        <div class="counter-label">2025년 11월 1일 오후 1시 결혼식으로부터</div>
+        <div class="counter-headline" id="anniversaryHeadline">
+          그날로부터 <strong id="elapsedSummary">1년</strong>이 지났습니다
+        </div>
+        <div class="counter-grid">
+          <div class="counter-box">
+            <span class="counter-num" id="countDays">365</span>
+            <span class="counter-unit">일</span>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="countHours">00</span>
+            <span class="counter-unit">시간</span>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="countMins">00</span>
+            <span class="counter-unit">분</span>
+          </div>
+          <div class="counter-box">
+            <span class="counter-num" id="countSecs">00</span>
+            <span class="counter-unit">초</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="floral-divider" aria-hidden="true">✿ ✿ ✿</div>
+
+    <!-- 감사 인사말 -->
+    <section id="section-message" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Thank You</span>
+        <h2 class="section-title"><i class="fa-regular fa-envelope-open"></i> 참석해 주신 모든 분들께</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="message-card">
+        <div class="message-card-inner">
+          <p>
+            2025년 11월 1일, 저희의 결혼식에<br>
+            귀한 발걸음으로 참석해 주시고<br>
+            따뜻한 축복을 보내주신 모든 분들께<br>
+            진심으로 감사드립니다.
+          </p>
+          <p>
+            행복으로 가득했던 그날로부터<br>
+            어느덧 1년이라는 시간이 흘렀습니다.<br>
+            여러분과 함께 나눈 미소와 따뜻한 축복은<br>
+            지금도 저희에게 가장 소중한 보물입니다.
+          </p>
+          <p>
+            감사의 마음을 담아<br>
+            그날의 영상과 추억의 사진들을 모았습니다.<br>
+            잠시나마 그날의 기쁨과 설렘을<br>
+            함께 떠올려 주시면 감사하겠습니다.
+          </p>
+          <div class="message-signature">
+            전영환 &nbsp;·&nbsp; 아마노 메구미
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01: 결혼식 하이라이트 영상 -->
+    <section id="section01" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Wedding Movie</span>
+        <h2 class="section-title"><i class="fa-solid fa-film"></i> 결혼식 하이라이트 영상</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="media-card">
+        <div class="video-frame">
+          <video
+            src="Digest(480p).mp4"
+            controls
+            playsinline
+            preload="metadata"
+            poster="Digest-Video-Thumbnail.jpg">
+            브라우저가 video 태그를 지원하지 않습니다.
+          </video>
+        </div>
+        <p class="media-caption">
+          결혼식 본식 하이라이트 영상입니다.<br>
+          ※ 영상을 재생하면 배경음악은 자동으로 일시정지됩니다.
+        </p>
+        <a class="btn-sakura" href="https://naver.me/GplYUnxa" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-clapperboard"></i>
+          전체 영상 이어서 보기
+          <i class="fa-solid fa-up-right-from-square" style="font-size: 0.78em;"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 식전영상 (Opening Movie) -->
+    <section id="section-premovie" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Opening Movie</span>
+        <h2 class="section-title"><i class="fa-solid fa-clapperboard"></i> 식전영상</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="media-card">
+        <h3 class="video-subtitle"><i class="fa-solid fa-play"></i> 식전영상 ①</h3>
+        <div class="video-frame">
+          <video
+            src="식전영상1.mp4#t=0.001"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://drive.google.com/thumbnail?id=1F2Bu-M8rCLp4W4KMZKd3R7XQdZCe4Te3&sz=w1000">
+            브라우저가 video 태그를 지원하지 않습니다.
+          </video>
+        </div>
+        <p class="media-caption" style="margin-bottom: 4px;">
+          결혼식 시작 전 상영한 첫 번째 식전영상입니다.<br>
+          ※ 영상을 재생하면 배경음악은 자동으로 일시정지됩니다.
+        </p>
+      </div>
+
+      <div class="media-card mt-3">
+        <h3 class="video-subtitle"><i class="fa-solid fa-play"></i> 식전영상 ②</h3>
+        <div class="video-frame">
+          <video
+            src="식전영상2.mp4#t=0.001"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://drive.google.com/thumbnail?id=1zB08JqkO5RN8G2fD6i2ezh2Lfn-wmyLN&sz=w1000">
+            브라우저가 video 태그를 지원하지 않습니다.
+          </video>
+        </div>
+        <p class="media-caption" style="margin-bottom: 4px;">
+          결혼식 시작 전 상영한 두 번째 식전영상입니다.<br>
+          ※ 영상을 재생하면 배경음악은 자동으로 일시정지됩니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 식중영상 (Ceremony Movie) -->
+    <section id="section-ceremonymovie" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Ceremony Movie</span>
+        <h2 class="section-title"><i class="fa-solid fa-film"></i> 식중영상</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="media-card">
+        <div class="video-frame">
+          <video
+            src="식중영상.mp4#t=0.001"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://drive.google.com/thumbnail?id=1ZhAaHimRLka1vRGe-jQER16odFbJ-iNO&sz=w1000">
+            브라우저가 video 태그를 지원하지 않습니다.
+          </video>
+        </div>
+        <p class="media-caption" style="margin-bottom: 4px;">
+          결혼식 진행 중 상영한 식중영상입니다.<br>
+          ※ 영상을 재생하면 배경음악은 자동으로 일시정지됩니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 식순 책자 (Wedding Program 3D Booklet) -->
+    <section id="section-program" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Wedding Program</span>
+        <h2 class="section-title"><i class="fa-solid fa-book-open"></i> 식순</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="program-card">
+        <div class="book-scene" id="bookScene">
+          <div class="book" id="programBook" data-state="0" role="region" aria-label="결혼식 식순 책자">
+            <!-- 1장: 앞면(표지 앞면) / 뒷면(안쪽 왼쪽) -->
+            <div class="book-leaf" id="bookLeaf1" style="z-index: 2;">
+              <div class="book-face face-front">
+                <img id="bookCoverImg" src="https://drive.google.com/thumbnail?id=1I-JfIT-3pLDGZwXGvAEndM20bbUvoxjd&sz=w1000" alt="식순 표지">
+              </div>
+              <div class="book-face face-back">
+                <img src="https://drive.google.com/thumbnail?id=1Yt5v3awS6dsrNqCYk8pUpUJZrKP1SFMG&sz=w1000" alt="식순 안쪽 왼쪽">
+              </div>
+            </div>
+
+            <!-- 2장: 앞면(안쪽 오른쪽) / 뒷면(표지 뒷면) -->
+            <div class="book-leaf" id="bookLeaf2" style="z-index: 1;">
+              <div class="book-face face-front">
+                <img src="https://drive.google.com/thumbnail?id=1KR65XRxLf_F6JUsEPriPYX_R0Z5wIKKP&sz=w1000" alt="식순 안쪽 오른쪽">
+              </div>
+              <div class="book-face face-back">
+                <img src="https://drive.google.com/thumbnail?id=1awm6Cq1mp3XzplaAJawGwBLL1XQYbqFi&sz=w1000" alt="식순 뒷표지">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-steps" role="tablist" aria-label="페이지 선택">
+          <button type="button" class="book-step-btn active" data-book-step="0">표지</button>
+          <button type="button" class="book-step-btn" data-book-step="1">안쪽 (펼침)</button>
+          <button type="button" class="book-step-btn" data-book-step="2">뒷표지</button>
+        </div>
+
+        <div class="book-actions">
+          <button type="button" class="book-nav-btn" id="bookPrevBtn" disabled>
+            <i class="fa-solid fa-chevron-left"></i> 이전 면
+          </button>
+          <button type="button" class="book-nav-btn" id="bookZoomBtn">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> 크게 보기
+          </button>
+          <button type="button" class="book-nav-btn" id="bookNextBtn">
+            다음 면 <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <p class="book-hint">
+          <i class="fa-regular fa-hand-pointer"></i> 책자를 탭하거나 좌우로 스와이프해 책처럼 넘겨보세요
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 02: 결혼식 포토 갤러리 -->
+    <section id="section02" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Photo Gallery</span>
+        <h2 class="section-title"><i class="fa-solid fa-camera-retro"></i> 추억의 포토 갤러리</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="gallery-card">
+        <div class="gallery-tabs" role="tablist" aria-label="사진 카테고리">
+          <button type="button" class="gallery-tab active" data-category="prewedding">웨딩촬영 <span class="tab-count" data-count-for="prewedding">0</span></button>
+          <button type="button" class="gallery-tab" data-category="album">결혼식① <span class="tab-count" data-count-for="album">0</span></button>
+          <button type="button" class="gallery-tab" data-category="guests">결혼식② <span class="tab-count" data-count-for="guests">0</span></button>
+          <button type="button" class="gallery-tab" data-category="all">전체 <span class="tab-count" data-count-for="all">0</span></button>
+        </div>
+
+        <div class="gallery-meta-bar">
+          <span id="galleryRangeText"></span>
+          <button type="button" class="gallery-slide-btn" id="galleryOpenFirstBtn">
+            <i class="fa-solid fa-expand"></i> 처음부터 연속 보기
+          </button>
+        </div>
+
+        <div class="photo-grid" id="photoGrid"></div>
+
+        <nav class="gallery-pagination" id="galleryPagination" aria-label="갤러리 페이지 이동"></nav>
+
+        <p class="gallery-hint"><i class="fa-regular fa-hand-pointer"></i> 사진을 탭하면 전체 사진을 좌우 스와이프로 연속 감상하실 수 있습니다</p>
+      </div>
+    </section>
+
+    <!-- Section 04: 결혼식까지의 발자취 (타임라인) -->
+    <section id="section04" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Our Story</span>
+        <h2 class="section-title"><i class="fa-regular fa-heart"></i> 결혼식까지의 발자취</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- 아래 타임라인 날짜와 설명은 필요에 맞게 자유롭게 수정해 주세요 -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2022.08.14</div>
+          <h3 class="timeline-title">첫 만남</h3>
+          <p class="timeline-desc">
+            두 사람의 이야기가 시작된, 잊지 못할 첫 만남의 날.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2024.09.24</div>
+          <h3 class="timeline-title">프로포즈</h3>
+          <p class="timeline-desc">
+            앞으로의 인생을 함께 걸어가기로 약속했습니다.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2024.02.22</div>
+          <h3 class="timeline-title">일본 혼인신고</h3>
+          <p class="timeline-desc">
+            일본에서 혼인신고를 마치고 부부로서의 새로운 첫걸음을 내디뎠습니다.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2024.02.22</div>
+          <h3 class="timeline-title">한국 혼인신고</h3>
+          <p class="timeline-desc">
+            한국에서도 혼인신고를 마쳐 양국에서 정식으로 부부가 되었습니다.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025.11.01</div>
+          <h3 class="timeline-title">한국에서 결혼식</h3>
+          <p class="timeline-desc">
+            소중한 분들의 따뜻한 축복 속에서 잊지 못할 하루를 맞이했습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: 맺음말 -->
+    <section id="section05" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">With Gratitude</span>
+        <h2 class="section-title"><i class="fa-solid fa-seedling"></i> 감사의 마음을 담아</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="closing-card">
+        <p>
+          앞으로도 두 사람이 서로 의지하며<br>
+          웃음이 가득한 따뜻한 가정을 꾸려 나가겠습니다.
+        </p>
+        <p>
+          언제나 건강과 행복이 가득하시길 진심으로 기원합니다.<br>
+          다시 반갑게 인사드릴 날을 기다리겠습니다.
+        </p>
+
+        <div class="closing-actions">
+          <a class="btn-outline-warm" href="./index.html">
+            <i class="fa-regular fa-bookmark"></i> 작년 모바일 청첩장 다시 보기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 하단 벚꽃 코너 장식 & 푸터 메시지 -->
+    <footer class="footer-decoration-wrapper">
+      <div class="footer-message">
+        이 기념 사이트는<br>
+        신랑 전영환과 신부 아마노 메구미가<br>
+        감사의 마음을 담아 제작했습니다.
+      </div>
+      <div class="decoration footer-decoration"></div>
+    </footer>
+  </div>
+
+  <!-- 사진 확대 라이트박스 -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="사진 확대 보기">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="닫기">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="lightbox-stage" id="lightboxStage">
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="이전 사진">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="lightbox-spinner" id="lightboxSpinner" aria-hidden="true"></div>
+      <div class="lightbox-track" id="lightboxTrack"></div>
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="다음 사진">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <!-- 맨 위로 이동 버튼 -->
+  <a id="top-button" href="#top" aria-label="맨 위로 이동">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
+
+  <script src="https://kit.fontawesome.com/6fcecb4845.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script>
+    /* ============================================================
+       [선택 사항] 모바일 전용 접속 제한이 필요하면 아래 주석을 해제하세요.
+       PC에서도 결혼식 영상/사진을 편하게 볼 수 있도록 기본은 허용해 두었습니다.
+    ============================================================ */
+    /*
+    window.addEventListener('DOMContentLoaded', function () {
+      const isMobile = /iPhone|iPad|Android|iPod|blackberry|opera mini|opera mobile/i.test(navigator.userAgent);
+      if (!isMobile) {
+        document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>모바일 기기에서 접속해 주세요 🙏</h2>";
+      }
+    });
+    */
+
+    /* ============================================================
+       1. 포토 갤러리 데이터 (대량 등록 헬퍼 포함)
+       - 구글 드라이브 링크/ID 배열을 넣으면 자동으로 썸네일+고화질 생성
+       - 로컬 폴더(예: ./photos/album/01.jpg ~ 51.jpg)도 한 줄로 생성 가능
+    ============================================================ */
+    function extractDriveId(input) {
+      const m = String(input).match(/\/d\/([a-zA-Z0-9_-]+)/) || String(input).match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      return m ? m[1] : String(input).trim();
+    }
+
+    function buildDrivePhotos(linksOrIds, category, labelPrefix) {
+      return linksOrIds.map((item, idx) => {
+        const id = extractDriveId(item);
+        const num = String(idx + 1).padStart(2, '0');
+        return {
+          src: `https://drive.google.com/thumbnail?id=${id}&sz=w1200`,
+          thumb: `https://drive.google.com/thumbnail?id=${id}&sz=w400`,
+          category,
+          caption: `${labelPrefix} ${num}`
+        };
+      });
+    }
+
+    function buildLocalPhotos(folderPath, count, category, labelPrefix, ext = 'jpg', padLength = 2) {
+      return Array.from({ length: count }, (_, idx) => {
+        const num = String(idx + 1).padStart(padLength, '0');
+        const path = `${folderPath}/${num}.${ext}`;
+        return {
+          src: path,
+          thumb: path,
+          category,
+          caption: `${labelPrefix} ${num}`
+        };
+      });
+    }
+
+    // [1] 본식 앨범 사진 (51장)
+    const ALBUM_DRIVE_LINKS = [
+      '1eTP9Aw3p0A0LCoBspgkGA7p0eXX7jqhF', // 3W8A1597.jpg
+      '19sIJMA4v0XOAfEM6FxGDFxdZWDVXEgRm', // 3W8A1614.jpg
+      '1UKhl5fmW8n3fKzXmpYRSwx6iDkPx0zQ7', // 3W8A1710.jpg
+      '1C0fP1vuRVKviFOGifNQr5LlBiaY8I5dD', // 3W8A1741.jpg
+      '1_9IALjqK7RJ22akkSt8QcM7pTltKvFyt', // 3W8A1822.jpg
+      '1eifzTn_ll4RXNIIhQJKKL8MF7byJ6qTO', // 3W8A1847.jpg
+      '1bDRM-ZGTO-_O4cQ-pYsbImUQjYXnReum', // 3W8A1874.jpg
+      '1Rn6ONuhKRq8wQ5tfa2KFfDbgRLnJTkKa', // 3W8A1993.jpg
+      '1YTfzh66SMHk1-xKXLUZT9-nowqmUGrJs', // 3W8A2037.jpg
+      '1rEYtFCqOraF0hKKZ2mDHzXlZ2bOBJzS4', // 3W8A2242.jpg
+      '1OYnhBILJ5RVFL0MSO2W2fp6I58CwFr2i', // 3W8A2271.jpg
+      '13Y6T0SdLQAT4ZU2FKldRRUZkdxDUlrxc', // 3W8A2340.jpg
+      '1LalwY3PE6E1CjXceZSpM40MP99n9M6Y4', // 3W8A2434.jpg
+      '1M3D8g5GNqcu1l_oSR6FY30KYu8CWlhb_', // 3W8A2441.jpg
+      '1_EEn4ErrT2RdSHOaGMun0kTjm-juo4Eh', // 3W8A2463.jpg
+      '1gH-vgeJVHzTj4Xl0HCl5EEJW12W-_11-', // 3W8A2496.jpg
+      '1g3oRZawQp03eQwIZYzPDP4LGjajMkNX6', // 3W8A2627.jpg
+      '1rqHsIBrKO95sq4_ePVatVmXZL444XCyZ', // 3W8A2660.jpg
+      '1VFJf033-ooJiC3NXHOgQRzlwUZEsRBL4', // 3W8A2734.jpg
+      '10mPk_jz8WsAarOE6Ox46_5M8wswjLGj8', // 3W8A2776.jpg
+      '1yHg14wkwxn2hp493WgH6khoKsWXjCIwR', // 3W8A2819.jpg
+      '1upLcSwmdEvAaQ1QFrmw2Qw86MAlaUlcD', // 3W8A2870.jpg
+      '1sbjNfsx5Qjo_D5G6Pld0Hb3dCootQhOs', // 3W8A2872.jpg
+      '1_uneJGpzHlan4w9Ec_3KC7aPgZ9g1ENX', // 3W8A2876.jpg
+      '1Y7M_75o7AdsblLkKiwS11l8yOE8OzTAb', // 3W8A2878.jpg
+      '12l2wOV_t0ixREggUpMtsMwW-e3dtd-LY', // 3W8A2881.jpg
+      '1zx8BrYj1LjpgVTtMWicqUod-0ZehTBUp', // 3W8A2913.jpg
+      '1G_1eSFOfg7xKmughZMO8VndGRDREjQ2X', // 3W8A2916.jpg
+      '1MHwq2TKN9ojbC8yzEnSxv0qoqyqi4Wrz', // 3W8A2923.jpg
+      '1GP6sdcUEQH6xqpFJle_NGO7M1j8odwcv', // DSC04502.jpg
+      '1PXcKeCoIOFNwJnznYiOGAL2GOblEFsYy', // DSC04521.jpg
+      '1D_PWhlK668b1Cmew0772o_qrxZrI3uO5', // DSC04647.jpg
+      '1c9uT0ettspbysjRMe_tiGN4zvoHQiAAy', // DSC04654.jpg
+      '1otajNjThv8RDW4RmD7SXyFT217Kokccf', // DSC04666.jpg
+      '1kO5Rw2KQb7yMZDdOeR9VMCkbn7KkEu9h', // DSC04709.jpg
+      '1kyvZFR1o8w40ffXLBJkr4dwbRH9nkSTZ', // DSC04714.jpg
+      '1YFATSXLDaLLnz75xRRPVr855u816GxAj', // DSC04793.jpg
+      '1vKgATmd6Fw-pPFbEJ4PTNeIlH128ydjd', // DSC04812.jpg
+      '1pvSrJCg5rCT6pZpQws89hdRw6zJdSkEI', // DSC04846.jpg
+      '1LeAnmrkcjr81KM6_pWxZEmK0TM9Ri17o', // DSC04933.jpg
+      '1RZSfTuhXksbyc1s9a3iU23Y5ae35sn8D', // DSC04954.jpg
+      '1ZNua2RVfQlc3QA83ptph5_TmYi7rgNnm', // DSC04959.jpg
+      '1SWvBOiZdDF9tk5OTE9eo2opLIW5PKEmJ', // DSC04967.jpg
+      '11ia-_PICYgt3DP-EAbplRCUdL4mlioSG', // DSC04983.jpg
+      '1tGeQDy2nmDm-Nkly5HjJZvFsAm35jhwc', // DSC05001.jpg
+      '1kCI2OSbi-0ViJqOqJJKxVYLCBodUGlqI', // DSC05017.jpg
+      '1e0PK9t0ufNI0hEX30XAp4rtc72hoxeTI', // DSC05030.jpg
+      '16vGSUB3Fx1xyOp88z0SlgkrjuPP5Zk0w', // DSC05067.jpg
+      '1hP-U3RKg5UdyVqI0EV-4fxifSbQncm-C', // DSC05105.jpg
+      '1MfTAddC0AhXWW0Xrxzfjp9xq_mDN0Jhn', // DSC05210.jpg
+      '12Bu_nxDdvQG2ZmNinV2woqTarUKbs-dG'  // DSC05235.jpg
+    ];
+
+    // [2] 지인 사진 (59장)
+    const GUEST_DRIVE_LINKS = [
+      '1ZS-Z1xuNuosfzojTiCVvSmPdEu3485tN', // 3W8A1929.jpg
+      '1bbmBYU6rTLdWfjS5s02WpfxOvApg7e9-', // 3W8A1930.jpg
+      '1pQWuqgLLzBbXh5l5xAr3hQm_H12I6cxY', // 3W8A1931.jpg
+      '1gtDH9gjty5m8NU9yDOHkT3OxcciVLOBL', // 3W8A1932.jpg
+      '1jV9YQ54f4yD9PCC2FNJM749oNSP1jy2p', // 3W8A1933.jpg
+      '1OtEXTGdwuoKupV4MpfO9aGgrW64HMBW6', // 3W8A1935.jpg
+      '19Y2VgcJSfTCFvEerSw9ewVsfsr83LXZ_', // 3W8A1936.jpg
+      '1V1rs9zdLnXyE9OX74c2tW85w4lfWMif2', // 3W8A1937.jpg
+      '1Z0KtXrYEIB8bnKCSamxId9cuMRF9sMek', // 3W8A1938.jpg
+      '1S-ySvWLyR_SCY4aBsMiU34ctJCHB7unw', // 3W8A1939.jpg
+      '1DxJnQ3W3TKd3C9ulAO5QuRcnqXKN7GvR', // 3W8A1970.jpg
+      '1kAT0s1cNmO-tGKzNmjgmNxsOQgwcEOZa', // 3W8A1971.jpg
+      '1AEIUkurOdg2FzxBWYf-qD17DcNzkXXV6', // 3W8A1972.jpg
+      '1wbPkHuI9u9Gg3Ri5TAlo7alsHnQR5_jK', // 3W8A1973.jpg
+      '1VApbPov-bwg_ZOU5p80uQCEopLUatMbK', // 3W8A1980.jpg
+      '1Iy3g-SS3azJxBIIS9WzRi94s8pF5bvQ8', // 3W8A1981.jpg
+      '1ueVOM4nysmbOpfE4wdpsY9jxoXu4xWNd', // 3W8A1982.jpg
+      '1ZIyqFNdmVXF_mGJz5VNOt9JDgVSNjsCz', // 3W8A1983.jpg
+      '1wKR842eXBKdUjlTs7Bkj3Y6FoJvsuGeR', // 3W8A1990.jpg
+      '1vA2TEgomdkMQvU4aEcASBnJVsxvP8bEQ', // 3W8A1991.jpg
+      '1TCXuk98X9W7CcW3unsG1K1-CYylrdV9Y', // 3W8A1992.jpg
+      '1WFzmuePYZbbQ09BbTYHbmBAgzXsiE8_2', // 3W8A1993.jpg
+      '1rn56dGqajwUrl9Wtt4h123LC4VlYz9lH', // 3W8A1994.jpg
+      '119XaUAdwu_rGZLdocP2I6vykSpF36GxZ', // 3W8A2004.jpg
+      '1yBEldyBY-7Hwnd68hDwb3ribwKahVGOY', // 3W8A2005.jpg
+      '1eqmrtrriyHptLoOi8fUmLEXmO_AVNiBa', // 3W8A2006.jpg
+      '1CvSmqidmU-tSdZKYDU8of3c3q2QlG5Wo', // 3W8A2007.jpg
+      '1wjvu-lFPleRvgI2Xe9S-6ew4LmhC1EUq', // 3W8A2008.jpg
+      '1TDVdt94D_Oyp-zDFTZWwOmIE5VrCCqGW', // 3W8A2014.jpg
+      '11o7kmorryEIg7QNnxkmftBJAfjQhJ-Yo', // 3W8A2015.jpg
+      '1m_VdCNH9vuPNj13uKDPG1swKham76kzu', // 3W8A2016.jpg
+      '1WKlV95GxzZxuFZ89cfos7X6l-pxKj6kk', // 3W8A2017.jpg
+      '1PG1CMl1Gn3duePTYsLKPt__Kl9kQq_oX', // 3W8A2018.jpg
+      '1OdBCjGmdEn_cXRUefzPDMk9e3YWC4dLE', // 3W8A2028.jpg
+      '1pqSax39qgLy1bytuta-1mmIGaB80SGxC', // 3W8A2029.jpg
+      '1GoO3AilnA2UqQaiaJ1mmFc7yxRsKHYGa', // 3W8A2030.jpg
+      '1-ft_gW__m7KlXHsbrL98TrC43_x7FFY3', // 3W8A2031.jpg
+      '1Pdhm7Trw8QGcvTa6x6MGV3rIZhvmfV1H', // 3W8A2032.jpg
+      '1d51nWYJxBT67S5Puc4YjrtAVrlVJfJyk', // 3W8A2043.jpg
+      '1XkWgSWK4oDh2T-r2jDl2-Jvp1gqaWJjL', // 3W8A2044.jpg
+      '182wvgd2OKjS5_aCFw7idL8o67XhT-8Vd', // 3W8A2045.jpg
+      '1187Rzoa1bkdxVsxF7rOAWFJ5fFxNbNc7', // 3W8A2046.jpg
+      '1gSHpWxaH9BieLcNMvKdUbYPa60Um4x8I', // 3W8A2047.jpg
+      '1xl2PW64sCZkSaZULFdKBuyAtFuNZv5ph', // 3W8A2178.jpg
+      '10a8TMu0USAmDnU8uvxsYm1FB8bqNRIUG', // 3W8A2179.jpg
+      '17OlZhHxBlLqQHm8eo7SemgDiFpCK8U81', // 3W8A2180.jpg
+      '1d6N_O8wsfopLeJAWWNWyyrjJ9LbjJJK7', // 3W8A2181.jpg
+      '1uEM54wwt5ZFyc3YlCrpXrnCW3VezpJA4', // 3W8A2182.jpg
+      '1E9eK44Hi70KbweeVQy5hH6Q6dp2AVwuZ', // 3W8A2183.jpg
+      '1lPDOJOcrrcWR5Q18xdQ-7AThr1LsiDJ3', // 3W8A2184.jpg
+      '1uW7PTsih7lSxAUYaQLs5M3VexhEJWb3G', // 3W8A2194.jpg
+      '1OnEk4d3bghdAFz8is9HRD3UP990g3zSq', // 3W8A2195.jpg
+      '1VF_-MXeFhYhZRao2JPbkKGlfT6UrShFD', // 3W8A2196.jpg
+      '1iBro6b1tMq8klCnoeAtV7Jk82FzJGFvt', // 3W8A2197.jpg
+      '1tRAO_ZC83rK1t6XylGvrOTV3qS-E1rKC', // 3W8A2211.jpg
+      '1y7Xa5qg-qijxaN4XwvipnHn-fCG7mdny', // 3W8A2212.jpg
+      '1b8pCD6CUU0yEbqYlO1YJY9AK6YSsXeOt', // 3W8A2213.jpg
+      '1iGdlqLizSZVQazmXjkrb3JOMzTqqsIed', // 3W8A2214.jpg
+      '19N9Jsm7IGCmTDB9XJpcrpSqbk8bXbRZD'  // 3W8A2215.jpg
+    ];
+
+    const WEDDING_PHOTOS = [
+      // --- 前撮り (작년 WEB초대장의 웨딩 사진 20장 전체) ---
+      {
+        src: 'https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1jEoQzjJugJ6Mym23K8TzImASwzbsVN2S&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 01'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1F_LM7n7QmTNV6zx4uRxdgULqhaDA2wIt&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 02'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=106uSjcCixsj0hgCF93Mnx6I6bIiRZzHa&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 03'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1QBnaINKAuF6Sb01bxpbqKpS9um-HZQY0&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 04'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1GysZjhhHEFsXsMjzLRBABeZl6nncbhHy&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1GysZjhhHEFsXsMjzLRBABeZl6nncbhHy&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 05'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=13GkHL_7s-A0iWTJzDvcSEHoObWSIJlMO&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=13GkHL_7s-A0iWTJzDvcSEHoObWSIJlMO&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 06'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1Pvu9obNEN33r1rfD3mkUA6PUkchdiXZv&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1Pvu9obNEN33r1rfD3mkUA6PUkchdiXZv&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 07'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1CuwnB2L5K8nvAUv98TCdLQMO2-lEwKEa&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1CuwnB2L5K8nvAUv98TCdLQMO2-lEwKEa&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 08'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1tXRXZcd1zvKL_rCrwtQIlPSzJF4E8SHb&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1tXRXZcd1zvKL_rCrwtQIlPSzJF4E8SHb&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 09'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1BNxNDNYaMY_xKmZnNvzOFcThq44L4Kkx&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1BNxNDNYaMY_xKmZnNvzOFcThq44L4Kkx&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 10'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1qP-Ad2kr8Z5-Vt8M1NpHNyfSKsATpzZr&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1qP-Ad2kr8Z5-Vt8M1NpHNyfSKsATpzZr&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 11'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=10fmOvHb5B-M73mCJxo2oXbbQz3PRwNXe&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=10fmOvHb5B-M73mCJxo2oXbbQz3PRwNXe&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 12'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1cguN7uUxzEnBQ7Cc7_GkPBH-UaLetuZr&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1cguN7uUxzEnBQ7Cc7_GkPBH-UaLetuZr&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 13'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1UCR67n53Xsgurjl2DKgSVmPuAcO6KtV_&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1UCR67n53Xsgurjl2DKgSVmPuAcO6KtV_&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 14'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1_71dRCVkIUIEZgaLIWZIm79Zm6KOwxka&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1_71dRCVkIUIEZgaLIWZIm79Zm6KOwxka&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 15'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1jwrB4E4SFDlm9y1EeyRaa0l_TQtMokxa&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1jwrB4E4SFDlm9y1EeyRaa0l_TQtMokxa&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 16'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1uSrPV1t7JUno1sUU02B6mTLho-4BnfPp&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1uSrPV1t7JUno1sUU02B6mTLho-4BnfPp&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 17'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=11L2Zuv0kYJbdx59qzi1Jdt_fv50dvY5I&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=11L2Zuv0kYJbdx59qzi1Jdt_fv50dvY5I&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 18'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1TcNlmuAPdMnx9QmaqFh9tyvZl0ZLmiRX&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1TcNlmuAPdMnx9QmaqFh9tyvZl0ZLmiRX&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 19'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1j3fgYm3XeMbH2Wkdfe48KuRDverdi4r4&sz=w1200',
+        thumb: 'https://drive.google.com/thumbnail?id=1j3fgYm3XeMbH2Wkdfe48KuRDverdi4r4&sz=w400',
+        category: 'prewedding',
+        caption: '웨딩촬영 20'
+      },
+
+      // --- 결혼식① (결혼식 당일 앨범 사진 51장) ---
+      ...buildDrivePhotos(ALBUM_DRIVE_LINKS, 'album', '결혼식①'),
+      // 로컬 파일(예: photos/album/01.jpg ~ 51.jpg)로 올릴 경우 위 줄 대신 아래 주석 해제:
+      // ...buildLocalPhotos('./photos/album', 51, 'album', '결혼식①', 'jpg', 2),
+
+      // --- 결혼식② (지인 사진 59장) ---
+      ...buildDrivePhotos(GUEST_DRIVE_LINKS, 'guests', '결혼식②')
+      // 로컬 파일(예: photos/guests/01.jpg ~ 59.jpg)로 올릴 경우 위 줄 대신 아래 주석 해제:
+      // ...buildLocalPhotos('./photos/guests', 59, 'guests', '결혼식②', 'jpg', 2)
+    ];
+
+    /* ============================================================
+       2. 로더 해제 & 초기 가이드 페이드아웃
+    ============================================================ */
+    function finishLoading() {
+      document.body.classList.add('loaded');
+      setTimeout(() => {
+        const guide = document.getElementById('buttonGuide');
+        if (guide) guide.classList.add('fade-out');
+      }, 4500);
+    }
+
+    window.addEventListener('load', finishLoading);
+    // 외부 리소스가 느려도 2.5초 후에는 화면 표시
+    setTimeout(finishLoading, 2500);
+
+    /* ============================================================
+       3. 결혼식(2025-11-01 13:00 JST/KST) 경과 시간 카운터
+    ============================================================ */
+    const WEDDING_DATE = new Date('2025-11-01T13:00:00+09:00');
+
+    function updateElapsedCounter() {
+      const now = new Date();
+      const diffMs = Math.max(0, now - WEDDING_DATE);
+
+      const totalSeconds = Math.floor(diffMs / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const mins = Math.floor((totalSeconds % 3600) / 60);
+      const secs = totalSeconds % 60;
+
+      document.getElementById('countDays').textContent = days;
+      document.getElementById('countHours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('countMins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('countSecs').textContent = String(secs).padStart(2, '0');
+
+      const years = Math.floor(days / 365);
+      const headlineEl = document.getElementById('anniversaryHeadline');
+      if (years >= 1) {
+        headlineEl.innerHTML = `그날로부터 <strong>${years}주년</strong> (총 <strong>${days}일</strong>)을 맞이했습니다`;
+      } else {
+        headlineEl.innerHTML = `그날로부터 <strong>${days}일</strong>이 지났습니다`;
+      }
+    }
+
+    updateElapsedCounter();
+    setInterval(updateElapsedCounter, 1000);
+
+    /* ============================================================
+       4. BGM 제어 (동영상 재생 시 BGM 자동 일시정지)
+    ============================================================ */
+    const bgmAudio = document.getElementById('bgmAudio');
+    const playBtn = document.getElementById('playBtn');
+
+    function setBgmButtonState(isPlaying) {
+      playBtn.classList.toggle('active', isPlaying);
+      playBtn.innerHTML = isPlaying
+        ? '<i class="fa-solid fa-pause"></i>'
+        : '<i class="fa-solid fa-music"></i>';
+    }
+
+    playBtn.addEventListener('click', () => {
+      if (bgmAudio.paused) {
+        bgmAudio.play().then(() => setBgmButtonState(true)).catch(() => {});
+      } else {
+        bgmAudio.pause();
+        setBgmButtonState(false);
+      }
+    });
+
+    // 영상 재생 시 BGM과 다른 영상이 겹치지 않도록 자동 정지
+    const allVideos = document.querySelectorAll('video');
+    allVideos.forEach((videoEl) => {
+      videoEl.addEventListener('play', () => {
+        if (!bgmAudio.paused) {
+          bgmAudio.pause();
+          setBgmButtonState(false);
+        }
+        allVideos.forEach((other) => {
+          if (other !== videoEl && !other.paused) {
+            other.pause();
+          }
+        });
+      });
+    });
+
+    /* ============================================================
+       5. 벚꽃 꽃잎 효과 토글
+    ============================================================ */
+    const sakuraContainer = document.getElementById('sakuraContainer');
+    const sakuraToggleBtn = document.getElementById('sakuraToggleBtn');
+    let sakuraInterval = null;
+    let sakuraActive = false;
+    const MAX_SAKURA = 22;
+
+    function spawnSakuraPetal() {
+      if (sakuraContainer.childElementCount >= MAX_SAKURA) return;
+      const petal = document.createElement('div');
+      petal.className = 'sakura-petal';
+      const size = 10 + Math.random() * 10;
+      petal.style.width = `${size}px`;
+      petal.style.height = `${size * 1.25}px`;
+      petal.style.left = `${Math.random() * 100}vw`;
+      petal.style.animationDuration = `${6 + Math.random() * 6}s`;
+      petal.style.animationDelay = `${Math.random() * 2}s`;
+      sakuraContainer.appendChild(petal);
+
+      petal.addEventListener('animationiteration', () => {
+        petal.style.left = `${Math.random() * 100}vw`;
+      });
+    }
+
+    sakuraToggleBtn.addEventListener('click', () => {
+      if (!sakuraActive) {
+        sakuraActive = true;
+        sakuraToggleBtn.classList.add('active');
+        sakuraToggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        for (let i = 0; i < 6; i++) spawnSakuraPetal();
+        sakuraInterval = setInterval(spawnSakuraPetal, 400);
+      } else {
+        sakuraActive = false;
+        clearInterval(sakuraInterval);
+        sakuraToggleBtn.classList.remove('active');
+        sakuraToggleBtn.innerHTML = '<img src="sakura-icon.png" alt="벚꽃" />';
+        sakuraContainer.innerHTML = '';
+      }
+    });
+
+    /* ============================================================
+       6. 포토 갤러리 렌더링 & 부드러운 라이트박스 (사전 로딩 + 슬라이드 전환)
+    ============================================================ */
+    const photoGrid = document.getElementById('photoGrid');
+    const galleryPagination = document.getElementById('galleryPagination');
+    const galleryRangeText = document.getElementById('galleryRangeText');
+    const galleryOpenFirstBtn = document.getElementById('galleryOpenFirstBtn');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxStage = document.getElementById('lightboxStage');
+    const lightboxTrack = document.getElementById('lightboxTrack');
+    const lightboxSpinner = document.getElementById('lightboxSpinner');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+
+    const GALLERY_PAGE_SIZE = 9; // 한 페이지에 3x3 (9장)만 표시해 스크롤 압박 제거
+    let currentCategory = 'all';
+    let currentGalleryPage = 0;
+    let filteredPhotos = [...WEDDING_PHOTOS];
+    let lightboxItems = filteredPhotos;
+    let currentPhotoIdx = 0;
+    let activeImgEl = null;
+    let renderToken = 0;
+
+    // 고화질 이미지 사전 로딩 & 디코딩 캐시
+    const preloadPromises = new Map();
+    const loadedImageUrls = new Set();
+
+    function preloadImage(url) {
+      if (!url) return Promise.resolve();
+      if (loadedImageUrls.has(url)) return Promise.resolve();
+      if (preloadPromises.has(url)) return preloadPromises.get(url);
+
+      const promise = new Promise((resolve) => {
+        const img = new Image();
+        img.decoding = 'async';
+        img.onload = () => {
+          const finish = () => {
+            loadedImageUrls.add(url);
+            resolve();
+          };
+          if (typeof img.decode === 'function') {
+            img.decode().then(finish).catch(finish);
+          } else {
+            finish();
+          }
+        };
+        img.onerror = () => resolve();
+        img.src = url;
+      });
+
+      preloadPromises.set(url, promise);
+      return promise;
+    }
+
+    function preloadNeighbors(centerIdx) {
+      const len = lightboxItems.length;
+      if (len === 0) return;
+      // 현재 사진 및 좌우 2장 우선 프리로드
+      const offsets = [0, 1, -1, 2, -2];
+      offsets.forEach((offset) => {
+        const idx = (centerIdx + offset + len) % len;
+        preloadImage(lightboxItems[idx].src);
+      });
+    }
+
+    function updateGalleryTabCounts() {
+      const counts = {
+        all: WEDDING_PHOTOS.length,
+        album: WEDDING_PHOTOS.filter((p) => p.category === 'album').length,
+        guests: WEDDING_PHOTOS.filter((p) => p.category === 'guests').length,
+        prewedding: WEDDING_PHOTOS.filter((p) => p.category === 'prewedding').length
+      };
+      document.querySelectorAll('[data-count-for]').forEach((el) => {
+        const key = el.dataset.countFor;
+        el.textContent = counts[key] ?? 0;
+      });
+    }
+
+    function getPaginationPages(current, total) {
+      if (total <= 5) return Array.from({ length: total }, (_, i) => i);
+      const pages = new Set([0, total - 1, current, current - 1, current + 1]);
+      return Array.from(pages).filter((p) => p >= 0 && p < total).sort((a, b) => a - b);
+    }
+
+    function renderGalleryPage(pageIndex) {
+      const total = filteredPhotos.length;
+      const totalPages = Math.max(1, Math.ceil(total / GALLERY_PAGE_SIZE));
+      currentGalleryPage = Math.max(0, Math.min(pageIndex, totalPages - 1));
+
+      photoGrid.innerHTML = '';
+      galleryPagination.innerHTML = '';
+
+      if (total === 0) {
+        galleryRangeText.textContent = '0장';
+        galleryOpenFirstBtn.style.display = 'none';
+        photoGrid.innerHTML = '<div class="gallery-empty">사진을 준비 중입니다 📷</div>';
+        return;
+      }
+
+      const start = currentGalleryPage * GALLERY_PAGE_SIZE;
+      const end = Math.min(start + GALLERY_PAGE_SIZE, total);
+      const pageItems = filteredPhotos.slice(start, end);
+
+      galleryRangeText.textContent = `${start + 1}~${end}번째 / 총 ${total}장`;
+      galleryOpenFirstBtn.style.display = 'inline-flex';
+
+      pageItems.forEach((photo, offset) => {
+        const globalIdx = start + offset;
+        const tile = document.createElement('button');
+        tile.type = 'button';
+        tile.className = 'photo-tile';
+        tile.setAttribute('aria-label', photo.caption || `사진 ${globalIdx + 1}`);
+        tile.innerHTML = `<img src="${photo.thumb || photo.src}" alt="${photo.caption || ''}" loading="lazy">`;
+        tile.addEventListener('pointerenter', () => preloadImage(photo.src), { passive: true });
+        tile.addEventListener('touchstart', () => preloadImage(photo.src), { passive: true });
+        tile.addEventListener('click', () => openLightbox(globalIdx));
+        photoGrid.appendChild(tile);
+      });
+
+      if (totalPages > 1) {
+        const prevBtn = document.createElement('button');
+        prevBtn.type = 'button';
+        prevBtn.className = 'page-btn';
+        prevBtn.disabled = currentGalleryPage === 0;
+        prevBtn.setAttribute('aria-label', '이전 페이지');
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left" style="font-size: 0.72rem;"></i>';
+        prevBtn.addEventListener('click', () => renderGalleryPage(currentGalleryPage - 1));
+        galleryPagination.appendChild(prevBtn);
+
+        const visiblePages = getPaginationPages(currentGalleryPage, totalPages);
+        visiblePages.forEach((p, i) => {
+          if (i > 0 && p - visiblePages[i - 1] > 1) {
+            const dots = document.createElement('span');
+            dots.className = 'page-ellipsis';
+            dots.textContent = '…';
+            galleryPagination.appendChild(dots);
+          }
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'page-btn' + (p === currentGalleryPage ? ' active' : '');
+          btn.textContent = String(p + 1);
+          btn.addEventListener('click', () => renderGalleryPage(p));
+          galleryPagination.appendChild(btn);
+        });
+
+        const nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
+        nextBtn.className = 'page-btn';
+        nextBtn.disabled = currentGalleryPage === totalPages - 1;
+        nextBtn.setAttribute('aria-label', '다음 페이지');
+        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right" style="font-size: 0.72rem;"></i>';
+        nextBtn.addEventListener('click', () => renderGalleryPage(currentGalleryPage + 1));
+        galleryPagination.appendChild(nextBtn);
+      }
+    }
+
+    function renderGallery(category) {
+      currentCategory = category;
+      filteredPhotos = category === 'all'
+        ? [...WEDDING_PHOTOS]
+        : WEDDING_PHOTOS.filter((item) => item.category === category);
+
+      document.querySelectorAll('.gallery-tab').forEach((t) => {
+        t.classList.toggle('active', t.dataset.category === category);
+      });
+
+      renderGalleryPage(0);
+    }
+
+    document.querySelectorAll('.gallery-tab').forEach((tab) => {
+      tab.addEventListener('click', () => renderGallery(tab.dataset.category));
+    });
+
+    galleryOpenFirstBtn.addEventListener('click', () => {
+      if (filteredPhotos.length > 0) openLightbox(0);
+    });
+
+    function showLightboxSlide(direction) {
+      const item = lightboxItems[currentPhotoIdx];
+      if (!item) return;
+
+      const token = ++renderToken;
+      const prevImg = activeImgEl;
+      const slideOffset = 46;
+
+      // 이미 캐시된 고화질이 있으면 바로 표시, 없으면 이미 로딩된 썸네일을 즉시 표시 후 고화질로 무음 교체
+      const isHdReady = loadedImageUrls.has(item.src);
+      const nextImg = document.createElement('img');
+      nextImg.className = 'lightbox-img';
+      nextImg.alt = item.caption || '';
+      nextImg.decoding = 'async';
+      nextImg.src = isHdReady ? item.src : (item.thumb || item.src);
+
+      // 시작 위치 설정
+      if (direction === 0) {
+        nextImg.style.opacity = '0';
+        nextImg.style.transform = 'translate3d(0, 0, 0) scale(0.96)';
+      } else {
+        nextImg.style.opacity = '0';
+        nextImg.style.transform = `translate3d(${direction > 0 ? slideOffset : -slideOffset}px, 0, 0)`;
+      }
+
+      // 빠르게 연타할 때 이전 잔여 이미지가 쌓이지 않도록 정리
+      Array.from(lightboxTrack.children).forEach((el) => {
+        if (el !== prevImg) el.remove();
+      });
+
+      lightboxTrack.appendChild(nextImg);
+      activeImgEl = nextImg;
+
+      // 다음 프레임에 GPU 가속 슬라이드 인/아웃 실행
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (prevImg && prevImg.parentNode === lightboxTrack) {
+            prevImg.style.opacity = '0';
+            prevImg.style.transform = direction === 0
+              ? 'translate3d(0, 0, 0) scale(0.96)'
+              : `translate3d(${direction > 0 ? -slideOffset : slideOffset}px, 0, 0)`;
+            setTimeout(() => {
+              if (prevImg.parentNode === lightboxTrack) prevImg.remove();
+            }, 300);
+          }
+
+          nextImg.style.opacity = '1';
+          nextImg.style.transform = 'translate3d(0, 0, 0) scale(1)';
+        });
+      });
+
+      // 캡션/카운터 즉시 갱신
+      lightboxCaption.textContent = item.caption || '';
+      lightboxCounter.textContent = `${currentPhotoIdx + 1} / ${lightboxItems.length}`;
+
+      // 고화질이 아직 캐시되지 않았으면 백그라운드에서 로드 완료 즉시 교체
+      lightboxSpinner.classList.remove('show');
+      if (!isHdReady && item.src !== nextImg.src) {
+        const spinnerTimer = setTimeout(() => {
+          if (token === renderToken) lightboxSpinner.classList.add('show');
+        }, 160);
+
+        preloadImage(item.src).then(() => {
+          clearTimeout(spinnerTimer);
+          if (token !== renderToken) return;
+          lightboxSpinner.classList.remove('show');
+          nextImg.src = item.src;
+        });
+      }
+
+      // 인접 사진들 미리 로드해 다음 클릭은 0ms로 전환
+      preloadNeighbors(currentPhotoIdx);
+    }
+
+    function openLightbox(index, customItems) {
+      lightboxItems = customItems || filteredPhotos;
+      currentPhotoIdx = index;
+      lightboxTrack.innerHTML = '';
+      activeImgEl = null;
+      lightbox.classList.add('open');
+      document.body.classList.add('no-scroll');
+      showLightboxSlide(0);
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+      lightboxSpinner.classList.remove('show');
+      // 라이트박스에서 보고 있던 사진이 있는 페이지로 갤러리 자동 동기화
+      if (lightboxItems === filteredPhotos && filteredPhotos.length > 0) {
+        const targetPage = Math.floor(currentPhotoIdx / GALLERY_PAGE_SIZE);
+        if (targetPage !== currentGalleryPage) {
+          renderGalleryPage(targetPage);
+        }
+      }
+    }
+
+    function showPrevPhoto() {
+      if (lightboxItems.length <= 1) return;
+      currentPhotoIdx = (currentPhotoIdx - 1 + lightboxItems.length) % lightboxItems.length;
+      showLightboxSlide(-1);
+    }
+
+    function showNextPhoto() {
+      if (lightboxItems.length <= 1) return;
+      currentPhotoIdx = (currentPhotoIdx + 1) % lightboxItems.length;
+      showLightboxSlide(1);
+    }
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', showPrevPhoto);
+    document.getElementById('lightboxNext').addEventListener('click', showNextPhoto);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightboxTrack) closeLightbox();
+    });
+
+    // 모바일 손가락 따라오는 부드러운 좌우 스와이프
+    let touchStartX = 0;
+    let touchDeltaX = 0;
+    let isSwiping = false;
+
+    lightboxStage.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1 || !activeImgEl || e.target.closest('.lightbox-nav')) return;
+      touchStartX = e.touches[0].clientX;
+      touchDeltaX = 0;
+      isSwiping = true;
+      activeImgEl.classList.add('dragging');
+    }, { passive: true });
+
+    lightboxStage.addEventListener('touchmove', (e) => {
+      if (!isSwiping || !activeImgEl) return;
+      touchDeltaX = e.touches[0].clientX - touchStartX;
+      activeImgEl.style.transform = `translate3d(${touchDeltaX * 0.65}px, 0, 0)`;
+    }, { passive: true });
+
+    lightboxStage.addEventListener('touchend', () => {
+      if (!isSwiping || !activeImgEl) return;
+      isSwiping = false;
+      activeImgEl.classList.remove('dragging');
+
+      if (Math.abs(touchDeltaX) >= 48) {
+        if (touchDeltaX > 0) showPrevPhoto();
+        else showNextPhoto();
+      } else {
+        activeImgEl.style.transform = 'translate3d(0, 0, 0) scale(1)';
+      }
+      touchDeltaX = 0;
+    }, { passive: true });
+
+    updateGalleryTabCounts();
+    renderGallery('prewedding');
+
+    /* ============================================================
+       6-2. 식순 3D 책자 (Wedding Program Booklet) 제어
+    ============================================================ */
+    const PROGRAM_PAGES = [
+      {
+        src: 'https://drive.google.com/thumbnail?id=1I-JfIT-3pLDGZwXGvAEndM20bbUvoxjd&sz=w1600',
+        thumb: 'https://drive.google.com/thumbnail?id=1I-JfIT-3pLDGZwXGvAEndM20bbUvoxjd&sz=w1000',
+        caption: '식순 — 표지'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1Yt5v3awS6dsrNqCYk8pUpUJZrKP1SFMG&sz=w1600',
+        thumb: 'https://drive.google.com/thumbnail?id=1Yt5v3awS6dsrNqCYk8pUpUJZrKP1SFMG&sz=w1000',
+        caption: '식순 — 안쪽 (왼쪽)'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1KR65XRxLf_F6JUsEPriPYX_R0Z5wIKKP&sz=w1600',
+        thumb: 'https://drive.google.com/thumbnail?id=1KR65XRxLf_F6JUsEPriPYX_R0Z5wIKKP&sz=w1000',
+        caption: '식순 — 안쪽 (오른쪽)'
+      },
+      {
+        src: 'https://drive.google.com/thumbnail?id=1awm6Cq1mp3XzplaAJawGwBLL1XQYbqFi&sz=w1600',
+        thumb: 'https://drive.google.com/thumbnail?id=1awm6Cq1mp3XzplaAJawGwBLL1XQYbqFi&sz=w1000',
+        caption: '식순 — 뒷표지'
+      }
+    ];
+
+    const bookScene = document.getElementById('bookScene');
+    const programBook = document.getElementById('programBook');
+    const bookLeaf1 = document.getElementById('bookLeaf1');
+    const bookLeaf2 = document.getElementById('bookLeaf2');
+    const bookCoverImg = document.getElementById('bookCoverImg');
+    const bookPrevBtn = document.getElementById('bookPrevBtn');
+    const bookNextBtn = document.getElementById('bookNextBtn');
+    const bookZoomBtn = document.getElementById('bookZoomBtn');
+    const bookStepBtns = document.querySelectorAll('.book-step-btn');
+
+    let bookState = 0; // 0: 表紙, 1: 中面（見開き）, 2: 裏表紙
+    let bookStepTimer = null;
+
+    // 실제 표지 이미지 비율에 맞춰 책자 비율 자동 조정 (잘림 방지)
+    function syncBookAspectRatio() {
+      if (bookCoverImg && bookCoverImg.naturalWidth && bookCoverImg.naturalHeight) {
+        const ratio = bookCoverImg.naturalWidth / bookCoverImg.naturalHeight;
+        if (ratio > 0.3 && ratio < 2) {
+          bookScene.style.setProperty('--book-page-ratio', ratio.toFixed(4));
+        }
+      }
+    }
+    if (bookCoverImg.complete) syncBookAspectRatio();
+    else bookCoverImg.addEventListener('load', syncBookAspectRatio);
+
+    function applyBookState(nextState) {
+      const prevState = bookState;
+      bookState = nextState;
+      programBook.dataset.state = String(nextState);
+
+      // 넘어가는 장이 항상 위쪽에 오도록 z-index 조정
+      if ((prevState === 0 && nextState === 1) || (prevState === 1 && nextState === 0)) {
+        bookLeaf1.style.zIndex = '3';
+        bookLeaf2.style.zIndex = '1';
+      } else if ((prevState === 1 && nextState === 2) || (prevState === 2 && nextState === 1)) {
+        bookLeaf2.style.zIndex = '3';
+        bookLeaf1.style.zIndex = '1';
+      }
+
+      bookLeaf1.classList.toggle('flipped', nextState >= 1);
+      bookLeaf2.classList.toggle('flipped', nextState >= 2);
+
+      bookStepBtns.forEach((btn) => {
+        btn.classList.toggle('active', Number(btn.dataset.bookStep) === nextState);
+      });
+      bookPrevBtn.disabled = nextState === 0;
+      bookNextBtn.disabled = nextState === 2;
+    }
+
+    function goToBookState(targetState) {
+      clearTimeout(bookStepTimer);
+      if (targetState === bookState) return;
+      // 0 <-> 2 직접 이동 시 중간 펼침면을 거쳐 실제 책처럼 순차 넘김
+      if (Math.abs(targetState - bookState) === 2) {
+        applyBookState(1);
+        bookStepTimer = setTimeout(() => applyBookState(targetState), 340);
+      } else {
+        applyBookState(targetState);
+      }
+    }
+
+    bookPrevBtn.addEventListener('click', () => {
+      if (bookState > 0) goToBookState(bookState - 1);
+    });
+
+    bookNextBtn.addEventListener('click', () => {
+      if (bookState < 2) goToBookState(bookState + 1);
+    });
+
+    bookStepBtns.forEach((btn) => {
+      btn.addEventListener('click', () => goToBookState(Number(btn.dataset.bookStep)));
+    });
+
+    // 크게 읽기(확대 보기) 버튼: 현재 펼친 면에 해당하는 페이지부터 4면 확대 탐색
+    bookZoomBtn.addEventListener('click', () => {
+      const startPage = bookState === 0 ? 0 : (bookState === 1 ? 1 : 3);
+      PROGRAM_PAGES.forEach((p) => preloadImage(p.src));
+      openLightbox(startPage, PROGRAM_PAGES);
+    });
+
+    // 책자 클릭으로 넘기기 (표지: 열기 / 펼침면: 좌측=이전, 우측=다음 / 뒷표지: 다시 펼치기)
+    programBook.addEventListener('click', (e) => {
+      if (bookState === 0) {
+        goToBookState(1);
+      } else if (bookState === 2) {
+        goToBookState(1);
+      } else {
+        const rect = programBook.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        if (clickX < rect.width / 2) goToBookState(0);
+        else goToBookState(2);
+      }
+    });
+
+    // 책자 모바일 좌우 스와이프
+    let bookTouchX = 0;
+    bookScene.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) bookTouchX = e.touches[0].clientX;
+    }, { passive: true });
+
+    bookScene.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].clientX - bookTouchX;
+      if (Math.abs(diffX) < 40) return;
+      if (diffX < 0 && bookState < 2) goToBookState(bookState + 1);
+      else if (diffX > 0 && bookState > 0) goToBookState(bookState - 1);
+    }, { passive: true });
+
+    /* ============================================================
+       7. 스크롤 리빌 & TOP 버튼
+    ============================================================ */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+    const topBtn = document.getElementById('top-button');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('show', window.scrollY > 260);
+    }, { passive: true });
+
+    /* ============================================================
+       8. 키보드 제어 (라이트박스 탐색 + 기존 단축키 차단 유지)
+    ============================================================ */
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.classList.contains('open')) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') showPrevPhoto();
+        else if (e.key === 'ArrowRight') showNextPhoto();
+      }
+
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
