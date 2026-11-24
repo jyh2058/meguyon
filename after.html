@@ -1263,6 +1263,41 @@
       line-height: 1.7;
     }
 
+    .timeline-counter {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-soft);
+    }
+
+    .timeline-counter-box {
+      background: var(--bg-page);
+      border: 1px solid var(--border-soft);
+      border-radius: 9px;
+      padding: 5px 2px;
+      text-align: center;
+    }
+
+    .timeline-counter-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: lining-nums tabular-nums;
+      font-feature-settings: "lnum" 1, "tnum" 1;
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.1;
+      display: block;
+    }
+
+    .timeline-counter-unit {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      display: block;
+    }
+
     /* 마무리 카드 */
     .closing-card {
       background: #FFFFFF;
@@ -1664,6 +1699,7 @@
           <p class="timeline-desc">
             두 사람의 이야기가 시작된, 잊지 못할 첫 만남의 날.
           </p>
+          <div class="timeline-counter" data-since="2022-08-14T00:00:00+09:00"></div>
         </div>
 
         <div class="timeline-item">
@@ -2085,15 +2121,37 @@
     ============================================================ */
     const WEDDING_DATE = new Date('2025-11-01T13:00:00+09:00');
 
+    // 첫 만남 미니 경과 카운터 초기화
+    const timelineCounterItems = Array.from(document.querySelectorAll('.timeline-counter[data-since]')).map((el) => {
+      el.innerHTML = `
+        <div class="timeline-counter-box"><span class="timeline-counter-num" data-unit="d">0</span><span class="timeline-counter-unit">일</span></div>
+        <div class="timeline-counter-box"><span class="timeline-counter-num" data-unit="h">00</span><span class="timeline-counter-unit">시간</span></div>
+        <div class="timeline-counter-box"><span class="timeline-counter-num" data-unit="m">00</span><span class="timeline-counter-unit">분</span></div>
+        <div class="timeline-counter-box"><span class="timeline-counter-num" data-unit="s">00</span><span class="timeline-counter-unit">초</span></div>
+      `;
+      return {
+        since: new Date(el.dataset.since),
+        d: el.querySelector('[data-unit="d"]'),
+        h: el.querySelector('[data-unit="h"]'),
+        m: el.querySelector('[data-unit="m"]'),
+        s: el.querySelector('[data-unit="s"]')
+      };
+    });
+
+    function calcElapsedParts(now, sinceDate) {
+      const diffMs = Math.max(0, now - sinceDate);
+      const totalSeconds = Math.floor(diffMs / 1000);
+      return {
+        days: Math.floor(totalSeconds / 86400),
+        hours: Math.floor((totalSeconds % 86400) / 3600),
+        mins: Math.floor((totalSeconds % 3600) / 60),
+        secs: totalSeconds % 60
+      };
+    }
+
     function updateElapsedCounter() {
       const now = new Date();
-      const diffMs = Math.max(0, now - WEDDING_DATE);
-
-      const totalSeconds = Math.floor(diffMs / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const mins = Math.floor((totalSeconds % 3600) / 60);
-      const secs = totalSeconds % 60;
+      const { days, hours, mins, secs } = calcElapsedParts(now, WEDDING_DATE);
 
       document.getElementById('countDays').textContent = days;
       document.getElementById('countHours').textContent = String(hours).padStart(2, '0');
@@ -2107,6 +2165,14 @@
       } else {
         headlineEl.innerHTML = `그날로부터 <strong>${days}일</strong>이 지났습니다`;
       }
+
+      timelineCounterItems.forEach((item) => {
+        const parts = calcElapsedParts(now, item.since);
+        item.d.textContent = parts.days;
+        item.h.textContent = String(parts.hours).padStart(2, '0');
+        item.m.textContent = String(parts.mins).padStart(2, '0');
+        item.s.textContent = String(parts.secs).padStart(2, '0');
+      });
     }
 
     updateElapsedCounter();
