@@ -1330,6 +1330,130 @@
       display: block;
     }
 
+    /* 결혼 후 근황 보고 */
+    .update-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .update-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      box-shadow: var(--shadow-soft);
+      text-align: left;
+    }
+
+    .update-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .update-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: lining-nums;
+      font-feature-settings: "lnum" 1;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent-pink-deep);
+    }
+
+    .update-tag {
+      font-size: 0.7rem;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: var(--accent-pink-soft);
+      border: 1px solid #F3CFD9;
+      color: var(--accent-pink-deep);
+    }
+
+    .update-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0 0 8px;
+    }
+
+    .update-body {
+      font-size: 0.86rem;
+      line-height: 1.95;
+      color: var(--text-body);
+      margin: 0;
+      white-space: pre-line;
+    }
+
+    .update-photo {
+      margin-top: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid #FAF3EC;
+      box-shadow: 0 6px 16px rgba(75, 63, 47, 0.1);
+    }
+
+    .update-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .update-coming-soon {
+      background: #FFFFFF;
+      border: 1.5px dashed #EBC9D4;
+      border-radius: 18px;
+      padding: 30px 20px 26px;
+      text-align: center;
+    }
+
+    .update-coming-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: var(--accent-pink-soft);
+      color: var(--accent-pink-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      animation: comingPulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes comingPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 157, 176, 0.35); }
+      50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(230, 157, 176, 0); }
+    }
+
+    .update-coming-badge {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 6px;
+    }
+
+    .update-coming-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-heading);
+      margin: 0 0 8px;
+    }
+
+    .update-coming-text {
+      font-size: 0.82rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
     /* 마무리 카드 */
     .closing-card {
       background: #FFFFFF;
@@ -1460,6 +1584,7 @@
         <a href="#section-vows"><i class="fa-solid fa-feather-pointed"></i> 혼인서약서</a>
         <a href="#section02"><i class="fa-solid fa-camera-retro"></i> 사진</a>
         <a href="#section04"><i class="fa-regular fa-heart"></i> 우리의 발자취</a>
+        <a href="#section-updates"><i class="fa-regular fa-comment-dots"></i> 근황</a>
       </nav>
 
       <!-- 결혼식(2025.11.01 13:00)으로부터의 경과 시간 -->
@@ -1787,6 +1912,52 @@
             소중한 분들의 따뜻한 축복 속에서 잊지 못할 하루를 맞이했습니다.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- 결혼 후 근황 보고 (Our Latest News) -->
+    <section id="section-updates" class="content-section reveal">
+      <div class="section-header">
+        <span class="section-en">Our Latest News</span>
+        <h2 class="section-title"><i class="fa-regular fa-comment-dots"></i> 결혼 후 근황</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!--
+        ★ 근황 글 작성 방법 ★
+        새 소식을 올릴 때는 아래 <article class="update-card"> ... </article> 블록을
+        통째로 복사해서 "가장 위"에 붙여넣고 날짜/태그/제목/본문만 수정하세요. (최신 글이 위로)
+        - 본문(update-body)은 줄바꿈이 그대로 반영됩니다. (<br> 불필요)
+        - 사진을 넣고 싶으면 아래 주석 처리된 update-photo 블록의 주석을 해제하세요.
+      -->
+      <div class="update-feed">
+
+        <!-- 준비 중 안내 카드: 첫 근황 글을 올리면 이 블록을 삭제하세요 -->
+        <div class="update-coming-soon">
+          <div class="update-coming-icon"><i class="fa-regular fa-hourglass-half"></i></div>
+          <div class="update-coming-badge">Coming Soon</div>
+          <p class="update-coming-title">근황 소식을 준비하고 있어요</p>
+          <p class="update-coming-text">결혼 후 두 사람의 새로운 일상과 취미 이야기를<br>전해드릴 예정입니다.<br>조금만 기다려 주세요 🌸</p>
+        </div>
+
+        <!--
+        ===== 근황 글 템플릿 (아래 블록을 복사해서 주석 밖, 준비 중 카드 자리에 붙여넣으세요) =====
+
+        <article class="update-card">
+          <div class="update-meta">
+            <span class="update-date">2026.11.28</span>
+            <span class="update-tag">취미</span>
+          </div>
+          <h3 class="update-title">제목</h3>
+          <p class="update-body">본문 내용 (줄바꿈이 그대로 반영됩니다)</p>
+          <div class="update-photo">
+            <img src="https://drive.google.com/thumbnail?id=여기에_파일ID&sz=w1000" alt="근황 사진" loading="lazy">
+          </div>
+        </article>
+
+        ※ 사진이 없으면 <div class="update-photo"> ... </div> 부분은 지우세요.
+        -->
+
       </div>
     </section>
 
